@@ -32,8 +32,9 @@
             // UserData.Add("User8", "kslj", 2, 1);
             //UserData.Update(1, "Roaa", "dfs", 2, 1);
             // UserData.Delete(1);
-
-
+            //  AuthorData.Add("ejiej", 23, "jshs");
+            //AuthorData.Update(6, "HI", 23, "hsks");
+            // AuthorData.Delete(6);
 
 
         }

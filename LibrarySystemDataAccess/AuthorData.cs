@@ -11,7 +11,7 @@ namespace LibrarySystemDataAccess
         {
             int NewIdCustomer = 0;
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"insert into Authors (Certificate,[Person Id],AdditionalDetails) values (@Certificate,@PersonId,@AdditionalDetails)
+            string query = @"insert into Authors (Certificate,[Person Id],[Additional Details]) values (@Certificate,@PersonId,@AdditionalDetails)
                            SELECT SCOPE_IDENTITY();";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@PersonId", PersonId);
@@ -55,7 +55,7 @@ namespace LibrarySystemDataAccess
             int RowAffected = 0;
 
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"   update Authors set Certificate=@Certificate , [Person Id]=@PersonId,AdditionalDetails=@AdditionalDetails
+            string query = @"   update Authors set Certificate=@Certificate , [Person Id]=@PersonId,[Additional Details]=@AdditionalDetails
 				   where Id=@Id;";
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -101,6 +101,5 @@ namespace LibrarySystemDataAccess
             return GenericData.All("select * from View_Author_Details");
         }
 
-\
     }
 }
