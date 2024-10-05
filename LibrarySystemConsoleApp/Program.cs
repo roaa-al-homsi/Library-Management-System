@@ -1,4 +1,6 @@
-﻿namespace LibrarySystemConsoleApp
+﻿using System;
+
+namespace LibrarySystemConsoleApp
 {
     internal class Program
     {
@@ -35,6 +37,8 @@
             //  AuthorData.Add("ejiej", 23, "jshs");
             //AuthorData.Update(6, "HI", 23, "hsks");
             // AuthorData.Delete(6);
+
+            Console.ReadKey();
 
 
         }

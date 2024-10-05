@@ -61,6 +61,44 @@ namespace LibrarySystemDataAccess
             return GenericData.All("select * from View_Customers_Details");
         }
 
+        static public bool GetCustomerByCard(int LibraryCardNum, ref int Id, ref int PersonId, ref string FullName, ref DateTime BirthDate, ref string Country, ref string ContactInfo,
+         ref string ImagePath, ref bool IsUser, ref bool IsCustomer, ref bool IsAuthor)
+        {
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select * from View_Customers_Details where =@Id";
+
+            bool IsFound = false;
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", Id);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    IsFound = true;
+                    Id = (int)reader["Customer Id"];
+                    PersonId = (int)reader["Person Id"];
+                    FullName = (string)reader["Full Name"];
+                    Country = (string)reader["Country"];
+                    ContactInfo = (string)reader["Contact Info"];
+                    IsAuthor = (bool)reader["Is Author"];
+                    IsCustomer = (bool)reader["Is Customer"];
+                    IsUser = (bool)reader["Is User"];
+                    ImagePath = reader["Image Path"] != DBNull.Value ? (string)reader["ImagePath"] : string.Empty;
+                    BirthDate = reader["Birth Date"] != DBNull.Value ? (DateTime)reader["Birth Date"] : DateTime.MinValue;
+                }
+                else
+                {
+                    IsFound = false;
+                }
+
+                reader.Close();
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return IsFound;
+        }
 
 
     }

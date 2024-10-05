@@ -98,8 +98,51 @@ namespace LibrarySystemDataAccess
 
         static public DataTable All()
         {
-            return GenericData.All("select * from View_Author_Details");
+            return GenericData.All(" select [Author Id],[Full Name],[Birth Date],[Country],[Contact Info],Certificate,[Additional Details],[Image Path] from View_Author_Details");
         }
+
+        static public bool GetAuthorById(int Id, ref int PersonId, ref string FullName, ref DateTime BirthDate, ref string Country, ref string ContactInfo, ref string Certificate,
+            ref string AdditionalDetails, ref string ImagePath, ref bool IsUser, ref bool IsCustomer, ref bool IsAuthor)
+        {
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select * from View_Author_Details where =@Id";
+
+            bool IsFound = false;
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", Id);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    IsFound = true;
+                    Id = (int)reader["Author Id"];
+                    PersonId = (int)reader["Id"];
+                    FullName = (string)reader["Full Name"];
+                    Country = (string)reader["Country"];
+                    ContactInfo = (string)reader["Contact Info"];
+                    IsAuthor = (bool)reader["Is Author"];
+                    IsCustomer = (bool)reader["Is Customer"];
+                    IsUser = (bool)reader["Is User"];
+                    ImagePath = reader["Image Path"] != DBNull.Value ? (string)reader["ImagePath"] : string.Empty;
+                    BirthDate = reader["Birth Date"] != DBNull.Value ? (DateTime)reader["Birth Date"] : DateTime.MinValue;
+                    AdditionalDetails = reader["Additional Details"] != DBNull.Value ? (string)reader["Additional Details"] : string.Empty;
+                    Certificate = reader["Certificate"] != DBNull.Value ? (string)reader["Certificate"] : string.Empty;
+                }
+                else
+                {
+                    IsFound = false;
+                }
+
+                reader.Close();
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return IsFound;
+        }
+
+
 
     }
 }

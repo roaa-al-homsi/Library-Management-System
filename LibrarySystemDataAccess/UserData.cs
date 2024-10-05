@@ -66,5 +66,47 @@ namespace LibrarySystemDataAccess
             return GenericData.All("select * from View_Users_Details");
         }
 
+        static public bool GetUserByUserName(ref int PersonId, ref string Name, ref DateTime BirthDate, ref string Country,
+          ref bool IsAuthor, ref bool IsCustomer, ref bool IsUser, ref string ContactInfo, ref string ImagePath,
+           ref int Id, string username, ref string Password, ref int Permission)
+        {
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select * from View_Users_MoreDetails where UserName=@username";
+
+            bool IsFound = false;
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@UserName", username);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    IsFound = true;
+                    Id = (int)reader["UserId"];
+                    PersonId = (int)reader["Id"];
+                    Name = (string)reader["Full Name"];
+                    Country = (string)reader["Country"];
+                    ContactInfo = (string)reader["Contact Info"];
+                    Password = (string)reader["Password"];
+                    Permission = (int)reader["Permission"];
+                    IsAuthor = (bool)reader["Is Author"];
+                    IsCustomer = (bool)reader["Is Customer"];
+                    IsUser = (bool)reader["Is User"];
+                    ImagePath = reader["Image Path"] != DBNull.Value ? (string)reader["ImagePath"] : string.Empty;
+                    BirthDate = reader["Birth Date"] != DBNull.Value ? (DateTime)reader["Birth Date"] : DateTime.MinValue;
+                }
+                else
+                {
+                    IsFound = false;
+                }
+
+                reader.Close();
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return IsFound;
+        }
+
     }
 }
