@@ -66,12 +66,10 @@ namespace LibrarySystemDataAccess
             return GenericData.All("select * from View_Users_Details");
         }
 
-        static public bool GetUserByUserName(ref int PersonId, ref string Name, ref DateTime BirthDate, ref string Country,
-          ref bool IsAuthor, ref bool IsCustomer, ref bool IsUser, ref string ContactInfo, ref string ImagePath,
-           ref int Id, string username, ref string Password, ref int Permission)
+        static public bool GetUserByUserName(ref int PersonId, ref int Id, string username, ref string Password, ref int Permission)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"select * from View_Users_MoreDetails where UserName=@username";
+            string query = @"select * from Users where UserName=@username";
 
             bool IsFound = false;
             SqlCommand command = new SqlCommand(query, connection);
@@ -83,18 +81,10 @@ namespace LibrarySystemDataAccess
                 if (reader.Read())
                 {
                     IsFound = true;
-                    Id = (int)reader["UserId"];
-                    PersonId = (int)reader["Id"];
-                    Name = (string)reader["Full Name"];
-                    Country = (string)reader["Country"];
-                    ContactInfo = (string)reader["Contact Info"];
+                    Id = (int)reader["Id"];
+                    PersonId = (int)reader["Person Id"];
                     Password = (string)reader["Password"];
                     Permission = (int)reader["Permission"];
-                    IsAuthor = (bool)reader["Is Author"];
-                    IsCustomer = (bool)reader["Is Customer"];
-                    IsUser = (bool)reader["Is User"];
-                    ImagePath = reader["Image Path"] != DBNull.Value ? (string)reader["ImagePath"] : string.Empty;
-                    BirthDate = reader["Birth Date"] != DBNull.Value ? (DateTime)reader["Birth Date"] : DateTime.MinValue;
                 }
                 else
                 {
@@ -107,6 +97,7 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return IsFound;
         }
+
 
     }
 }

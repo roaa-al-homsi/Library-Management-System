@@ -62,14 +62,14 @@ namespace LibrarySystemDataAccess
         }
 
         static public bool GetCustomerByCard(int LibraryCardNum, ref int Id, ref int PersonId, ref string FullName, ref DateTime BirthDate, ref string Country, ref string ContactInfo,
-         ref string ImagePath, ref bool IsUser, ref bool IsCustomer, ref bool IsAuthor)
+         ref string ImagePath)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"select * from View_Customers_Details where =@Id";
+            string query = @"select * from View_Customers_Details where [Library Card Number] =@LibraryCardNum";
 
             bool IsFound = false;
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@Id", Id);
+            command.Parameters.AddWithValue("@LibraryCardNum", LibraryCardNum);
             try
             {
                 connection.Open();
@@ -82,9 +82,6 @@ namespace LibrarySystemDataAccess
                     FullName = (string)reader["Full Name"];
                     Country = (string)reader["Country"];
                     ContactInfo = (string)reader["Contact Info"];
-                    IsAuthor = (bool)reader["Is Author"];
-                    IsCustomer = (bool)reader["Is Customer"];
-                    IsUser = (bool)reader["Is User"];
                     ImagePath = reader["Image Path"] != DBNull.Value ? (string)reader["ImagePath"] : string.Empty;
                     BirthDate = reader["Birth Date"] != DBNull.Value ? (DateTime)reader["Birth Date"] : DateTime.MinValue;
                 }

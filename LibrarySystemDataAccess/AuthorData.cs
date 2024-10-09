@@ -6,7 +6,6 @@ namespace LibrarySystemDataAccess
 {
     static public class AuthorData
     {
-
         static public int Add(string Certificate, int PersonId, string AdditionalDetails)
         {
             int NewIdCustomer = 0;
@@ -101,11 +100,10 @@ namespace LibrarySystemDataAccess
             return GenericData.All(" select [Author Id],[Full Name],[Birth Date],[Country],[Contact Info],Certificate,[Additional Details],[Image Path] from View_Author_Details");
         }
 
-        static public bool GetAuthorById(int Id, ref int PersonId, ref string FullName, ref DateTime BirthDate, ref string Country, ref string ContactInfo, ref string Certificate,
-            ref string AdditionalDetails, ref string ImagePath, ref bool IsUser, ref bool IsCustomer, ref bool IsAuthor)
+        static public bool GetAuthorById(int Id, ref int PersonId, ref string Certificate, ref string AdditionalDetails)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"select * from View_Author_Details where =@Id";
+            string query = @"select * from Authors where [Id] =@Id";
 
             bool IsFound = false;
             SqlCommand command = new SqlCommand(query, connection);
@@ -117,16 +115,8 @@ namespace LibrarySystemDataAccess
                 if (reader.Read())
                 {
                     IsFound = true;
-                    Id = (int)reader["Author Id"];
-                    PersonId = (int)reader["Id"];
-                    FullName = (string)reader["Full Name"];
-                    Country = (string)reader["Country"];
-                    ContactInfo = (string)reader["Contact Info"];
-                    IsAuthor = (bool)reader["Is Author"];
-                    IsCustomer = (bool)reader["Is Customer"];
-                    IsUser = (bool)reader["Is User"];
-                    ImagePath = reader["Image Path"] != DBNull.Value ? (string)reader["ImagePath"] : string.Empty;
-                    BirthDate = reader["Birth Date"] != DBNull.Value ? (DateTime)reader["Birth Date"] : DateTime.MinValue;
+                    Id = (int)reader["Id"];
+                    PersonId = (int)reader["Person Id"];
                     AdditionalDetails = reader["Additional Details"] != DBNull.Value ? (string)reader["Additional Details"] : string.Empty;
                     Certificate = reader["Certificate"] != DBNull.Value ? (string)reader["Certificate"] : string.Empty;
                 }
@@ -141,8 +131,6 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return IsFound;
         }
-
-
 
     }
 }
