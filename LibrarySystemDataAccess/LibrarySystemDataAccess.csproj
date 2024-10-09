@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AuthorData.cs" />
+    <Compile Include="BookCopyData.cs" />
     <Compile Include="BookData.cs" />
     <Compile Include="CustomerData.cs" />
     <Compile Include="GenericData.cs" />

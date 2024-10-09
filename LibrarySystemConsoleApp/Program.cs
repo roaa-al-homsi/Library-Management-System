@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibrarySystemBusiness;
+using System;
 namespace LibrarySystemConsoleApp
 {
 
@@ -254,6 +255,17 @@ ChildId: 5
 
         static void Main(string[] args)
         {
+
+
+            BookCopy bookCopy = new BookCopy(2);
+            //Console.WriteLine(bookCopy.Book.Title);
+
+            //if (BookCopy.Exist(2))
+            //{
+            //    Console.WriteLine("Yde");
+            //}
+
+
             //    Book book = new Book(1);
             //    book.Title = "Time";
             //    book.ISBN = "4789646";
