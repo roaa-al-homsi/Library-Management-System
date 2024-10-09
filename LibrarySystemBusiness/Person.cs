@@ -13,7 +13,6 @@ namespace LibrarySystemBusiness
         public string Country { get; set; }
         public string ContactInfo { get; set; }
         public string ImagePath { get; set; }
-
         public Person(int Id, string Name, DateTime BirthDate, string Country, string ContactInfo, string ImagePath)
         {
             this.Id = Id;
@@ -25,7 +24,6 @@ namespace LibrarySystemBusiness
 
             _Mode = Mode.Update;
         }
-
         public Person()
         {
             this.Id = -1;
@@ -41,17 +39,14 @@ namespace LibrarySystemBusiness
             return (Id != -1);
 
         }
-
         private bool _Update()
         {
             return PersonData.Update(this.Id, this.Name, this.BirthDate, this.Country, this.ContactInfo, this.ImagePath);
         }
-
         static public bool DeletePerson(int Id)
         {
             return PersonData.Delete(Id);
         }
-
         public bool Save()
         {
             switch (this._Mode)
@@ -63,7 +58,6 @@ namespace LibrarySystemBusiness
             }
             return false;
         }
-
         public static Person Find(int Id)
         {
             string Name = string.Empty;
@@ -80,6 +74,12 @@ namespace LibrarySystemBusiness
             }
             return null;
         }
+
+        static public bool Exist(int Id)
+        {
+            return PersonData.Exist(Id);
+        }
+
 
     }
 

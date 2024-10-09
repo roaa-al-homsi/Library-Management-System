@@ -74,6 +74,10 @@ namespace LibrarySystemBusiness
             return null;
         }
 
+        static public bool Exist(int Id)
+        {
+            return AuthorData.Exist(Id);
+        }
 
     }
 }

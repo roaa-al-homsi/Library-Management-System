@@ -98,6 +98,14 @@ namespace LibrarySystemDataAccess
             return IsFound;
         }
 
+        static public bool Exist(int Id)
+        {
+            return GenericData.Exist("select Found=1 from Users where Id =@Id", "@Id", Id);
+        }
 
+        static public bool ExistByUserName(string UserName)
+        {
+            return GenericData.Exist("select Found=1 from Users where UserName=@UserName", "@UserName", UserName);
+        }
     }
 }

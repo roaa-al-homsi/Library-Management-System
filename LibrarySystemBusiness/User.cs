@@ -81,6 +81,14 @@ namespace LibrarySystemBusiness
             return null;
         }
 
+        public static bool Exist(int Id)
+        {
+            return UserData.Exist(Id);
+        }
+        public static bool ExistByUserName(string UserName)
+        {
+            return UserData.ExistByUserName(UserName);
+        }
 
     }
 }

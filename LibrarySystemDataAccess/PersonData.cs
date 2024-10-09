@@ -138,5 +138,10 @@ namespace LibrarySystemDataAccess
 
         }
 
+        static public bool Exist(int Id)
+        {
+            return GenericData.Exist("select Found=1 from Persons where Id =@Id", "@Id", Id);
+        }
+
     }
 }

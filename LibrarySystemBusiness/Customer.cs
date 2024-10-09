@@ -81,5 +81,11 @@ namespace LibrarySystemBusiness
             return null;
         }
 
+        static public bool Exist(int Id)
+        {
+            return CustomerData.Exist(Id);
+        }
+
+
     }
 }
