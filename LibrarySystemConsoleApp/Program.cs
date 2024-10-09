@@ -254,6 +254,35 @@ ChildId: 5
 
         static void Main(string[] args)
         {
+            //    Book book = new Book(1);
+            //    book.Title = "Time";
+            //    book.ISBN = "4789646";
+            //    book.Genre = "s";
+            //    book.AdditionalDetails = string.Empty;
+            //    book.BorrowingPrice = 4;
+            //    book.ImagePath = string.Empty;
+            //    book.NumberOfPages = 4;
+            //    book.PublicationDate = 2022;
+            //    book.PublishingHouse = string.Empty;
+            //    if (book.Save())
+            //    {
+            //        Console.WriteLine("Yes");
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("NO");
+            //    }
+
+            //Book book1 = Book.Find(2);
+            //Console.WriteLine(book1.Author.Person.Name);
+
+
+            //if (Book.Exist(10))
+            //{
+            //    Console.WriteLine("ys");
+            //}
+
+
             //Person person = new Person();
             //person.Name = "Test";
             //person.ContactInfo = "ksf";
