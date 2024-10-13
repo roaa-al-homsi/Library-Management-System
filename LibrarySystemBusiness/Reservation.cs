@@ -15,18 +15,12 @@ namespace LibrarySystemBusiness
         public int CopyId { get; set; }
         public int Id { get; set; }
         public DateTime ReservationDate { get; set; }
-        public Reservation(int CustomerId, int CopyId)
+        public Reservation()
         {
-            this.Customer = Customer.Find(CustomerId);
-            if (this.Customer != null)
-            {
-                this.CustomerId = CustomerId;
-            }
-            this.BookCopy = BookCopy.Find(CopyId);
-            if (this.BookCopy != null)
-            {
-                this.CopyId = CopyId;
-            }
+            this.Customer = new Customer();
+            this.CustomerId = -1;
+            this.BookCopy = new BookCopy();
+            this.CopyId = -1;
             this.Id = -1;
             this.ReservationDate = DateTime.MinValue;
             _Mode = Mode.Add;
