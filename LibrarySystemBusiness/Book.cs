@@ -20,9 +20,9 @@ namespace LibrarySystemBusiness
         public string ImagePath { get; set; }
         public int AuthorId { get; set; }
 
-        public Book(int AuthorId)
+        public Book()
         {
-            this.Author = Author.Find(AuthorId);
+            this.Author = new Author();
             this.AuthorId = this.Author.Id;
             this.Id = -1;
             this.Title = string.Empty;
