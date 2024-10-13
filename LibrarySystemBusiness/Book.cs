@@ -23,7 +23,7 @@ namespace LibrarySystemBusiness
         public Book()
         {
             this.Author = new Author();
-            this.AuthorId = this.Author.Id;
+            this.AuthorId = -1;
             this.Id = -1;
             this.Title = string.Empty;
             this.ISBN = string.Empty;
