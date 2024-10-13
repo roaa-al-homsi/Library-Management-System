@@ -14,9 +14,9 @@ namespace LibrarySystemBusiness
         public string Password { get; set; }
         public int Permission { get; set; }
 
-        public User(int PersonId)
+        public User()
         {
-            Person = Person.Find(PersonId);
+            Person Person = new Person();
             this.Id = -1;
             this.PersonId = PersonId;
             this.UserName = string.Empty;
