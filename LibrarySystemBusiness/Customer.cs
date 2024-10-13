@@ -12,9 +12,9 @@ namespace LibrarySystemBusiness
         public string LibraryCardNumber { get; set; }
         public int PersonId { get; set; }
 
-        public Customer(int PersonId)
+        public Customer()
         {
-            Person = Person.Find(PersonId);
+            Person Person = new Person();
             this.Id = -1;
             this.LibraryCardNumber = string.Empty;
             this.PersonId = PersonId;
