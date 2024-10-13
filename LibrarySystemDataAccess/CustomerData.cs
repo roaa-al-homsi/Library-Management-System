@@ -6,7 +6,7 @@ namespace LibrarySystemDataAccess
 {
     static public class CustomerData
     {
-        static public int Add(int LibraryCardNumber, int PersonId)
+        static public int Add(string LibraryCardNumber, int PersonId)
         {
             int NewIdCustomer = 0;
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
@@ -29,7 +29,7 @@ namespace LibrarySystemDataAccess
             return NewIdCustomer;
         }
 
-        static public bool Update(int Id, int LibraryCardNumber, int PersonId)
+        static public bool Update(int Id, string LibraryCardNumber, int PersonId)
         {
             int RowAffected = 0;
 
@@ -61,11 +61,11 @@ namespace LibrarySystemDataAccess
             return GenericData.All("select * from View_Customers_Details");
         }
 
-        static public bool GetCustomerByCard(int LibraryCardNum, ref int Id, ref int PersonId, ref string FullName, ref DateTime BirthDate, ref string Country, ref string ContactInfo,
-         ref string ImagePath)
+        static public bool GetCustomerByCard(string LibraryCardNum, ref int Id, ref int PersonId)
+
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"select * from View_Customers_Details where [Library Card Number] =@LibraryCardNum";
+            string query = @"select * from Customers where [Library Card Number] =@LibraryCardNum";
 
             bool IsFound = false;
             SqlCommand command = new SqlCommand(query, connection);
@@ -77,19 +77,44 @@ namespace LibrarySystemDataAccess
                 if (reader.Read())
                 {
                     IsFound = true;
-                    Id = (int)reader["Customer Id"];
+                    Id = (int)reader["Id"];
                     PersonId = (int)reader["Person Id"];
-                    FullName = (string)reader["Full Name"];
-                    Country = (string)reader["Country"];
-                    ContactInfo = (string)reader["Contact Info"];
-                    ImagePath = reader["Image Path"] != DBNull.Value ? (string)reader["ImagePath"] : string.Empty;
-                    BirthDate = reader["Birth Date"] != DBNull.Value ? (DateTime)reader["Birth Date"] : DateTime.MinValue;
                 }
                 else
                 {
                     IsFound = false;
                 }
 
+                reader.Close();
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return IsFound;
+        }
+
+        static public bool GetCustomerById(int Id, ref string LibraryCardNum, ref int PersonId)
+
+        {
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select * from Customers where Id =@Id";
+
+            bool IsFound = false;
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", Id);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    IsFound = true;
+                    PersonId = (int)reader["Person Id"];
+                    LibraryCardNum = (string)reader["Library Card Number"];
+                }
+                else
+                {
+                    IsFound = false;
+                }
                 reader.Close();
             }
             catch { Exception exception; }

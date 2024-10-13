@@ -33,12 +33,12 @@ namespace LibrarySystemBusiness
             _Mode = ModeAuthor.Update;
         }
 
-        private bool Add()
+        private bool _Add()
         {//validation
             this.Id = AuthorData.Add(Certificate, this.PersonId, AdditionalDetails);
             return (Id != -1);
         }
-        private bool Update()
+        private bool _Update()
         {//validation
             return AuthorData.Update(this.Id, this.Certificate, this.PersonId, this.AdditionalDetails);
         }
@@ -47,9 +47,9 @@ namespace LibrarySystemBusiness
             switch (_Mode)
             {
                 case ModeAuthor.Add:
-                    return Add();
+                    return _Add();
                 case ModeAuthor.Update:
-                    return Update();
+                    return _Update();
             }
             return false;
         }
@@ -73,7 +73,6 @@ namespace LibrarySystemBusiness
             }
             return null;
         }
-
         static public bool Exist(int Id)
         {
             return AuthorData.Exist(Id);

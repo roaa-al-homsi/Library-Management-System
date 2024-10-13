@@ -44,7 +44,9 @@
     <Compile Include="AuthorData.cs" />
     <Compile Include="BookCopyData.cs" />
     <Compile Include="BookData.cs" />
+    <Compile Include="BorrowingRecordData.cs" />
     <Compile Include="CustomerData.cs" />
+    <Compile Include="FineData.cs" />
     <Compile Include="GenericData.cs" />
     <Compile Include="PersonData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

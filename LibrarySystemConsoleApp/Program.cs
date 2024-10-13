@@ -60,7 +60,7 @@ ChildId: 5
 
         //static public void TestFind(int Lib)
         //{
-        //    Customer customer = Customer.Find(Lib);
+        //    Customer customer = Customer.FindByLibraryCard(Lib);
         //    if (customer != null)
         //    {
         //        Console.WriteLine(customer.Id);
@@ -106,7 +106,7 @@ ChildId: 5
 
         //static public void TestUpdate(int LibNUM)
         //{
-        //    Customer customer = Customer.Find(LibNUM);
+        //    Customer customer = Customer.FindByLibraryCard(LibNUM);
         //    customer.Name = "Reem";
 
         //    if (customer.Save())
@@ -159,7 +159,7 @@ ChildId: 5
         //static public void TestUpdateAuth(int id)
         //{
 
-        //    Author author = Author.Find(id);
+        //    Author author = Author.FindByLibraryCard(id);
         //    author.Name = "Lolo";
 
         //    if (author.Save())
@@ -226,7 +226,7 @@ ChildId: 5
 
         //static public void TestFindUser(string UserName)
         //{
-        //    User user = User.Find(UserName);
+        //    User user = User.FindByLibraryCard(UserName);
         //    if (user != null)
         //    {
         //        Console.WriteLine(user.Id);
@@ -256,8 +256,58 @@ ChildId: 5
         static void Main(string[] args)
         {
 
+            //Fine f = new Fine(27, 5);
+            //f.Amount = 500;
+            //f.NumberOfLateDays = 12;
+            //f.PaymentStatus = true;
+            //if (f.Save())
+            //{
+            //    Console.WriteLine("Yde");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("NO");
+            //}
 
-            BookCopy bookCopy = new BookCopy(2);
+
+
+            Fine f1 = Fine.Find(2);
+            Console.WriteLine(f1.Id);
+            Console.WriteLine(f1.CustomerId);
+            Console.WriteLine(f1.BorrowingRecordId);
+            Console.WriteLine(f1.Amount);
+            Console.WriteLine(f1.NumberOfLateDays);
+            Console.WriteLine(f1.PaymentStatus);
+
+
+            //BorrowingRecord borrowingRecord = new BorrowingRecord(1, 27);
+            //borrowingRecord.BorrowingDate = new DateTime(2001, 4, 1);
+            //borrowingRecord.DueDate = new DateTime(2001, 5, 1);
+            //borrowingRecord.ActualReturnDate = new DateTime(2001, 4, 25);
+
+
+
+            //if (borrowingRecord.Save())
+            //{
+            //    Console.WriteLine("Yde");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("NO");
+            //}
+            // BorrowingRecord.Delete(6);
+            //BorrowingRecord b = BorrowingRecord.Find(5);
+            //b.DueDate = new DateTime(2001, 4, 26);
+            //b.Save();
+            //Console.WriteLine(b.DueDate);
+            if (BorrowingRecord.Exist(10))
+            {
+                Console.WriteLine("Y");
+            }
+
+
+
+            //BookCopy bookCopy = new BookCopy(2);
             //Console.WriteLine(bookCopy.Book.Title);
 
             //if (BookCopy.Exist(2))
@@ -285,7 +335,7 @@ ChildId: 5
             //        Console.WriteLine("NO");
             //    }
 
-            //Book book1 = Book.Find(2);
+            //Book book1 = Book.FindByLibraryCard(2);
             //Console.WriteLine(book1.Author.Person.Name);
 
 

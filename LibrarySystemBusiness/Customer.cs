@@ -1,5 +1,4 @@
 ﻿using LibrarySystemDataAccess;
-using System;
 using System.Data;
 namespace LibrarySystemBusiness
 {
@@ -10,18 +9,18 @@ namespace LibrarySystemBusiness
         private enum ModeCustomer { Add, Update };
         ModeCustomer _Mode;
         public int Id { get; set; }
-        public int LibraryCardNumber { get; set; }
+        public string LibraryCardNumber { get; set; }
         public int PersonId { get; set; }
 
         public Customer(int PersonId)
         {
             Person = Person.Find(PersonId);
             this.Id = -1;
-            this.LibraryCardNumber = 0;
+            this.LibraryCardNumber = string.Empty;
             this.PersonId = PersonId;
             _Mode = ModeCustomer.Add;
         }
-        private Customer(int Id, int LibraryCardNumber, int PersonId)
+        private Customer(int Id, string LibraryCardNumber, int PersonId)
         {
             Person = Person.Find(PersonId);
             this.Id = Id;
@@ -61,19 +60,13 @@ namespace LibrarySystemBusiness
             return CustomerData.All();
         }
 
-        public static Customer Find(int LibraryCardNumber)
+        public static Customer FindByLibraryCard(string LibraryCardNumber)
         {
             int Id = -1;
             int PersonId = -1;
 
-            string Name = string.Empty;
-            DateTime BirthDate = DateTime.MinValue;
-            string Country = string.Empty;
-            string ContactInfo = string.Empty;
-            string ImagePath = string.Empty;
+            if (CustomerData.GetCustomerByCard(LibraryCardNumber, ref Id, ref PersonId))
 
-            if (CustomerData.GetCustomerByCard(LibraryCardNumber, ref Id, ref PersonId, ref Name,
-                ref BirthDate, ref Country, ref ContactInfo, ref ImagePath))
             {
                 return new Customer(Id, LibraryCardNumber, PersonId);
 
@@ -81,6 +74,18 @@ namespace LibrarySystemBusiness
             return null;
         }
 
+        public static Customer Find(int Id)
+        {
+            string LibraryCardNumber = string.Empty;
+            int PersonId = -1;
+
+            if (CustomerData.GetCustomerById(Id, ref LibraryCardNumber, ref PersonId))
+            {
+                return new Customer(Id, LibraryCardNumber, PersonId);
+
+            }
+            return null;
+        }
         static public bool Exist(int Id)
         {
             return CustomerData.Exist(Id);
