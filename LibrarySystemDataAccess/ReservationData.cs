@@ -47,7 +47,7 @@ namespace LibrarySystemDataAccess
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Id", Id);
             command.Parameters.AddWithValue("@CustomerId", CustomerId);
-            command.Parameters.AddWithValue("@BorrowingRecordId", CopyId);
+            command.Parameters.AddWithValue("@CopyId", CopyId);
             if (ReservationDate == DateTime.MinValue)
             {
                 command.Parameters.AddWithValue("@ReservationDate", System.DBNull.Value);

@@ -256,6 +256,22 @@ ChildId: 5
         static void Main(string[] args)
         {
 
+
+
+
+            //Reservation reservation = new Reservation(27, 1);
+            //reservation.ReservationDate = new DateTime(2000, 5, 12);
+            //if (reservation.Save())
+            //{
+            //    Console.WriteLine("Yde");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("NO");
+            //}
+
+            Reservation.Delete(1);
+
             //Fine f = new Fine(27, 5);
             //f.Amount = 500;
             //f.NumberOfLateDays = 12;
