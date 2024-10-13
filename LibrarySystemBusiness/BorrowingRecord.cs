@@ -22,7 +22,8 @@ namespace LibrarySystemBusiness
         {
             this.BookCopy = new BookCopy();
             this.Customer = new Customer();
-
+            this.CopyId = -1;
+            this.CustomerId = -1;
             this.BorrowingDate = DateTime.MinValue;
             this.DueDate = DateTime.MinValue;
             this.ActualReturnDate = DateTime.MinValue;
