@@ -14,7 +14,7 @@ namespace LibrarySystemBusiness
         public BookCopy()
         {
             this.Book = new Book();
-            this.BookId = BookId;
+            this.BookId = -1;
             this.AvailabilityStatus = false;
             this.Id = -1;
             _Mode = Mode.Add;
