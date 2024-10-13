@@ -271,13 +271,13 @@ ChildId: 5
 
 
 
-            Fine f1 = Fine.Find(2);
-            Console.WriteLine(f1.Id);
-            Console.WriteLine(f1.CustomerId);
-            Console.WriteLine(f1.BorrowingRecordId);
-            Console.WriteLine(f1.Amount);
-            Console.WriteLine(f1.NumberOfLateDays);
-            Console.WriteLine(f1.PaymentStatus);
+            //Fine f1 = Fine.Find(2);
+            //Console.WriteLine(f1.Id);
+            //Console.WriteLine(f1.CustomerId);
+            //Console.WriteLine(f1.BorrowingRecordId);
+            //Console.WriteLine(f1.Amount);
+            //Console.WriteLine(f1.NumberOfLateDays);
+            //Console.WriteLine(f1.PaymentStatus);
 
 
             //BorrowingRecord borrowingRecord = new BorrowingRecord(1, 27);

@@ -50,6 +50,7 @@
     <Compile Include="GenericData.cs" />
     <Compile Include="PersonData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReservationData.cs" />
     <Compile Include="SettingData.cs" />
     <Compile Include="UserData.cs" />
   </ItemGroup>
