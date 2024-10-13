@@ -13,7 +13,7 @@ namespace LibrarySystemBusiness
         public string Country { get; set; }
         public string ContactInfo { get; set; }
         public string ImagePath { get; set; }
-        public Person(int Id, string Name, DateTime BirthDate, string Country, string ContactInfo, string ImagePath)
+        private Person(int Id, string Name, DateTime BirthDate, string Country, string ContactInfo, string ImagePath)
         {
             this.Id = Id;
             this.Name = Name;
@@ -32,6 +32,7 @@ namespace LibrarySystemBusiness
             this.Country = string.Empty;
             this.ContactInfo = string.Empty;
             this.ImagePath = string.Empty;
+            _Mode = Mode.Add;
         }
         private bool _Add()
         {
