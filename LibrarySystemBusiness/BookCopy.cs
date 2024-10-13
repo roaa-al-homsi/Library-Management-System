@@ -11,9 +11,9 @@ namespace LibrarySystemBusiness
         public int Id { get; set; }
         public int BookId { get; set; }
         public bool AvailabilityStatus { get; set; }
-        public BookCopy(int BookId)
+        public BookCopy()
         {
-            this.Book = Book.Find(BookId);
+            this.Book = new Book();
             this.BookId = BookId;
             this.AvailabilityStatus = false;
             this.Id = -1;
