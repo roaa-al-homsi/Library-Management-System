@@ -14,9 +14,9 @@ namespace LibrarySystemBusiness
         public string Certificate { get; set; }
         public string AdditionalDetails { get; set; }
 
-        public Author(int PersonId)
+        public Author()
         {
-            Person = Person.Find(PersonId);
+            Person Person = new Person();
             this.Id = -1;
             this.PersonId = PersonId;
             this.Certificate = string.Empty;
