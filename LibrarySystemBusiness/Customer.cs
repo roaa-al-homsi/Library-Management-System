@@ -17,7 +17,7 @@ namespace LibrarySystemBusiness
             Person Person = new Person();
             this.Id = -1;
             this.LibraryCardNumber = string.Empty;
-            this.PersonId = PersonId;
+            this.PersonId = -1;
             _Mode = ModeCustomer.Add;
         }
         private Customer(int Id, string LibraryCardNumber, int PersonId)
