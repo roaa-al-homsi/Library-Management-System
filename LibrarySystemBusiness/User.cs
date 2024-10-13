@@ -18,7 +18,7 @@ namespace LibrarySystemBusiness
         {
             Person Person = new Person();
             this.Id = -1;
-            this.PersonId = PersonId;
+            this.PersonId = -1;
             this.UserName = string.Empty;
             this.Password = string.Empty;
             this.Permission = 0;
