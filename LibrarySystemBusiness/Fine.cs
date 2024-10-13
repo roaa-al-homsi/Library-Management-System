@@ -15,20 +15,12 @@ namespace LibrarySystemBusiness
         public decimal Amount { get; set; }
         public short NumberOfLateDays { get; set; }
         public bool PaymentStatus { get; set; }
-        public Fine(int CustomerId, int BorrowingRecordId)
+        public Fine()
         {
-            this.Customer = Customer.Find(CustomerId);
-            if (this.Customer != null)
-            {
-                this.CustomerId = CustomerId;//composition
-            }
-
-            this.BorrowingRecord = BorrowingRecord.Find(BorrowingRecordId);
-            if (this.BorrowingRecord != null)
-            {
-                this.BorrowingRecordId = BorrowingRecordId;
-            }
-
+            this.Customer = new Customer();
+            this.BorrowingRecord = new BorrowingRecord();
+            this.CustomerId = -1;
+            this.BorrowingRecordId = -1;
             this.Id = -1;
             this.Amount = 1;
             this.NumberOfLateDays = 1;
