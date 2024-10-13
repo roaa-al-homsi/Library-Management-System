@@ -18,19 +18,10 @@ namespace LibrarySystemBusiness
         public DateTime DueDate { get; set; }
         public DateTime ActualReturnDate { get; set; }
 
-        public BorrowingRecord(int BookCopyId, int CustomerId)
+        public BorrowingRecord()
         {
-            this.BookCopy = BookCopy.Find(BookCopyId);
-            if (this.BookCopy != null)
-            {
-                this.CopyId = BookCopyId;
-            }
-
-            this.Customer = Customer.Find(CustomerId);
-            if (this.Customer != null)
-            {
-                this.CustomerId = CustomerId;
-            }
+            this.BookCopy = new BookCopy();
+            this.Customer = new Customer();
 
             this.BorrowingDate = DateTime.MinValue;
             this.DueDate = DateTime.MinValue;
