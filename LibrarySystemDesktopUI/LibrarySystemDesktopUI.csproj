@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UctrlBookInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UctrlBookInfo.Designer.cs">
+      <DependentUpon>UctrlBookInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Books\frmAllBooks.resx">
       <DependentUpon>frmAllBooks.cs</DependentUpon>
     </EmbeddedResource>
@@ -81,6 +87,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UctrlBookInfo.resx">
+      <DependentUpon>UctrlBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

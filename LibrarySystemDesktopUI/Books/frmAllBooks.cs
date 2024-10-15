@@ -25,7 +25,6 @@ namespace LibrarySystem.Books
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
             if (MessageBox.Show("Are you sure delete this Book?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
             {
                 int BookId = (int)dgvAllBooks.CurrentRow.Cells[0].Value;
