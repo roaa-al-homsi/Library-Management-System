@@ -23,6 +23,23 @@ namespace LibrarySystem.Books
             _RefreshBooksData();
         }
 
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+            if (MessageBox.Show("Are you sure delete this Book?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
+            {
+                int BookId = (int)dgvAllBooks.CurrentRow.Cells[0].Value;
+
+                if (Book.Delete(BookId))
+                {
+                    MessageBox.Show("Delete Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Delete Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                _RefreshBooksData();
+            }
+        }
     }
 }
