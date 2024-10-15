@@ -1,4 +1,5 @@
 ﻿using LibrarySystemDataAccess;
+using System.Data;
 
 namespace LibrarySystemBusiness
 {
@@ -112,6 +113,10 @@ namespace LibrarySystemBusiness
             return BookData.Delete(Id);
         }
 
+        static public DataTable All()
+        {
+            return BookData.All();
+        }
     }
 }
 
