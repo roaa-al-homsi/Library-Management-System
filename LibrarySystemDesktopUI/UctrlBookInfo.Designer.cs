@@ -34,11 +34,10 @@
             this.txtPublicationDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSellingPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNumberOfPages = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAuthor = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtGenre = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtISBN = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTitle = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pictBook = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -49,7 +48,11 @@
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.linkRemove = new System.Windows.Forms.LinkLabel();
+            this.linkSet = new System.Windows.Forms.LinkLabel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.comboAuthors = new Guna.UI2.WinForms.Guna2ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictBook)).BeginInit();
             this.SuspendLayout();
             // 
             // txtAdditionalDetails
@@ -208,31 +211,6 @@
             this.txtNumberOfPages.Size = new System.Drawing.Size(238, 36);
             this.txtNumberOfPages.TabIndex = 61;
             // 
-            // txtAuthor
-            // 
-            this.txtAuthor.Animated = true;
-            this.txtAuthor.AutoRoundedCorners = true;
-            this.txtAuthor.BorderRadius = 17;
-            this.txtAuthor.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAuthor.DefaultText = "";
-            this.txtAuthor.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtAuthor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtAuthor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAuthor.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAuthor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.txtAuthor.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAuthor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtAuthor.ForeColor = System.Drawing.Color.White;
-            this.txtAuthor.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAuthor.Location = new System.Drawing.Point(422, 228);
-            this.txtAuthor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtAuthor.Name = "txtAuthor";
-            this.txtAuthor.PasswordChar = '\0';
-            this.txtAuthor.PlaceholderText = "";
-            this.txtAuthor.SelectedText = "";
-            this.txtAuthor.Size = new System.Drawing.Size(238, 36);
-            this.txtAuthor.TabIndex = 60;
-            // 
             // txtGenre
             // 
             this.txtGenre.Animated = true;
@@ -309,16 +287,17 @@
             this.txtTitle.Size = new System.Drawing.Size(238, 36);
             this.txtTitle.TabIndex = 57;
             // 
-            // guna2CirclePictureBox1
+            // pictBook
             // 
-            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.DimGray;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(8, 21);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(256, 243);
-            this.guna2CirclePictureBox1.TabIndex = 56;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.pictBook.FillColor = System.Drawing.Color.DimGray;
+            this.pictBook.ImageRotate = 0F;
+            this.pictBook.Location = new System.Drawing.Point(8, 21);
+            this.pictBook.Name = "pictBook";
+            this.pictBook.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictBook.Size = new System.Drawing.Size(247, 243);
+            this.pictBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictBook.TabIndex = 56;
+            this.pictBook.TabStop = false;
             // 
             // guna2HtmlLabel11
             // 
@@ -430,22 +409,73 @@
             this.guna2HtmlLabel2.TabIndex = 46;
             this.guna2HtmlLabel2.Text = "Title";
             // 
+            // linkRemove
+            // 
+            this.linkRemove.AutoSize = true;
+            this.linkRemove.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkRemove.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.linkRemove.Location = new System.Drawing.Point(39, 277);
+            this.linkRemove.Name = "linkRemove";
+            this.linkRemove.Size = new System.Drawing.Size(65, 27);
+            this.linkRemove.TabIndex = 67;
+            this.linkRemove.TabStop = true;
+            this.linkRemove.Text = "Remove";
+            this.linkRemove.Visible = false;
+            this.linkRemove.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkRemove_LinkClicked);
+            // 
+            // linkSet
+            // 
+            this.linkSet.AutoSize = true;
+            this.linkSet.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkSet.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.linkSet.Location = new System.Drawing.Point(162, 277);
+            this.linkSet.Name = "linkSet";
+            this.linkSet.Size = new System.Drawing.Size(32, 27);
+            this.linkSet.TabIndex = 68;
+            this.linkSet.TabStop = true;
+            this.linkSet.Text = "Set";
+            this.linkSet.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkSet_LinkClicked);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // comboAuthors
+            // 
+            this.comboAuthors.AutoRoundedCorners = true;
+            this.comboAuthors.BackColor = System.Drawing.Color.Transparent;
+            this.comboAuthors.BorderRadius = 17;
+            this.comboAuthors.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboAuthors.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboAuthors.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.comboAuthors.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboAuthors.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboAuthors.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboAuthors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboAuthors.ItemHeight = 30;
+            this.comboAuthors.Location = new System.Drawing.Point(422, 226);
+            this.comboAuthors.Name = "comboAuthors";
+            this.comboAuthors.Size = new System.Drawing.Size(238, 36);
+            this.comboAuthors.TabIndex = 69;
+            // 
             // UctrlBookInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.comboAuthors);
+            this.Controls.Add(this.linkSet);
+            this.Controls.Add(this.linkRemove);
             this.Controls.Add(this.txtAdditionalDetails);
             this.Controls.Add(this.txtBorrowingPrice);
             this.Controls.Add(this.txtPublishingHouse);
             this.Controls.Add(this.txtPublicationDate);
             this.Controls.Add(this.txtSellingPrice);
             this.Controls.Add(this.txtNumberOfPages);
-            this.Controls.Add(this.txtAuthor);
             this.Controls.Add(this.txtGenre);
             this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.txtTitle);
-            this.Controls.Add(this.guna2CirclePictureBox1);
+            this.Controls.Add(this.pictBook);
             this.Controls.Add(this.guna2HtmlLabel11);
             this.Controls.Add(this.guna2HtmlLabel10);
             this.Controls.Add(this.guna2HtmlLabel9);
@@ -458,8 +488,10 @@
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Name = "UctrlBookInfo";
             this.Size = new System.Drawing.Size(1167, 467);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.Load += new System.EventHandler(this.UctrlBookInfo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictBook)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -471,11 +503,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPublicationDate;
         private Guna.UI2.WinForms.Guna2TextBox txtSellingPrice;
         private Guna.UI2.WinForms.Guna2TextBox txtNumberOfPages;
-        private Guna.UI2.WinForms.Guna2TextBox txtAuthor;
         private Guna.UI2.WinForms.Guna2TextBox txtGenre;
         private Guna.UI2.WinForms.Guna2TextBox txtISBN;
         private Guna.UI2.WinForms.Guna2TextBox txtTitle;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pictBook;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
@@ -486,5 +517,9 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private System.Windows.Forms.LinkLabel linkRemove;
+        private System.Windows.Forms.LinkLabel linkSet;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private Guna.UI2.WinForms.Guna2ComboBox comboAuthors;
     }
 }

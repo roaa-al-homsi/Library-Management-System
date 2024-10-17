@@ -77,6 +77,10 @@ namespace LibrarySystemBusiness
         {
             return AuthorData.Exist(Id);
         }
+        static public int GetAuthorIdByName(string Name)
+        {
+            return AuthorData.GetAuthorIdByName(Name);
+        }
 
     }
 }

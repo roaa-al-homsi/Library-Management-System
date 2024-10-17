@@ -1,4 +1,5 @@
-﻿using LibrarySystemBusiness;
+﻿using LibraryStstem.Books;
+using LibrarySystemBusiness;
 using System;
 using System.Windows.Forms;
 
@@ -39,6 +40,18 @@ namespace LibrarySystem.Books
                 }
                 _RefreshBooksData();
             }
+        }
+
+        private void btnAddBook_Click(object sender, EventArgs e)
+        {
+
+            _frmMainMenu.OpenChildFormAsync(new frmAddOrUpdateBook(-1));
+        }
+
+        private void updateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int BookId = (int)dgvAllBooks.CurrentRow.Cells[0].Value;
+            _frmMainMenu.OpenChildFormAsync(new frmAddOrUpdateBook(BookId));
         }
     }
 }

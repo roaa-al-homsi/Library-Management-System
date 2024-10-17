@@ -37,6 +37,7 @@
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showCopiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddBook = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllBooks)).BeginInit();
             this.cmsBooks.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +52,6 @@
             this.dgvAllBooks.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgvAllBooks.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvAllBooks.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dgvAllBooks.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
             this.dgvAllBooks.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
@@ -137,6 +137,7 @@
             this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
             this.updateToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.updateToolStripMenuItem.Text = "Update";
+            this.updateToolStripMenuItem.Click += new System.EventHandler(this.updateToolStripMenuItem_Click);
             // 
             // deleteToolStripMenuItem
             // 
@@ -151,12 +152,32 @@
             this.showCopiesToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.showCopiesToolStripMenuItem.Text = "Show Copies";
             // 
+            // btnAddBook
+            // 
+            this.btnAddBook.Animated = true;
+            this.btnAddBook.AutoRoundedCorners = true;
+            this.btnAddBook.BorderRadius = 26;
+            this.btnAddBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAddBook.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddBook.ForeColor = System.Drawing.Color.White;
+            this.btnAddBook.Location = new System.Drawing.Point(60, 566);
+            this.btnAddBook.Name = "btnAddBook";
+            this.btnAddBook.Size = new System.Drawing.Size(133, 54);
+            this.btnAddBook.TabIndex = 113;
+            this.btnAddBook.Text = "Add Book";
+            this.btnAddBook.Click += new System.EventHandler(this.btnAddBook_Click);
+            // 
             // frmAllBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1245, 675);
+            this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.dgvAllBooks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAllBooks";
@@ -175,5 +196,6 @@
         private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showCopiesToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2Button btnAddBook;
     }
 }

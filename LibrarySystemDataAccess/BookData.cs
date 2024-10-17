@@ -8,7 +8,7 @@ namespace LibrarySystemDataAccess
     {
 
         static public int Add(string Title, string ISBN, int PublicationDate, string Genre, string AdditionalDetails,
-            int NumberOfPages, string PublishingHouse, double SellingPrice, double BorrowingPrice, string ImagePath, int AuthorId)
+            int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId)
         {
             int NewIdBook = 0;
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
@@ -71,7 +71,7 @@ namespace LibrarySystemDataAccess
         }
 
         static public bool Update(int Id, string Title, string ISBN, int PublicationDate, string Genre, string AdditionalDetails,
-            int NumberOfPages, string PublishingHouse, double SellingPrice, double BorrowingPrice, string ImagePath, int AuthorId)
+            int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId)
         {
             int RowAffected = 0;
 
@@ -142,7 +142,7 @@ where Id=@Id";
         }
 
         static public bool GetBookById(int Id, ref string Title, ref string ISBN, ref int PublicationDate, ref string Genre, ref string AdditionalDetails,
-           ref int NumberOfPages, ref string PublishingHouse, ref double SellingPrice, ref double BorrowingPrice, ref string ImagePath, ref int AuthorId)
+           ref int NumberOfPages, ref string PublishingHouse, ref decimal SellingPrice, ref decimal BorrowingPrice, ref string ImagePath, ref int AuthorId)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
             string query = @"select * from Books where [Id] =@Id";
@@ -162,11 +162,9 @@ where Id=@Id";
                     ISBN = (string)reader["ISBN"];
                     PublicationDate = (int)reader["Publication Date"];
                     Genre = (string)reader["Genre"];
-                    NumberOfPages = (int)reader["Number Of Pages"];
-
-                    SellingPrice = (double)reader["Selling Price"];
-                    BorrowingPrice = (double)reader["Selling Price"];
-                    PublishingHouse = (string)reader["Borrowing Price"];
+                    NumberOfPages = (int)reader["Numbers Of Pages"];
+                    SellingPrice = (decimal)reader["Selling Price"];
+                    BorrowingPrice = (decimal)reader["Borrowing Price"];
 
                     AdditionalDetails = reader["Additional Details"] != DBNull.Value ? (string)reader["Additional Details"] : string.Empty;
                     ImagePath = reader["Image"] != DBNull.Value ? (string)reader["Image"] : string.Empty;

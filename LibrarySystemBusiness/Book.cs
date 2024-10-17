@@ -16,8 +16,8 @@ namespace LibrarySystemBusiness
         public string AdditionalDetails { get; set; }
         public int NumberOfPages { get; set; }
         public string PublishingHouse { get; set; }
-        public double SellingPrice { get; set; }
-        public double BorrowingPrice { get; set; }
+        public decimal SellingPrice { get; set; }
+        public decimal BorrowingPrice { get; set; }
         public string ImagePath { get; set; }
         public int AuthorId { get; set; }
 
@@ -41,7 +41,7 @@ namespace LibrarySystemBusiness
         }
 
         private Book(int Id, string Title, string ISBN, int PublicationDate, string Genre, string AdditionalDetails,
-            int NumberOfPages, string PublishingHouse, double SellingPrice, double BorrowingPrice, string ImagePath, int AuthorId)
+            int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId)
         {
             this.Author = Author.Find(AuthorId);
             this.AuthorId = AuthorId;
@@ -88,8 +88,8 @@ namespace LibrarySystemBusiness
             string AdditionalDetails = string.Empty;
             int NumberOfPages = 0;
             string PublishingHouse = string.Empty;
-            double SellingPrice = 0;
-            double BorrowingPrice = 0;
+            decimal SellingPrice = 0;
+            decimal BorrowingPrice = 0;
             string ImagePath = string.Empty;
             int AuthorId = -1;
 
