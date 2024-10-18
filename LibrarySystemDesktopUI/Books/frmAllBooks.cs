@@ -57,7 +57,8 @@ namespace LibrarySystem.Books
         private void showCopiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int BookId = (int)dgvAllBooks.CurrentRow.Cells[0].Value;
-            frmBookCopies frmBookCopies = new frmBookCopies(BookId);
+            string NameBook = (string)dgvAllBooks.CurrentRow.Cells[1].Value;
+            frmBookCopies frmBookCopies = new frmBookCopies(BookId, NameBook);
             frmBookCopies.ShowDialog();
 
         }

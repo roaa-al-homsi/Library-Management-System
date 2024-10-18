@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvBookCopies = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.labNameBook = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookCopies)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +47,7 @@
             this.dgvBookCopies.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBookCopies.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgvBookCopies.BackgroundColor = System.Drawing.Color.Silver;
-            this.dgvBookCopies.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dgvBookCopies.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Single;
             this.dgvBookCopies.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
@@ -82,7 +84,7 @@
             this.dgvBookCopies.RowHeadersVisible = false;
             this.dgvBookCopies.RowHeadersWidth = 51;
             this.dgvBookCopies.RowTemplate.Height = 24;
-            this.dgvBookCopies.Size = new System.Drawing.Size(675, 218);
+            this.dgvBookCopies.Size = new System.Drawing.Size(592, 270);
             this.dgvBookCopies.TabIndex = 1;
             this.dgvBookCopies.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvBookCopies.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -106,11 +108,35 @@
             this.dgvBookCopies.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvBookCopies.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(210, 276);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(84, 37);
+            this.guna2HtmlLabel1.TabIndex = 2;
+            this.guna2HtmlLabel1.Text = "Book Is ";
+            // 
+            // labNameBook
+            // 
+            this.labNameBook.AutoSize = false;
+            this.labNameBook.BackColor = System.Drawing.Color.Transparent;
+            this.labNameBook.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labNameBook.Location = new System.Drawing.Point(300, 276);
+            this.labNameBook.Name = "labNameBook";
+            this.labNameBook.Size = new System.Drawing.Size(127, 37);
+            this.labNameBook.TabIndex = 3;
+            // 
             // frmBookCopies
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 416);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(592, 315);
+            this.Controls.Add(this.labNameBook);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.dgvBookCopies);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmBookCopies";
@@ -124,5 +150,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvBookCopies;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labNameBook;
     }
 }

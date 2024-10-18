@@ -7,21 +7,21 @@ namespace LibraryStstem.Books
     public partial class frmBookCopies : Form
     {
         private int _BookId;
-
-        public frmBookCopies(int BookId)
+        private string _NameBook;
+        public frmBookCopies(int BookId, string NameBook)
         {
             InitializeComponent();
             _BookId = BookId;
+            _NameBook = NameBook;
         }
-
         private void _RefreshBookCopiesData()
         {
             dgvBookCopies.DataSource = BookCopy.GetCopiesForSpecificBook(_BookId);
         }
-
         private void frmBookCopies_Load(object sender, EventArgs e)
         {
             _RefreshBookCopiesData();
+            labNameBook.Text = _NameBook;
         }
     }
 }
