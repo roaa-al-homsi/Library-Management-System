@@ -32,7 +32,6 @@ namespace LibraryStstem.Books
             uctrlBookInfo1.Genre = _Book.Genre;
             uctrlBookInfo1.SellingPrice = _Book.SellingPrice;
             uctrlBookInfo1.PublicationDate = _Book.PublicationDate;
-            uctrlBookInfo1.PublishingHouse = _Book.PublishingHouse;
             uctrlBookInfo1.BorrowingPrice = _Book.BorrowingPrice;
             uctrlBookInfo1.NumberOfPages = _Book.NumberOfPages;
             uctrlBookInfo1.AdditionalDetails = _Book.AdditionalDetails;
@@ -52,7 +51,7 @@ namespace LibraryStstem.Books
         {
 
         }
-        private void FillBookBeforeSave()
+        private void _FillBookBeforeSave()
         {
             int AuthorId = Author.GetAuthorIdByName(uctrlBookInfo1.ComboBoxName);
             _Book.Title = uctrlBookInfo1.Title;
@@ -68,9 +67,24 @@ namespace LibraryStstem.Books
             _Book.ImagePath = (uctrlBookInfo1.Image != null) ? uctrlBookInfo1.Image : null;
 
         }
+        private void _BackDefaultForm()
+        {
+            uctrlBookInfo1.Title = string.Empty;
+            uctrlBookInfo1.ISBN = string.Empty;
+            uctrlBookInfo1.PublishingHouse = string.Empty;
+            uctrlBookInfo1.Genre = string.Empty;
+            uctrlBookInfo1.SellingPrice = 1;
+            uctrlBookInfo1.PublicationDate = 1;
+            uctrlBookInfo1.BorrowingPrice = 1;
+            uctrlBookInfo1.NumberOfPages = 1;
+            uctrlBookInfo1.AdditionalDetails = string.Empty;
+            uctrlBookInfo1.LinkRemove = false;
+            uctrlBookInfo1.Image = null;
+
+        }
         private void btnSave_Click(object sender, System.EventArgs e)
         {
-            FillBookBeforeSave();
+            _FillBookBeforeSave();
             if (_Book.Save())
             {
                 MessageBox.Show("Data Saved Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -80,9 +94,14 @@ namespace LibraryStstem.Books
                 MessageBox.Show("Failed Successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void btnCancel_Click(object sender, System.EventArgs e)
+        {
+            _BackDefaultForm();
+        }
         private void frmAddOrUpdateBook_Load(object sender, System.EventArgs e)
         {
             _LoadData();
         }
+
     }
 }

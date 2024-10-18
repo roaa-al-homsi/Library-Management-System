@@ -59,7 +59,7 @@
             // 
             this.txtAdditionalDetails.Animated = true;
             this.txtAdditionalDetails.AutoRoundedCorners = true;
-            this.txtAdditionalDetails.BorderRadius = 50;
+            this.txtAdditionalDetails.BorderRadius = 31;
             this.txtAdditionalDetails.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtAdditionalDetails.DefaultText = "";
             this.txtAdditionalDetails.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -71,14 +71,14 @@
             this.txtAdditionalDetails.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAdditionalDetails.ForeColor = System.Drawing.Color.White;
             this.txtAdditionalDetails.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAdditionalDetails.Location = new System.Drawing.Point(288, 361);
+            this.txtAdditionalDetails.Location = new System.Drawing.Point(284, 369);
             this.txtAdditionalDetails.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAdditionalDetails.Name = "txtAdditionalDetails";
             this.txtAdditionalDetails.PasswordChar = '\0';
             this.txtAdditionalDetails.PlaceholderText = "";
             this.txtAdditionalDetails.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtAdditionalDetails.SelectedText = "";
-            this.txtAdditionalDetails.Size = new System.Drawing.Size(876, 102);
+            this.txtAdditionalDetails.Size = new System.Drawing.Size(845, 64);
             this.txtAdditionalDetails.TabIndex = 66;
             this.txtAdditionalDetails.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -98,13 +98,13 @@
             this.txtBorrowingPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtBorrowingPrice.ForeColor = System.Drawing.Color.White;
             this.txtBorrowingPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtBorrowingPrice.Location = new System.Drawing.Point(908, 228);
+            this.txtBorrowingPrice.Location = new System.Drawing.Point(925, 252);
             this.txtBorrowingPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtBorrowingPrice.Name = "txtBorrowingPrice";
             this.txtBorrowingPrice.PasswordChar = '\0';
             this.txtBorrowingPrice.PlaceholderText = "";
             this.txtBorrowingPrice.SelectedText = "";
-            this.txtBorrowingPrice.Size = new System.Drawing.Size(238, 36);
+            this.txtBorrowingPrice.Size = new System.Drawing.Size(177, 36);
             this.txtBorrowingPrice.TabIndex = 65;
             this.txtBorrowingPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -124,13 +124,13 @@
             this.txtPublishingHouse.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPublishingHouse.ForeColor = System.Drawing.Color.White;
             this.txtPublishingHouse.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPublishingHouse.Location = new System.Drawing.Point(908, 168);
+            this.txtPublishingHouse.Location = new System.Drawing.Point(925, 192);
             this.txtPublishingHouse.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPublishingHouse.Name = "txtPublishingHouse";
             this.txtPublishingHouse.PasswordChar = '\0';
             this.txtPublishingHouse.PlaceholderText = "";
             this.txtPublishingHouse.SelectedText = "";
-            this.txtPublishingHouse.Size = new System.Drawing.Size(238, 36);
+            this.txtPublishingHouse.Size = new System.Drawing.Size(177, 36);
             this.txtPublishingHouse.TabIndex = 64;
             this.txtPublishingHouse.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -150,13 +150,13 @@
             this.txtPublicationDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPublicationDate.ForeColor = System.Drawing.Color.White;
             this.txtPublicationDate.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPublicationDate.Location = new System.Drawing.Point(908, 108);
+            this.txtPublicationDate.Location = new System.Drawing.Point(925, 132);
             this.txtPublicationDate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPublicationDate.Name = "txtPublicationDate";
             this.txtPublicationDate.PasswordChar = '\0';
             this.txtPublicationDate.PlaceholderText = "";
             this.txtPublicationDate.SelectedText = "";
-            this.txtPublicationDate.Size = new System.Drawing.Size(238, 36);
+            this.txtPublicationDate.Size = new System.Drawing.Size(177, 36);
             this.txtPublicationDate.TabIndex = 63;
             this.txtPublicationDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -176,13 +176,13 @@
             this.txtSellingPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSellingPrice.ForeColor = System.Drawing.Color.White;
             this.txtSellingPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSellingPrice.Location = new System.Drawing.Point(908, 48);
+            this.txtSellingPrice.Location = new System.Drawing.Point(925, 72);
             this.txtSellingPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSellingPrice.Name = "txtSellingPrice";
             this.txtSellingPrice.PasswordChar = '\0';
             this.txtSellingPrice.PlaceholderText = "";
             this.txtSellingPrice.SelectedText = "";
-            this.txtSellingPrice.Size = new System.Drawing.Size(238, 36);
+            this.txtSellingPrice.Size = new System.Drawing.Size(177, 36);
             this.txtSellingPrice.TabIndex = 62;
             this.txtSellingPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -208,7 +208,7 @@
             this.txtNumberOfPages.PasswordChar = '\0';
             this.txtNumberOfPages.PlaceholderText = "";
             this.txtNumberOfPages.SelectedText = "";
-            this.txtNumberOfPages.Size = new System.Drawing.Size(238, 36);
+            this.txtNumberOfPages.Size = new System.Drawing.Size(177, 36);
             this.txtNumberOfPages.TabIndex = 61;
             // 
             // txtGenre
@@ -227,13 +227,13 @@
             this.txtGenre.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtGenre.ForeColor = System.Drawing.Color.White;
             this.txtGenre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGenre.Location = new System.Drawing.Point(422, 168);
+            this.txtGenre.Location = new System.Drawing.Point(439, 192);
             this.txtGenre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGenre.Name = "txtGenre";
             this.txtGenre.PasswordChar = '\0';
             this.txtGenre.PlaceholderText = "";
             this.txtGenre.SelectedText = "";
-            this.txtGenre.Size = new System.Drawing.Size(238, 36);
+            this.txtGenre.Size = new System.Drawing.Size(177, 36);
             this.txtGenre.TabIndex = 59;
             // 
             // txtISBN
@@ -252,13 +252,13 @@
             this.txtISBN.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtISBN.ForeColor = System.Drawing.Color.White;
             this.txtISBN.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtISBN.Location = new System.Drawing.Point(422, 108);
+            this.txtISBN.Location = new System.Drawing.Point(439, 132);
             this.txtISBN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtISBN.Name = "txtISBN";
             this.txtISBN.PasswordChar = '\0';
             this.txtISBN.PlaceholderText = "";
             this.txtISBN.SelectedText = "";
-            this.txtISBN.Size = new System.Drawing.Size(238, 36);
+            this.txtISBN.Size = new System.Drawing.Size(177, 36);
             this.txtISBN.TabIndex = 58;
             // 
             // txtTitle
@@ -277,14 +277,14 @@
             this.txtTitle.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTitle.ForeColor = System.Drawing.Color.White;
             this.txtTitle.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTitle.Location = new System.Drawing.Point(422, 48);
+            this.txtTitle.Location = new System.Drawing.Point(439, 72);
             this.txtTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTitle.Name = "txtTitle";
             this.txtTitle.PasswordChar = '\0';
             this.txtTitle.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
             this.txtTitle.PlaceholderText = "";
             this.txtTitle.SelectedText = "";
-            this.txtTitle.Size = new System.Drawing.Size(238, 36);
+            this.txtTitle.Size = new System.Drawing.Size(177, 36);
             this.txtTitle.TabIndex = 57;
             // 
             // pictBook
@@ -303,8 +303,8 @@
             // 
             this.guna2HtmlLabel11.AutoSize = false;
             this.guna2HtmlLabel11.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel11.Location = new System.Drawing.Point(310, 232);
+            this.guna2HtmlLabel11.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel11.Location = new System.Drawing.Point(327, 256);
             this.guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             this.guna2HtmlLabel11.Size = new System.Drawing.Size(122, 49);
             this.guna2HtmlLabel11.TabIndex = 55;
@@ -314,8 +314,8 @@
             // 
             this.guna2HtmlLabel10.AutoSize = false;
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(693, 226);
+            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(710, 250);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(197, 46);
             this.guna2HtmlLabel10.TabIndex = 54;
@@ -325,8 +325,8 @@
             // 
             this.guna2HtmlLabel9.AutoSize = false;
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(693, 46);
+            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(710, 70);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(197, 46);
             this.guna2HtmlLabel9.TabIndex = 53;
@@ -336,7 +336,7 @@
             // 
             this.guna2HtmlLabel8.AutoSize = false;
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.Location = new System.Drawing.Point(32, 387);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(232, 46);
@@ -347,7 +347,7 @@
             // 
             this.guna2HtmlLabel7.AutoSize = false;
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.Location = new System.Drawing.Point(32, 315);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(246, 36);
@@ -358,8 +358,8 @@
             // 
             this.guna2HtmlLabel6.AutoSize = false;
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(693, 166);
+            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(710, 190);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(197, 46);
             this.guna2HtmlLabel6.TabIndex = 50;
@@ -369,8 +369,8 @@
             // 
             this.guna2HtmlLabel5.AutoSize = false;
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(310, 168);
+            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(327, 192);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(122, 36);
             this.guna2HtmlLabel5.TabIndex = 49;
@@ -380,8 +380,8 @@
             // 
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(693, 106);
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(710, 130);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(197, 46);
             this.guna2HtmlLabel4.TabIndex = 48;
@@ -391,8 +391,8 @@
             // 
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(310, 108);
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(327, 132);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(122, 36);
             this.guna2HtmlLabel3.TabIndex = 47;
@@ -402,8 +402,8 @@
             // 
             this.guna2HtmlLabel2.AutoSize = false;
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(310, 48);
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(327, 72);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(122, 36);
             this.guna2HtmlLabel2.TabIndex = 46;
@@ -453,9 +453,9 @@
             this.comboAuthors.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboAuthors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.comboAuthors.ItemHeight = 30;
-            this.comboAuthors.Location = new System.Drawing.Point(422, 226);
+            this.comboAuthors.Location = new System.Drawing.Point(439, 250);
             this.comboAuthors.Name = "comboAuthors";
-            this.comboAuthors.Size = new System.Drawing.Size(238, 36);
+            this.comboAuthors.Size = new System.Drawing.Size(177, 36);
             this.comboAuthors.TabIndex = 69;
             // 
             // UctrlBookInfo
