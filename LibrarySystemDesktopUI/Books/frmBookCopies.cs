@@ -23,5 +23,11 @@ namespace LibraryStstem.Books
             _RefreshBookCopiesData();
             labNameBook.Text = _NameBook;
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
