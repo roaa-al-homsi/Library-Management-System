@@ -89,17 +89,18 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return RowAffected > 0;
         }
-
         static public bool Delete(int Id)
         {
             return GenericData.Delete("Delete Authors where Id=@Id", "@Id", Id);
         }
-
         static public DataTable All()
         {
             return GenericData.All(" select [Author Id],[Full Name],[Birth Date],[Country],[Contact Info],Certificate,[Additional Details],[Image Path] from View_Author_Details");
         }
-
+        static public DataTable GetAuthorsNames()
+        {
+            return GenericData.All("select [Full Name] from View_Author_Details");
+        }
         static public bool GetAuthorById(int Id, ref int PersonId, ref string Certificate, ref string AdditionalDetails)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
@@ -131,7 +132,6 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return IsFound;
         }
-
         static public int GetAuthorIdByName(string Name)
         {
             int AuthorID = 0;

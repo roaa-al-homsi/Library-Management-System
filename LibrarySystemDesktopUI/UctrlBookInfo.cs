@@ -101,7 +101,7 @@ namespace LibraryStstem
 
         private void _FillAuthorsINComboBox()
         {
-            DataTable dataTable = Author.All();
+            DataTable dataTable = Author.GetAuthorsNames();
             foreach (DataRow row in dataTable.Rows)
             {
                 comboAuthors.Items.Add(row["Full Name"]);

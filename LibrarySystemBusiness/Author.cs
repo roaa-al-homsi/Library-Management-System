@@ -81,6 +81,10 @@ namespace LibrarySystemBusiness
         {
             return AuthorData.GetAuthorIdByName(Name);
         }
+        static public DataTable GetAuthorsNames()
+        {
+            return AuthorData.GetAuthorsNames();
+        }
 
     }
 }
