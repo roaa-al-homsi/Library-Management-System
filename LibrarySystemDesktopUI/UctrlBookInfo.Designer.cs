@@ -107,6 +107,7 @@
             this.txtBorrowingPrice.Size = new System.Drawing.Size(177, 36);
             this.txtBorrowingPrice.TabIndex = 65;
             this.txtBorrowingPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtBorrowingPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNumbers_KeyPress);
             // 
             // txtPublishingHouse
             // 
@@ -133,6 +134,7 @@
             this.txtPublishingHouse.Size = new System.Drawing.Size(177, 36);
             this.txtPublishingHouse.TabIndex = 64;
             this.txtPublishingHouse.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPublishingHouse.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxLetter_KeyPress);
             // 
             // txtPublicationDate
             // 
@@ -159,6 +161,7 @@
             this.txtPublicationDate.Size = new System.Drawing.Size(177, 36);
             this.txtPublicationDate.TabIndex = 63;
             this.txtPublicationDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPublicationDate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNumbers_KeyPress);
             // 
             // txtSellingPrice
             // 
@@ -185,6 +188,7 @@
             this.txtSellingPrice.Size = new System.Drawing.Size(177, 36);
             this.txtSellingPrice.TabIndex = 62;
             this.txtSellingPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSellingPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNumbers_KeyPress);
             // 
             // txtNumberOfPages
             // 
@@ -210,6 +214,7 @@
             this.txtNumberOfPages.SelectedText = "";
             this.txtNumberOfPages.Size = new System.Drawing.Size(177, 36);
             this.txtNumberOfPages.TabIndex = 61;
+            this.txtNumberOfPages.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNumbers_KeyPress);
             // 
             // txtGenre
             // 
@@ -235,6 +240,7 @@
             this.txtGenre.SelectedText = "";
             this.txtGenre.Size = new System.Drawing.Size(177, 36);
             this.txtGenre.TabIndex = 59;
+            this.txtGenre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxLetter_KeyPress);
             // 
             // txtISBN
             // 
@@ -260,6 +266,7 @@
             this.txtISBN.SelectedText = "";
             this.txtISBN.Size = new System.Drawing.Size(177, 36);
             this.txtISBN.TabIndex = 58;
+            this.txtISBN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNumbers_KeyPress);
             // 
             // txtTitle
             // 
@@ -286,6 +293,7 @@
             this.txtTitle.SelectedText = "";
             this.txtTitle.Size = new System.Drawing.Size(177, 36);
             this.txtTitle.TabIndex = 57;
+            this.txtTitle.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxLetter_KeyPress);
             // 
             // pictBook
             // 

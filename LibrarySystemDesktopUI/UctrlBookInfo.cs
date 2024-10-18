@@ -114,7 +114,20 @@ namespace LibraryStstem
             comboAuthors.SelectedIndex = 0;
         }
 
-
+        private void txtBoxLetter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        private void txtBoxNumbers_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
 
