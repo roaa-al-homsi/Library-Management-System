@@ -151,6 +151,7 @@
             this.showCopiesToolStripMenuItem.Name = "showCopiesToolStripMenuItem";
             this.showCopiesToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.showCopiesToolStripMenuItem.Text = "Show Copies";
+            this.showCopiesToolStripMenuItem.Click += new System.EventHandler(this.showCopiesToolStripMenuItem_Click);
             // 
             // btnAddBook
             // 

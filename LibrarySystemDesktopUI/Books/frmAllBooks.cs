@@ -53,5 +53,13 @@ namespace LibrarySystem.Books
             int BookId = (int)dgvAllBooks.CurrentRow.Cells[0].Value;
             _frmMainMenu.OpenChildFormAsync(new frmAddOrUpdateBook(BookId));
         }
+
+        private void showCopiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int BookId = (int)dgvAllBooks.CurrentRow.Cells[0].Value;
+            frmBookCopies frmBookCopies = new frmBookCopies(BookId);
+            frmBookCopies.ShowDialog();
+
+        }
     }
 }
