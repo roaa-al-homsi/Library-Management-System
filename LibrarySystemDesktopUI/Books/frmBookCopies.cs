@@ -16,7 +16,7 @@ namespace LibraryStstem.Books
 
         private void _RefreshBookCopiesData()
         {
-            dgvBookCopies.DataSource = BookCopy.All();
+            dgvBookCopies.DataSource = BookCopy.GetCopiesForSpecificBook(_BookId);
         }
 
         private void frmBookCopies_Load(object sender, EventArgs e)

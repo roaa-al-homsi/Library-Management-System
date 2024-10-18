@@ -27,7 +27,27 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return dt;
         }
+        static public DataTable ShowDataForSpecificObject<T>(string query, string ParameterName, T FilterBy)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue(ParameterName, FilterBy);
 
+            try
+            {
+                connection.Open();
+                SqlDataReader Reader = command.ExecuteReader();
+                if (Reader.HasRows)
+                {
+                    dt.Load(Reader);
+                }
+                Reader.Close();
+            }
+            catch (Exception ex) { }
+            finally { connection.Close(); }
+            return dt;
+        }
         static public bool Delete<T>(string query, string ParameterName, T DeleteBy)
         {
             int RowsAffected = 0;

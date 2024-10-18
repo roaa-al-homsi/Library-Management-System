@@ -58,6 +58,10 @@ namespace LibrarySystemDataAccess
         {
             return GenericData.All(" select *from View_BookCopy_Details");
         }
+        public static DataTable GetCopiesForSpecificBook(int BookID)
+        {
+            return GenericData.ShowDataForSpecificObject("select *from BookCopies where [Book Id]=@BookId", "@BookId", BookID);
+        }
 
         public static bool Exist(int Id)
         {
