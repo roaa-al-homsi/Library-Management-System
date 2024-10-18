@@ -64,6 +64,12 @@
     <Compile Include="Books\frmAllBooks.Designer.cs">
       <DependentUpon>frmAllBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Books\frmAllBooksCopies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Books\frmAllBooksCopies.Designer.cs">
+      <DependentUpon>frmAllBooksCopies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Books\frmBookCopies.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Books\frmAllBooks.resx">
       <DependentUpon>frmAllBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Books\frmAllBooksCopies.resx">
+      <DependentUpon>frmAllBooksCopies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Books\frmBookCopies.resx">
       <DependentUpon>frmBookCopies.cs</DependentUpon>

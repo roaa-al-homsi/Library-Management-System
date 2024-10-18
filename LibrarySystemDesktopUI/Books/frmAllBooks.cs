@@ -44,7 +44,6 @@ namespace LibrarySystem.Books
 
         private void btnAddBook_Click(object sender, EventArgs e)
         {
-
             _frmMainMenu.OpenChildFormAsync(new frmAddOrUpdateBook(-1));
         }
 
@@ -60,7 +59,12 @@ namespace LibrarySystem.Books
             string NameBook = (string)dgvAllBooks.CurrentRow.Cells[1].Value;
             frmBookCopies frmBookCopies = new frmBookCopies(BookId, NameBook);
             frmBookCopies.ShowDialog();
+        }
 
+        private void btnAllCopies_Click(object sender, EventArgs e)
+        {
+            frmAllBooksCopies frmAllBooksCopies = new frmAllBooksCopies();
+            frmAllBooksCopies.ShowDialog();
         }
     }
 }
