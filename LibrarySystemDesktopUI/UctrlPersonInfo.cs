@@ -39,6 +39,21 @@ namespace LibraryStstem
             set { labPersoId.Text = value.ToString(); }
             get { return int.Parse(labPersoId.Text); }
         }
+        public bool LinkRemove
+        {
+            set { linkRemove.Visible = value; }
+            get { return linkRemove.Enabled; }
+        }
+        public bool LinkSet
+        {
+            set { linkSet.Visible = value; }
+            get { return linkSet.Enabled; }
+        }
+        public bool IsVisibleLabPersonId
+        {
+            set { labPersoId.Visible = value; }
+            get { return labPersoId.Visible; }
+        }
         private void linkSet_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
