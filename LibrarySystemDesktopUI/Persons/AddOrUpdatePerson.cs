@@ -31,7 +31,9 @@ namespace LibraryStstem.Persons
             uctrlPersonInfo1.Country = _Person.Country;
             uctrlPersonInfo1.ContactInfo = _Person.ContactInfo;
             uctrlPersonInfo1.BirthDate = _Person.BirthDate;
-            //image
+            uctrlPersonInfo1.ImagePath = (!string.IsNullOrWhiteSpace(_Person.ImagePath)) ? _Person.ImagePath : null;
+            uctrlPersonInfo1.IsVisibleLabPersonId = true;
+            uctrlPersonInfo1.personId = _Person.Id;
         }
         private void uctrlPersonInfo1_Load(object sender, System.EventArgs e)
         {
@@ -51,6 +53,8 @@ namespace LibraryStstem.Persons
             _FillPersonBeforeSave();
             if (_Person.Save())
             {
+                uctrlPersonInfo1.IsVisibleLabPersonId = true;
+                uctrlPersonInfo1.personId = _Person.Id;
                 MessageBox.Show("Data Saved Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -66,7 +70,7 @@ namespace LibraryStstem.Persons
             uctrlPersonInfo1.Country = "???";
             uctrlPersonInfo1.ContactInfo = "???";
             uctrlPersonInfo1.BirthDate = new DateTime(1999, 1, 1);
-            labPersoId.Text = "???";
+            uctrlPersonInfo1.IsVisibleLabPersonId = false;
             uctrlPersonInfo1.ImagePath = null;
         }
         private void btnCancel_Click(object sender, System.EventArgs e)

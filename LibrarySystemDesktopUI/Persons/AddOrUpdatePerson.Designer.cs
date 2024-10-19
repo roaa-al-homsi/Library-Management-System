@@ -28,48 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.uctrlPersonInfo1 = new LibraryStstem.UctrlPersonInfo();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labPersoId = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.uctrlPersonInfo1 = new LibraryStstem.UctrlPersonInfo();
             this.SuspendLayout();
-            // 
-            // uctrlPersonInfo1
-            // 
-            this.uctrlPersonInfo1.BirthDate = new System.DateTime(2024, 10, 19, 22, 56, 7, 337);
-            this.uctrlPersonInfo1.ContactInfo = "";
-            this.uctrlPersonInfo1.Country = "";
-            this.uctrlPersonInfo1.FullName = "";
-            this.uctrlPersonInfo1.ImagePath = null;
-            this.uctrlPersonInfo1.Location = new System.Drawing.Point(69, 12);
-            this.uctrlPersonInfo1.Name = "uctrlPersonInfo1";
-            this.uctrlPersonInfo1.Size = new System.Drawing.Size(358, 431);
-            this.uctrlPersonInfo1.TabIndex = 0;
-            this.uctrlPersonInfo1.Load += new System.EventHandler(this.uctrlPersonInfo1_Load);
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(81, 449);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(95, 32);
-            this.guna2HtmlLabel1.TabIndex = 1;
-            this.guna2HtmlLabel1.Text = "Person ID:";
-            // 
-            // labPersoId
-            // 
-            this.labPersoId.AutoSize = false;
-            this.labPersoId.BackColor = System.Drawing.Color.Transparent;
-            this.labPersoId.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPersoId.Location = new System.Drawing.Point(261, 449);
-            this.labPersoId.Name = "labPersoId";
-            this.labPersoId.Size = new System.Drawing.Size(95, 32);
-            this.labPersoId.TabIndex = 2;
-            this.labPersoId.Text = "??";
-            this.labPersoId.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnSave
             // 
@@ -109,17 +71,27 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // uctrlPersonInfo1
+            // 
+            this.uctrlPersonInfo1.BirthDate = new System.DateTime(2024, 10, 19, 22, 56, 7, 337);
+            this.uctrlPersonInfo1.ContactInfo = "";
+            this.uctrlPersonInfo1.Country = "";
+            this.uctrlPersonInfo1.FullName = "";
+            this.uctrlPersonInfo1.ImagePath = null;
+            this.uctrlPersonInfo1.Location = new System.Drawing.Point(66, -1);
+            this.uctrlPersonInfo1.Name = "uctrlPersonInfo1";
+            this.uctrlPersonInfo1.Size = new System.Drawing.Size(379, 498);
+            this.uctrlPersonInfo1.TabIndex = 115;
+            // 
             // frmAddPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(510, 558);
+            this.Controls.Add(this.uctrlPersonInfo1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.labPersoId);
-            this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.uctrlPersonInfo1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddPerson";
             this.Tag = "Add | Update Person";
@@ -129,11 +101,8 @@
         }
 
         #endregion
-
-        private UctrlPersonInfo uctrlPersonInfo1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labPersoId;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private UctrlPersonInfo uctrlPersonInfo1;
     }
 }
