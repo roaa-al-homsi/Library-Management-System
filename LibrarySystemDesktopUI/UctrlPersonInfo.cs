@@ -34,6 +34,11 @@ namespace LibraryStstem
             set { picPerson.ImageLocation = value; }
             get { return picPerson.ImageLocation; }
         }
+        public int personId
+        {
+            set { labPersoId.Text = value.ToString(); }
+            get { return int.Parse(labPersoId.Text); }
+        }
         private void linkSet_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
