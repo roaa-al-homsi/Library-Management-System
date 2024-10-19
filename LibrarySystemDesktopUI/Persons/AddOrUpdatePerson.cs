@@ -34,6 +34,7 @@ namespace LibraryStstem.Persons
             uctrlPersonInfo1.ImagePath = (!string.IsNullOrWhiteSpace(_Person.ImagePath)) ? _Person.ImagePath : null;
             uctrlPersonInfo1.IsVisibleLabPersonId = true;
             uctrlPersonInfo1.personId = _Person.Id;
+            uctrlPersonInfo1.LinkRemove = (!string.IsNullOrWhiteSpace(_Person.ImagePath)) ? true : false;
         }
         private void uctrlPersonInfo1_Load(object sender, System.EventArgs e)
         {
@@ -46,7 +47,6 @@ namespace LibraryStstem.Persons
             _Person.BirthDate = uctrlPersonInfo1.BirthDate;
             _Person.Country = uctrlPersonInfo1.Country;
             _Person.ImagePath = (!string.IsNullOrWhiteSpace(uctrlPersonInfo1.ImagePath)) ? uctrlPersonInfo1.ImagePath : null;
-
         }
         private void btnSave_Click(object sender, System.EventArgs e)
         {
