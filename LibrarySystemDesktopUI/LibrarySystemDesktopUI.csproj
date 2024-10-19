@@ -90,6 +90,12 @@
     <Compile Include="UctrlBookInfo.Designer.cs">
       <DependentUpon>UctrlBookInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UctrlPersonInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UctrlPersonInfo.Designer.cs">
+      <DependentUpon>UctrlPersonInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Books\frmAddOrUpdateBook.resx">
       <DependentUpon>frmAddOrUpdateBook.cs</DependentUpon>
     </EmbeddedResource>
@@ -116,6 +122,9 @@
     </Compile>
     <EmbeddedResource Include="UctrlBookInfo.resx">
       <DependentUpon>UctrlBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UctrlPersonInfo.resx">
+      <DependentUpon>UctrlPersonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
