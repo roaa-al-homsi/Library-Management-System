@@ -5,6 +5,10 @@ namespace LibraryStstem.Persons
 {
     public partial class frmAddPerson : Form
     {
+        //Declare a delegate 
+        public delegate void DataBackEventHandle(object sender, int PersonId);
+        public event DataBackEventHandle DataBack;
+
         private enum Mode { Add, Update }
         private Mode _Mode;
         private int _PersonId;
@@ -29,7 +33,6 @@ namespace LibraryStstem.Persons
             uctrlPersonInfo1.BirthDate = _Person.BirthDate;
             //image
         }
-
         private void uctrlPersonInfo1_Load(object sender, System.EventArgs e)
         {
 
@@ -54,6 +57,8 @@ namespace LibraryStstem.Persons
             {
                 MessageBox.Show("Failed Successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            DataBack?.Invoke(this, _Person.Id);
+            this.Close();
         }
         private void _BackDefaultForm()
         {
