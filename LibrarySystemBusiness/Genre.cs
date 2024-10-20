@@ -35,5 +35,9 @@ namespace LibrarySystemBusiness
                 default: return false;
             }
         }
+        public Genre Find(int Id)
+        {
+            //
+        }
     }
 }

@@ -7,21 +7,21 @@ namespace LibrarySystemDataAccess
     static public class BookData
     {
 
-        static public int Add(string Title, string ISBN, int PublicationDate, string Genre, string AdditionalDetails,
+        static public int Add(string Title, string ISBN, int PublicationDate, int GenreId, string AdditionalDetails,
             int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId)
         {
             int NewIdBook = 0;
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"insert into Books (Title,ISBN,[Publication Date],Genre,[Additional Details],
+            string query = @"insert into Books (Title,ISBN,[Publication Date],[Genre Id],[Additional Details],
              [Numbers Of Pages],[publishing house],[Selling price],
 			[borrowing price],Image,[Author Id] )
-             Values (@Title,@ISBN,@PublicationDate,@Genre,@AdditionalDetails,@NumberOfPages,@PublishingHouse,@SellingPrice,@BorrowingPrice,@ImagePath,@AuthorId)
+             Values (@Title,@ISBN,@PublicationDate,@GenreId,@AdditionalDetails,@NumberOfPages,@PublishingHouse,@SellingPrice,@BorrowingPrice,@ImagePath,@AuthorId)
                            SELECT SCOPE_IDENTITY();";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Title", Title);
             command.Parameters.AddWithValue("@ISBN", ISBN);
             command.Parameters.AddWithValue("@PublicationDate", PublicationDate);
-            command.Parameters.AddWithValue("@Genre", Genre);
+            command.Parameters.AddWithValue("@GenreId", GenreId);
             command.Parameters.AddWithValue("@NumberOfPages", NumberOfPages);
             command.Parameters.AddWithValue("@SellingPrice", SellingPrice);
             command.Parameters.AddWithValue("@BorrowingPrice", BorrowingPrice);
@@ -69,14 +69,13 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return NewIdBook;
         }
-
-        static public bool Update(int Id, string Title, string ISBN, int PublicationDate, string Genre, string AdditionalDetails,
+        static public bool Update(int Id, string Title, string ISBN, int PublicationDate, int GenreId, string AdditionalDetails,
             int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId)
         {
             int RowAffected = 0;
 
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"update Books set Title=@Title,ISBN=@ISBN,[Publication Date]=@PublicationDate,Genre=@Genre,[Additional Details]=@AdditionalDetails,
+            string query = @"update Books set Title=@Title,ISBN=@ISBN,[Publication Date]=@PublicationDate,[Genre Id]=@GenreId,[Additional Details]=@AdditionalDetails,
 [Numbers Of Pages]=@NumberOfPages,[publishing house]=@PublishingHouse,[Selling price]=@SellingPrice,[borrowing price]=@BorrowingPrice,Image=@ImagePath,[Author Id]=@AuthorId
 where Id=@Id";
 
@@ -86,7 +85,7 @@ where Id=@Id";
             command.Parameters.AddWithValue("@Title", Title);
             command.Parameters.AddWithValue("@ISBN", ISBN);
             command.Parameters.AddWithValue("@PublicationDate", PublicationDate);
-            command.Parameters.AddWithValue("@Genre", Genre);
+            command.Parameters.AddWithValue("@GenreId", GenreId);
             command.Parameters.AddWithValue("@NumberOfPages", NumberOfPages);
             command.Parameters.AddWithValue("@SellingPrice", SellingPrice);
             command.Parameters.AddWithValue("@BorrowingPrice", BorrowingPrice);
@@ -130,18 +129,15 @@ where Id=@Id";
             finally { connection.Close(); }
             return RowAffected > 0;
         }
-
         static public bool Delete(int Id)
         {
             return GenericData.Delete("delete Books where Id=@Id", "@Id", Id);
         }
-
         static public DataTable All()
         {
             return GenericData.All(" select * from View_Book_Details");
         }
-
-        static public bool GetBookById(int Id, ref string Title, ref string ISBN, ref int PublicationDate, ref string Genre, ref string AdditionalDetails,
+        static public bool GetBookById(int Id, ref string Title, ref string ISBN, ref int PublicationDate, ref int GenreId, ref string AdditionalDetails,
            ref int NumberOfPages, ref string PublishingHouse, ref decimal SellingPrice, ref decimal BorrowingPrice, ref string ImagePath, ref int AuthorId)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
@@ -161,7 +157,7 @@ where Id=@Id";
                     Title = (string)reader["Title"];
                     ISBN = (string)reader["ISBN"];
                     PublicationDate = (int)reader["Publication Date"];
-                    Genre = (string)reader["Genre"];
+                    GenreId = (int)reader["Genre Id"];
                     NumberOfPages = (int)reader["Numbers Of Pages"];
                     SellingPrice = (decimal)reader["Selling Price"];
                     BorrowingPrice = (decimal)reader["Borrowing Price"];
@@ -180,11 +176,7 @@ where Id=@Id";
             catch { Exception exception; }
             finally { connection.Close(); }
             return IsFound;
-
-
-
         }
-
         static public bool IsExistByISBN(int ISBN)
         {
             return GenericData.Exist("select Found=1 from Books where ISBN=@ISBN", "@ISBN", ISBN);
@@ -193,6 +185,5 @@ where Id=@Id";
         {
             return GenericData.Exist("select Found=1 from Books where Id=@Id", "@Id", Id);
         }
-
     }
 }
