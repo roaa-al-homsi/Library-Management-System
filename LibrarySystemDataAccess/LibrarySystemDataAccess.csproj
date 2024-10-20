@@ -48,6 +48,7 @@
     <Compile Include="CustomerData.cs" />
     <Compile Include="FineData.cs" />
     <Compile Include="GenericData.cs" />
+    <Compile Include="GenreData.cs" />
     <Compile Include="PersonData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReservationData.cs" />

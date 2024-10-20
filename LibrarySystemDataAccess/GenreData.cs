@@ -58,6 +58,32 @@ namespace LibrarySystemDataAccess
         {
             return GenericData.Exist("select Found=1 from Genres where Id =@Id", "@Id", Id);
         }
+        static public bool GetGenreById(int Id, ref string Name)
+        {
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select * from Genres where [Id] =@Id";
+            bool IsFound = false;
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", Id);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    IsFound = true;
+                    Name = (string)reader["Name"];
+                }
+                else
+                {
+                    IsFound = false;
+                }
+                reader.Close();
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return IsFound;
+        }
 
     }
 }

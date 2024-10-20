@@ -8,12 +8,16 @@ namespace LibrarySystemBusiness
         private Mode _Mode;
         public int Id { get; set; }
         public string Name { get; set; }
-
         public Genre()
         {
             this.Id = -1;
             this.Name = string.Empty;
             _Mode = Mode.Add;
+        }
+        private Genre(int Id, string Name)
+        {
+            this.Id = Id;
+            this.Name = Name;
         }
         private bool _Add()
         {//validation
@@ -37,7 +41,12 @@ namespace LibrarySystemBusiness
         }
         public Genre Find(int Id)
         {
-            //
+            string Name = string.Empty;
+            if (GenreData.GetGenreById(Id, ref Name))
+            {
+                return new Genre(Id, Name);
+            }
+            return null;
         }
     }
 }
