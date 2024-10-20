@@ -44,11 +44,6 @@ namespace LibraryStstem
             set { linkRemove.Visible = value; }
             get { return linkRemove.Enabled; }
         }
-        public bool LinkSet
-        {
-            set { linkSet.Visible = value; }
-            get { return linkSet.Enabled; }
-        }
         public bool IsVisibleLabPersonId
         {
             set { labPersoId.Visible = value; }
