@@ -1,4 +1,5 @@
 ﻿using LibrarySystemDataAccess;
+using System.Data;
 
 namespace LibrarySystemBusiness
 {
@@ -39,7 +40,7 @@ namespace LibrarySystemBusiness
                 default: return false;
             }
         }
-        public Genre Find(int Id)
+        static public Genre Find(int Id)
         {
             string Name = string.Empty;
             if (GenreData.GetGenreById(Id, ref Name))
@@ -48,5 +49,18 @@ namespace LibrarySystemBusiness
             }
             return null;
         }
+        static public DataTable GetGenresNames()
+        {
+            return GenreData.GetGenresNames();
+        }
+        static public string GetNameGenreById(int Id)
+        {
+            return GenreData.GetNameGenreById(Id);
+        }
+        static public int GetGenreIdByName(string Name)
+        {
+            return GenreData.GetGenreIdByName(Name);
+        }
+
     }
 }

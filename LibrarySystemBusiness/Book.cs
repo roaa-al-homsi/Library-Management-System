@@ -21,8 +21,6 @@ namespace LibrarySystemBusiness
         public decimal SellingPrice { get; set; }
         public decimal BorrowingPrice { get; set; }
         public string ImagePath { get; set; }
-
-
         public Book()
         {
             this.Author = new Author();
@@ -41,14 +39,16 @@ namespace LibrarySystemBusiness
 
             _Mode = Mode.Add;
         }
-
         private Book(int Id, string Title, string ISBN, int PublicationDate, int GenreId, string AdditionalDetails,
             int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId)
         {
             this.Author = Author.Find(AuthorId);
             this.AuthorId = AuthorId;
             this.Genre = Genre.Find(GenreId);
-            this.GenreId = GenreId;
+            if (Genre != null)
+            {
+                this.GenreId = GenreId;
+            }
             this.Id = Id;
             this.Title = Title;
             this.ISBN = ISBN;

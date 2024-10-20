@@ -29,13 +29,14 @@ namespace LibraryStstem.Books
             uctrlBookInfo1.Title = _Book.Title;
             uctrlBookInfo1.ISBN = _Book.ISBN;
             uctrlBookInfo1.PublishingHouse = _Book.PublishingHouse;
-            uctrlBookInfo1.Genre = _Book.Genre;
             uctrlBookInfo1.SellingPrice = _Book.SellingPrice;
             uctrlBookInfo1.PublicationDate = _Book.PublicationDate;
             uctrlBookInfo1.BorrowingPrice = _Book.BorrowingPrice;
             uctrlBookInfo1.NumberOfPages = _Book.NumberOfPages;
             uctrlBookInfo1.AdditionalDetails = _Book.AdditionalDetails;
-            uctrlBookInfo1.ComboBoxName = Author.Find(_Book.AuthorId).Person.Name;
+            uctrlBookInfo1.ComboBoxAuthorsNames = Author.Find(_Book.AuthorId).Person.Name;
+            uctrlBookInfo1.ComboBoxGenresNames = Genre.GetNameGenreById(_Book.GenreId);
+
             if (!string.IsNullOrWhiteSpace(_Book.ImagePath))
             {
                 uctrlBookInfo1.LinkRemove = true;
@@ -53,7 +54,8 @@ namespace LibraryStstem.Books
         }
         private void _FillBookBeforeSave()
         {
-            int AuthorId = Author.GetAuthorIdByName(uctrlBookInfo1.ComboBoxName);
+            int AuthorId = Author.GetAuthorIdByName(uctrlBookInfo1.ComboBoxAuthorsNames);
+            int GenreId = Genre.GetGenreIdByName(uctrlBookInfo1.ComboBoxGenresNames);
             _Book.Title = uctrlBookInfo1.Title;
             _Book.ISBN = uctrlBookInfo1.ISBN;
             _Book.PublishingHouse = uctrlBookInfo1.PublishingHouse;
@@ -62,7 +64,7 @@ namespace LibraryStstem.Books
             _Book.BorrowingPrice = uctrlBookInfo1.BorrowingPrice;
             _Book.AdditionalDetails = uctrlBookInfo1.AdditionalDetails;
             _Book.NumberOfPages = uctrlBookInfo1.NumberOfPages;
-            _Book.Genre = uctrlBookInfo1.Genre;
+            _Book.GenreId = GenreId;
             _Book.AuthorId = AuthorId;
             _Book.ImagePath = (uctrlBookInfo1.Image != null) ? uctrlBookInfo1.Image : null;
 
@@ -72,7 +74,6 @@ namespace LibraryStstem.Books
             uctrlBookInfo1.Title = string.Empty;
             uctrlBookInfo1.ISBN = string.Empty;
             uctrlBookInfo1.PublishingHouse = string.Empty;
-            uctrlBookInfo1.Genre = string.Empty;
             uctrlBookInfo1.SellingPrice = 1;
             uctrlBookInfo1.PublicationDate = 1;
             uctrlBookInfo1.BorrowingPrice = 1;
@@ -80,7 +81,6 @@ namespace LibraryStstem.Books
             uctrlBookInfo1.AdditionalDetails = string.Empty;
             uctrlBookInfo1.LinkRemove = false;
             uctrlBookInfo1.Image = null;
-
         }
         private void btnSave_Click(object sender, System.EventArgs e)
         {

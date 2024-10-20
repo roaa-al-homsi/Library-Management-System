@@ -34,7 +34,6 @@
             this.txtPublicationDate = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtSellingPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNumberOfPages = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtGenre = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtISBN = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtTitle = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictBook = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -52,6 +51,7 @@
             this.linkSet = new System.Windows.Forms.LinkLabel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.comboAuthors = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ComboGenre = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictBook)).BeginInit();
             this.SuspendLayout();
             // 
@@ -215,32 +215,6 @@
             this.txtNumberOfPages.Size = new System.Drawing.Size(177, 36);
             this.txtNumberOfPages.TabIndex = 61;
             this.txtNumberOfPages.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNumbers_KeyPress);
-            // 
-            // txtGenre
-            // 
-            this.txtGenre.Animated = true;
-            this.txtGenre.AutoRoundedCorners = true;
-            this.txtGenre.BorderRadius = 17;
-            this.txtGenre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGenre.DefaultText = "";
-            this.txtGenre.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtGenre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtGenre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtGenre.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtGenre.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.txtGenre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGenre.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtGenre.ForeColor = System.Drawing.Color.White;
-            this.txtGenre.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGenre.Location = new System.Drawing.Point(439, 192);
-            this.txtGenre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtGenre.Name = "txtGenre";
-            this.txtGenre.PasswordChar = '\0';
-            this.txtGenre.PlaceholderText = "";
-            this.txtGenre.SelectedText = "";
-            this.txtGenre.Size = new System.Drawing.Size(177, 36);
-            this.txtGenre.TabIndex = 59;
-            this.txtGenre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxLetter_KeyPress);
             // 
             // txtISBN
             // 
@@ -466,11 +440,30 @@
             this.comboAuthors.Size = new System.Drawing.Size(177, 36);
             this.comboAuthors.TabIndex = 69;
             // 
+            // ComboGenre
+            // 
+            this.ComboGenre.AutoRoundedCorners = true;
+            this.ComboGenre.BackColor = System.Drawing.Color.Transparent;
+            this.ComboGenre.BorderRadius = 17;
+            this.ComboGenre.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ComboGenre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboGenre.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.ComboGenre.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboGenre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ComboGenre.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ComboGenre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.ComboGenre.ItemHeight = 30;
+            this.ComboGenre.Location = new System.Drawing.Point(439, 192);
+            this.ComboGenre.Name = "ComboGenre";
+            this.ComboGenre.Size = new System.Drawing.Size(177, 36);
+            this.ComboGenre.TabIndex = 70;
+            // 
             // UctrlBookInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.ComboGenre);
             this.Controls.Add(this.comboAuthors);
             this.Controls.Add(this.linkSet);
             this.Controls.Add(this.linkRemove);
@@ -480,7 +473,6 @@
             this.Controls.Add(this.txtPublicationDate);
             this.Controls.Add(this.txtSellingPrice);
             this.Controls.Add(this.txtNumberOfPages);
-            this.Controls.Add(this.txtGenre);
             this.Controls.Add(this.txtISBN);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.pictBook);
@@ -511,7 +503,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPublicationDate;
         private Guna.UI2.WinForms.Guna2TextBox txtSellingPrice;
         private Guna.UI2.WinForms.Guna2TextBox txtNumberOfPages;
-        private Guna.UI2.WinForms.Guna2TextBox txtGenre;
         private Guna.UI2.WinForms.Guna2TextBox txtISBN;
         private Guna.UI2.WinForms.Guna2TextBox txtTitle;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pictBook;
@@ -529,5 +520,6 @@
         private System.Windows.Forms.LinkLabel linkSet;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI2.WinForms.Guna2ComboBox comboAuthors;
+        private Guna.UI2.WinForms.Guna2ComboBox ComboGenre;
     }
 }

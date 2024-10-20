@@ -60,9 +60,9 @@ namespace LibrarySystemDataAccess
         }
         static public bool GetGenreById(int Id, ref string Name)
         {
-            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"select * from Genres where [Id] =@Id";
             bool IsFound = false;
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select * from Genres where Id =@Id";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Id", Id);
             try
@@ -84,6 +84,49 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return IsFound;
         }
-
+        static public string GetNameGenreById(int Id)
+        {
+            string GenreName = string.Empty;
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select Name from Genres where Id =@Id";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", Id);
+            try
+            {
+                connection.Open();
+                object Result = command.ExecuteScalar();
+                if (Result != null)
+                {
+                    GenreName = Result.ToString();
+                }
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return GenreName;
+        }
+        static public DataTable GetGenresNames()
+        {
+            return GenericData.All("select Name from Genres");
+        }
+        static public int GetGenreIdByName(string Name)
+        {
+            int GenreID = 0;
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select Id from Genres where Name=@Name";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Name", Name);
+            try
+            {
+                connection.Open();
+                object Result = command.ExecuteScalar();
+                if (Result != null && int.TryParse(Result.ToString(), out int insertedId))
+                {
+                    GenreID = insertedId;
+                }
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return GenreID;
+        }
     }
 }

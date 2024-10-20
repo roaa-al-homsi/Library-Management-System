@@ -256,6 +256,7 @@ ChildId: 5
         static void Main(string[] args)
         {
 
+            Genre genre = Genre.Find(1);
 
 
 
@@ -351,7 +352,7 @@ ChildId: 5
             //        Console.WriteLine("NO");
             //    }
 
-            //Book book1 = Book.FindByLibraryCard(2);
+            //Book book1 = Book.Find(2);
             //Console.WriteLine(book1.Author.Person.Name);
 
 

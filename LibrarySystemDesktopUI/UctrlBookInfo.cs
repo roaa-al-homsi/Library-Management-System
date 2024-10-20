@@ -21,11 +21,6 @@ namespace LibraryStstem
             set { txtISBN.Text = value; }
             get { return txtISBN.Text; }
         }
-        public string Genre
-        {
-            set { txtGenre.Text = value; }
-            get { return txtGenre.Text; }
-        }
         public decimal SellingPrice
         {
             set { txtSellingPrice.Text = value.ToString(); }
@@ -66,12 +61,16 @@ namespace LibraryStstem
             set { linkRemove.Visible = value; }
             get { return linkRemove.Enabled; }
         }
-        public string ComboBoxName
+        public string ComboBoxAuthorsNames
         {
             set { comboAuthors.SelectedIndex = comboAuthors.FindString(value); }
             get { return comboAuthors.Text; }
         }
-
+        public string ComboBoxGenresNames
+        {
+            set { ComboGenre.SelectedIndex = ComboGenre.FindString(value); }
+            get { return ComboGenre.Text; }
+        }
         private void linkSet_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             openFileDialog1.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
@@ -88,13 +87,11 @@ namespace LibraryStstem
                 pictBook.ImageLocation = selectedFilePath;
             }
         }
-
         private void linkRemove_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             pictBook.ImageLocation = null;
         }
-
-        private void _FillAuthorsINComboBox()
+        private void _FillAuthorsInComboBox()
         {
             DataTable dataTable = Author.GetAuthorsNames();
             foreach (DataRow row in dataTable.Rows)
@@ -102,13 +99,21 @@ namespace LibraryStstem
                 comboAuthors.Items.Add(row["Full Name"]);
             }
         }
-
+        private void _FillGenresInComboBox()
+        {
+            DataTable dataTable = Genre.GetGenresNames();
+            foreach (DataRow row in dataTable.Rows)
+            {
+                ComboGenre.Items.Add(row["Name"]);
+            }
+        }
         private void UctrlBookInfo_Load(object sender, System.EventArgs e)
         {
-            _FillAuthorsINComboBox();
+            _FillAuthorsInComboBox();
+            _FillGenresInComboBox();
             comboAuthors.SelectedIndex = 0;
+            ComboGenre.SelectedIndex = 0;
         }
-
         private void txtBoxLetter_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar))

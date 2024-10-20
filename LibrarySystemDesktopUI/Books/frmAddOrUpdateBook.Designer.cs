@@ -75,9 +75,8 @@
             // 
             this.uctrlBookInfo1.AdditionalDetails = "";
             this.uctrlBookInfo1.BackColor = System.Drawing.Color.Silver;
-            this.uctrlBookInfo1.ComboBoxName = "Reem";
+            this.uctrlBookInfo1.ComboBoxAuthorsNames = "Reem";
             this.uctrlBookInfo1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uctrlBookInfo1.Genre = "";
             this.uctrlBookInfo1.Image = null;
             this.uctrlBookInfo1.ISBN = "";
             this.uctrlBookInfo1.LinkRemove = true;
