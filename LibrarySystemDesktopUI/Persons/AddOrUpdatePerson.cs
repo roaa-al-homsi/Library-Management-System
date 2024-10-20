@@ -36,10 +36,7 @@ namespace LibraryStstem.Persons
             uctrlPersonInfo1.personId = _Person.Id;
             uctrlPersonInfo1.LinkRemove = (!string.IsNullOrWhiteSpace(_Person.ImagePath)) ? true : false;
         }
-        private void uctrlPersonInfo1_Load(object sender, System.EventArgs e)
-        {
 
-        }
         private void _FillPersonBeforeSave()
         {
             _Person.Name = uctrlPersonInfo1.FullName;
