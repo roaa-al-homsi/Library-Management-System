@@ -34,7 +34,7 @@ namespace LibraryStstem.Books
             uctrlBookInfo1.BorrowingPrice = _Book.BorrowingPrice;
             uctrlBookInfo1.NumberOfPages = _Book.NumberOfPages;
             uctrlBookInfo1.AdditionalDetails = _Book.AdditionalDetails;
-            uctrlBookInfo1.ComboBoxAuthorsNames = Author.Find(_Book.AuthorId).Person.Name;
+            uctrlBookInfo1.ComboBoxAuthorsNames = Author.GetNameAuthorById(_Book.AuthorId);
             uctrlBookInfo1.ComboBoxGenresNames = Genre.GetNameGenreById(_Book.GenreId);
 
             if (!string.IsNullOrWhiteSpace(_Book.ImagePath))

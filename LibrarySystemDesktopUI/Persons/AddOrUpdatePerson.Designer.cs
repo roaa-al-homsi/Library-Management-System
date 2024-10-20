@@ -78,6 +78,8 @@
             this.uctrlPersonInfo1.Country = "";
             this.uctrlPersonInfo1.FullName = "";
             this.uctrlPersonInfo1.ImagePath = null;
+            this.uctrlPersonInfo1.IsVisibleLabPersonId = false;
+            this.uctrlPersonInfo1.LinkRemove = true;
             this.uctrlPersonInfo1.Location = new System.Drawing.Point(66, -1);
             this.uctrlPersonInfo1.Name = "uctrlPersonInfo1";
             this.uctrlPersonInfo1.Size = new System.Drawing.Size(379, 498);
@@ -95,7 +97,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddPerson";
             this.Tag = "Add | Update Person";
-            this.Text = "Add | Update Person";
+            this.Text = " ";
             this.ResumeLayout(false);
 
         }
