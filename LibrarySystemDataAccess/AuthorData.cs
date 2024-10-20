@@ -95,7 +95,7 @@ namespace LibrarySystemDataAccess
         }
         static public DataTable All()
         {
-            return GenericData.All(" select [Author Id],[Full Name],[Birth Date],[Country],[Contact Info],Certificate,[Additional Details],[Image Path] from View_Author_Details");
+            return GenericData.All(" select * from View_Author_Details");
         }
         static public DataTable GetAuthorsNames()
         {

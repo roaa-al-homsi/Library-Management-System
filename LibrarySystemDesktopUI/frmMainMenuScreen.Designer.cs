@@ -207,6 +207,7 @@
             this.btnAuthors.TabIndex = 3;
             this.btnAuthors.Tag = "   Authors";
             this.btnAuthors.Text = "   Authors";
+            this.btnAuthors.Click += new System.EventHandler(this.btnAuthors_Click);
             // 
             // guna2Panel1
             // 

@@ -81,7 +81,6 @@
             this.uctrlBookInfo1.Image = null;
             this.uctrlBookInfo1.ISBN = "";
             this.uctrlBookInfo1.LinkRemove = true;
-            this.uctrlBookInfo1.LinkSet = true;
             this.uctrlBookInfo1.Location = new System.Drawing.Point(0, 0);
             this.uctrlBookInfo1.Name = "uctrlBookInfo1";
             this.uctrlBookInfo1.PublishingHouse = "";

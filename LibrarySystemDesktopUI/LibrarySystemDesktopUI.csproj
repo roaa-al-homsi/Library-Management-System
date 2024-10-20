@@ -52,6 +52,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authors\frmManageAuthors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authors\frmManageAuthors.Designer.cs">
+      <DependentUpon>frmManageAuthors.cs</DependentUpon>
+    </Compile>
     <Compile Include="Books\frmAddOrUpdateBook.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,9 @@
     <Compile Include="UctrlPersonInfo.Designer.cs">
       <DependentUpon>UctrlPersonInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Authors\frmManageAuthors.resx">
+      <DependentUpon>frmManageAuthors.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Books\frmAddOrUpdateBook.resx">
       <DependentUpon>frmAddOrUpdateBook.cs</DependentUpon>
     </EmbeddedResource>
