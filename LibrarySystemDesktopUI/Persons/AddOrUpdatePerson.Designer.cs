@@ -33,7 +33,7 @@
             this.linkSet = new System.Windows.Forms.LinkLabel();
             this.linkRemove = new System.Windows.Forms.LinkLabel();
             this.picPerson = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.TBirthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.TimePicBirthDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.txtContactInfo = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCountry = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtFullName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -122,21 +122,21 @@
             this.picPerson.TabIndex = 123;
             this.picPerson.TabStop = false;
             // 
-            // TBirthDate
+            // TimePicBirthDate
             // 
-            this.TBirthDate.AutoRoundedCorners = true;
-            this.TBirthDate.BorderRadius = 17;
-            this.TBirthDate.Checked = true;
-            this.TBirthDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.TBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.TBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.TBirthDate.Location = new System.Drawing.Point(190, 441);
-            this.TBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.TBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.TBirthDate.Name = "TBirthDate";
-            this.TBirthDate.Size = new System.Drawing.Size(200, 36);
-            this.TBirthDate.TabIndex = 122;
-            this.TBirthDate.Value = new System.DateTime(2024, 10, 19, 22, 56, 7, 337);
+            this.TimePicBirthDate.AutoRoundedCorners = true;
+            this.TimePicBirthDate.BorderRadius = 17;
+            this.TimePicBirthDate.Checked = true;
+            this.TimePicBirthDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.TimePicBirthDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TimePicBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.TimePicBirthDate.Location = new System.Drawing.Point(190, 441);
+            this.TimePicBirthDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.TimePicBirthDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.TimePicBirthDate.Name = "TimePicBirthDate";
+            this.TimePicBirthDate.Size = new System.Drawing.Size(200, 36);
+            this.TimePicBirthDate.TabIndex = 122;
+            this.TimePicBirthDate.Value = new System.DateTime(2024, 10, 19, 22, 56, 7, 337);
             // 
             // txtContactInfo
             // 
@@ -298,7 +298,7 @@
             this.Controls.Add(this.linkSet);
             this.Controls.Add(this.linkRemove);
             this.Controls.Add(this.picPerson);
-            this.Controls.Add(this.TBirthDate);
+            this.Controls.Add(this.TimePicBirthDate);
             this.Controls.Add(this.txtContactInfo);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.txtFullName);
@@ -326,7 +326,7 @@
         private System.Windows.Forms.LinkLabel linkSet;
         private System.Windows.Forms.LinkLabel linkRemove;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picPerson;
-        private Guna.UI2.WinForms.Guna2DateTimePicker TBirthDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker TimePicBirthDate;
         private Guna.UI2.WinForms.Guna2TextBox txtContactInfo;
         private Guna.UI2.WinForms.Guna2TextBox txtCountry;
         private Guna.UI2.WinForms.Guna2TextBox txtFullName;

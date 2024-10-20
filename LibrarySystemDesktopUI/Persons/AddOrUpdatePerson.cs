@@ -27,31 +27,31 @@ namespace LibraryStstem.Persons
                 return;
             }
             _Person = Person.Find(_PersonId);
-            uctrlPersonInfo1.FullName = _Person.Name;
-            uctrlPersonInfo1.Country = _Person.Country;
-            uctrlPersonInfo1.ContactInfo = _Person.ContactInfo;
-            uctrlPersonInfo1.BirthDate = _Person.BirthDate;
-            uctrlPersonInfo1.ImagePath = (!string.IsNullOrWhiteSpace(_Person.ImagePath)) ? _Person.ImagePath : null;
-            uctrlPersonInfo1.IsVisibleLabPersonId = true;
-            uctrlPersonInfo1.personId = _Person.Id;
-            uctrlPersonInfo1.LinkRemove = (!string.IsNullOrWhiteSpace(_Person.ImagePath)) ? true : false;
+            txtFullName.Text = _Person.Name;
+            txtCountry.Text = _Person.Country;
+            txtContactInfo.Text = _Person.ContactInfo;
+            TimePicBirthDate.Value = _Person.BirthDate;
+            picPerson.ImageLocation = (!string.IsNullOrWhiteSpace(_Person.ImagePath)) ? _Person.ImagePath : null;
+            labPersoId.Visible = true;
+            labPersoId.Text = _Person.Id.ToString();
+            linkRemove.Visible = (!string.IsNullOrWhiteSpace(_Person.ImagePath)) ? true : false;
         }
 
         private void _FillPersonBeforeSave()
         {
-            _Person.Name = uctrlPersonInfo1.FullName;
-            _Person.ContactInfo = uctrlPersonInfo1.ContactInfo;
-            _Person.BirthDate = uctrlPersonInfo1.BirthDate;
-            _Person.Country = uctrlPersonInfo1.Country;
-            _Person.ImagePath = (!string.IsNullOrWhiteSpace(uctrlPersonInfo1.ImagePath)) ? uctrlPersonInfo1.ImagePath : null;
+            _Person.Name = txtFullName.Text;
+            _Person.ContactInfo = txtContactInfo.Text;
+            _Person.BirthDate = TimePicBirthDate.Value;
+            _Person.Country = txtCountry.Text;
+            _Person.ImagePath = (!string.IsNullOrWhiteSpace(picPerson.ImageLocation)) ? picPerson.ImageLocation : null;
         }
         private void btnSave_Click(object sender, System.EventArgs e)
         {
             _FillPersonBeforeSave();
             if (_Person.Save())
             {
-                uctrlPersonInfo1.IsVisibleLabPersonId = true;
-                uctrlPersonInfo1.personId = _Person.Id;
+                labPersoId.Visible = true;
+                labPersoId.Text = _Person.Id.ToString();
                 MessageBox.Show("Data Saved Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
@@ -63,12 +63,12 @@ namespace LibraryStstem.Persons
         }
         private void _BackDefaultForm()
         {
-            uctrlPersonInfo1.FullName = "???";
-            uctrlPersonInfo1.Country = "???";
-            uctrlPersonInfo1.ContactInfo = "???";
-            uctrlPersonInfo1.BirthDate = new DateTime(1999, 1, 1);
-            uctrlPersonInfo1.IsVisibleLabPersonId = false;
-            uctrlPersonInfo1.ImagePath = null;
+            txtFullName.Text = "???";
+            txtCountry.Text = "???";
+            txtContactInfo.Text = "???";
+            TimePicBirthDate.Value = new DateTime(1999, 1, 1);
+            labPersoId.Visible = false;
+            picPerson.ImageLocation = null;
         }
         private void btnCancel_Click(object sender, System.EventArgs e)
         {
