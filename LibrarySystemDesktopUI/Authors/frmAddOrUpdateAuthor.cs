@@ -1,4 +1,5 @@
-﻿using LibrarySystemBusiness;
+﻿using LibraryStstem.Persons;
+using LibrarySystemBusiness;
 using System.Windows.Forms;
 
 namespace LibraryStstem.Authors
@@ -16,8 +17,10 @@ namespace LibraryStstem.Authors
             _Mode = (AuthorId != -1) ? Mode.Update : Mode.Add;
         }
 
-
-
-
+        private void btnAddPerson_Click(object sender, System.EventArgs e)
+        {
+            frmAddPerson frmAddPerson = new frmAddPerson(-1);
+            frmAddPerson.ShowDialog();
+        }
     }
 }

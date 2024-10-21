@@ -108,6 +108,12 @@
     <Compile Include="UctrlBookInfo.Designer.cs">
       <DependentUpon>UctrlBookInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="uc_PersonInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uc_PersonInfo.Designer.cs">
+      <DependentUpon>uc_PersonInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Authors\frmAddOrUpdateAuthor.resx">
       <DependentUpon>frmAddOrUpdateAuthor.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +149,9 @@
     </Compile>
     <EmbeddedResource Include="UctrlBookInfo.resx">
       <DependentUpon>UctrlBookInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uc_PersonInfo.resx">
+      <DependentUpon>uc_PersonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
