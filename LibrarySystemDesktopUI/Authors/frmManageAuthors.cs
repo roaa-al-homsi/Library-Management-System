@@ -22,5 +22,11 @@ namespace LibraryStstem.Authors
         {
             _RefreshAuthorsData();
         }
+
+        private void btnAddAuthor_Click(object sender, EventArgs e)
+        {
+            // int AuthorId = (int)dgvAllAuthors.CurrentRow.Cells[0].Value;
+            _MainMenuScreen.OpenChildFormAsync(new frmAddOrUpdateAuthor(-1), sender);
+        }
     }
 }

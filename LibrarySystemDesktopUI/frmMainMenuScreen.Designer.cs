@@ -62,7 +62,7 @@
             this.btnTitle.ImageSize = new System.Drawing.Size(40, 40);
             this.btnTitle.Location = new System.Drawing.Point(3, 36);
             this.btnTitle.Name = "btnTitle";
-            this.btnTitle.Size = new System.Drawing.Size(180, 45);
+            this.btnTitle.Size = new System.Drawing.Size(435, 42);
             this.btnTitle.TabIndex = 2;
             this.btnTitle.Text = "Home";
             this.btnTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
