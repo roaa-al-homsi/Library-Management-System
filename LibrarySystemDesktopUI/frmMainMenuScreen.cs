@@ -93,6 +93,8 @@ namespace LibrarySystem
         {
             btnTitle.Image = btnAuthors.Image;
             OpenChildFormAsync(new frmManageAuthors(this), sender);
+
+
         }
     }
 }
