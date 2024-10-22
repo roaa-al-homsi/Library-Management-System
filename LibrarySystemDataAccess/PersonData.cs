@@ -119,8 +119,8 @@ namespace LibrarySystemDataAccess
                     Id = (int)reader["Id"];
                     Country = (string)reader["Country"];
                     ContactInfo = (string)reader["Contact Info"];
-                    ImagePath = reader["Image Path"] != DBNull.Value ? (string)reader["ImagePath"] : string.Empty;
-                    BirthDate = reader["Birth Date"] != DBNull.Value ? (DateTime)reader["Birth Date"] : DateTime.MinValue;
+                    ImagePath = (reader["Image Path"] != DBNull.Value) ? (string)reader["Image Path"] : string.Empty;
+                    BirthDate = (reader["Birth Date"] != DBNull.Value) ? (DateTime)reader["Birth Date"] : DateTime.MinValue;
                     Name = (string)reader["Full Name"];
 
                 }

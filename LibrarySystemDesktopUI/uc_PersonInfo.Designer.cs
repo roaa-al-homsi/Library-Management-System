@@ -234,7 +234,7 @@
             this.Controls.Add(this.labPersoId);
             this.Controls.Add(this.guna2HtmlLabel1);
             this.Name = "uc_PersonInfo";
-            this.Size = new System.Drawing.Size(378, 493);
+            this.Size = new System.Drawing.Size(379, 498);
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).EndInit();
             this.ResumeLayout(false);
 

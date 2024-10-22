@@ -1,13 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LibrarySystemBusiness;
 using System.Windows.Forms;
-
 namespace LibraryStstem
 {
     public partial class uc_PersonInfo : UserControl
@@ -15,6 +7,18 @@ namespace LibraryStstem
         public uc_PersonInfo()
         {
             InitializeComponent();
+        }
+
+        public void ShowDataPerson(Person person)
+        {
+            if (person != null)
+            {
+                labPersoId.Text = person.Id.ToString();
+                txtFullName.Text = person.Name;
+                txtCountry.Text = person.Country;
+                txtContactInfo.Text = person.ContactInfo;
+                picPerson.ImageLocation = (!string.IsNullOrWhiteSpace(person.ImagePath)) ? person.ImagePath : null;
+            }
         }
     }
 }
