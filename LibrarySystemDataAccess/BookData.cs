@@ -189,5 +189,9 @@ where Id=@Id";
         {
             return GenericData.Exist("select Found=1 from Books where [Author Id]=@AuthorId", "@AuthorId", AuthorId);
         }
+        static public DataTable GetBooksForSpecificAuthor(int AuthorId)
+        {
+            return GenericData.ShowDataForSpecificObject("select * from Books where [Author Id]=@AuthorId", "@AuthorId", AuthorId);
+        }
     }
 }

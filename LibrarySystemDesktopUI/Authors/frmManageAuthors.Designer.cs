@@ -152,6 +152,7 @@
             this.showBookToolStripMenuItem.Name = "showBookToolStripMenuItem";
             this.showBookToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.showBookToolStripMenuItem.Text = "View author\'s books";
+            this.showBookToolStripMenuItem.Click += new System.EventHandler(this.showBookToolStripMenuItem_Click);
             // 
             // btnAddAuthor
             // 

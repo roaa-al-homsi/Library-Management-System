@@ -8,6 +8,7 @@ namespace LibraryStstem.Authors
     public partial class frmManageAuthors : Form
     {
         private frmMainMenuScreen _MainMenuScreen;
+
         public frmManageAuthors(frmMainMenuScreen MainMenuScreen)
         {
             InitializeComponent();
@@ -45,6 +46,14 @@ namespace LibraryStstem.Authors
                 }
             }
             _RefreshAuthorsData();
+        }
+
+        private void showBookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int AuthorId = (int)dgvAllAuthors.CurrentRow.Cells[0].Value;
+            frmAuthor_sBooks frmAuthor_SBooks = new frmAuthor_sBooks(AuthorId);
+            frmAuthor_SBooks.ShowDialog();
+
         }
     }
 }

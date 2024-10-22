@@ -122,6 +122,10 @@ namespace LibrarySystemBusiness
         {
             return BookData.All();
         }
+        static public DataTable GetBooksForSpecificAuthor(int AuthorId)
+        {
+            return BookData.GetBooksForSpecificAuthor(AuthorId);
+        }
     }
 }
 

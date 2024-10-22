@@ -58,6 +58,12 @@
     <Compile Include="Authors\frmAddOrUpdateAuthor.Designer.cs">
       <DependentUpon>frmAddOrUpdateAuthor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Authors\frmAuthor%27sBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authors\frmAuthor%27sBooks.Designer.cs">
+      <DependentUpon>frmAuthor%27sBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Authors\frmManageAuthors.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </Compile>
     <EmbeddedResource Include="Authors\frmAddOrUpdateAuthor.resx">
       <DependentUpon>frmAddOrUpdateAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authors\frmAuthor%27sBooks.resx">
+      <DependentUpon>frmAuthor%27sBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Authors\frmManageAuthors.resx">
       <DependentUpon>frmManageAuthors.cs</DependentUpon>
