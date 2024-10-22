@@ -125,7 +125,7 @@
             this.btnAddPerson.Size = new System.Drawing.Size(180, 45);
             this.btnAddPerson.TabIndex = 1;
             this.btnAddPerson.Text = "Select a Person";
-            this.btnAddPerson.Click += new System.EventHandler(this.btnAddPerson_Click);
+            this.btnAddPerson.Click += new System.EventHandler(this.btnSelectPerson_Click);
             // 
             // tabAuthorInfo
             // 

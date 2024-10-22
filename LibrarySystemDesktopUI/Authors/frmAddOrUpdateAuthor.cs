@@ -24,13 +24,20 @@ namespace LibraryStstem.Authors
                 return;
             }
             _Author = Author.Find(_AuthorId);
-            txtAdditionalDetails.Text = _Author.AdditionalDetails;
-            txtCertificate.Text = _Author.Certificate;
-            labAuthorId.Text = _Author.Id.ToString();
+            if (_Author != null)
+            {
+                labAuthor.Visible = true;
+                labAuthorId.Visible = true;
+                labAuthorId.Text = _Author.Id.ToString();
+                labPerson.Text = _Author.PersonId.ToString();
+                panelContainerAuthorInfo.Enabled = true;
+                txtAdditionalDetails.Text = _Author.AdditionalDetails;
+                txtCertificate.Text = _Author.Certificate;
+            }
         }
-        private void btnAddPerson_Click(object sender, System.EventArgs e)
+        private void btnSelectPerson_Click(object sender, System.EventArgs e)
         {
-            frmAddUpdatePerson frmAddPerson = new frmAddUpdatePerson(-1);
+            frmAddUpdatePerson frmAddPerson = new frmAddUpdatePerson(_Author.PersonId);
             frmAddPerson.DataBack += DataBackPerson;
             frmAddPerson.ShowDialog();
         }
