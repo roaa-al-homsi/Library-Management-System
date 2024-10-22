@@ -35,10 +35,10 @@ namespace LibrarySystemBusiness
 
         private bool _Add()
         {//validation
-            if (!Person.Save())
-            {
-                return false;
-            }
+            //if (!Person.Save())
+            //{
+            //    return false;
+            //}
             this.Id = AuthorData.Add(Certificate, this.PersonId, AdditionalDetails);
             return (Id != -1);
         }
@@ -74,7 +74,24 @@ namespace LibrarySystemBusiness
         }
         static public bool Delete(int Id)
         {
-            return AuthorData.Delete(Id);
+            if (!Author.Exist(Id))
+            {
+                return false;
+            }
+
+            if (Book.ExistBookByAuthorId(Id))
+            {
+                return false;
+            }
+            int PersonId = AuthorData.GetPersonIdByAuthorId(Id);
+            if (!AuthorData.Delete(Id))
+            {
+                return false;
+            }
+            else
+            {
+                return Person.DeletePerson(PersonId);
+            }
         }
         static public Author Find(int Id)
         {

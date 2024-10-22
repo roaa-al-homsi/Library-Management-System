@@ -152,6 +152,26 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return AuthorID;
         }
+        static public int GetPersonIdByAuthorId(int AuthorID)
+        {
+            int PersonID = 0;
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select [Person Id] from Authors where Id =@AuthorID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@AuthorID", AuthorID);
+            try
+            {
+                connection.Open();
+                object Result = command.ExecuteScalar();
+                if (Result != null && int.TryParse(Result.ToString(), out int insertedId))
+                {
+                    PersonID = insertedId;
+                }
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return PersonID;
+        }
         static public string GetNameAuthorById(int Id)
         {
             string AuthorName = string.Empty;
@@ -176,6 +196,5 @@ namespace LibrarySystemDataAccess
         {
             return GenericData.Exist("select Found=1 from Authors where Id =@Id", "@Id", Id);
         }
-
     }
 }

@@ -33,11 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllAuthors = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnAddAuthor = new Guna.UI2.WinForms.Guna2Button();
             this.cmsManageAuthors = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddAuthor = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAuthors)).BeginInit();
             this.cmsManageAuthors.SuspendLayout();
             this.SuspendLayout();
@@ -113,25 +113,6 @@
             this.dgvAllAuthors.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.dgvAllAuthors.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
-            // btnAddAuthor
-            // 
-            this.btnAddAuthor.Animated = true;
-            this.btnAddAuthor.AutoRoundedCorners = true;
-            this.btnAddAuthor.BorderRadius = 24;
-            this.btnAddAuthor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddAuthor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddAuthor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddAuthor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddAuthor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.btnAddAuthor.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddAuthor.ForeColor = System.Drawing.Color.White;
-            this.btnAddAuthor.Location = new System.Drawing.Point(534, 601);
-            this.btnAddAuthor.Name = "btnAddAuthor";
-            this.btnAddAuthor.Size = new System.Drawing.Size(159, 51);
-            this.btnAddAuthor.TabIndex = 115;
-            this.btnAddAuthor.Text = "Add Author";
-            this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
-            // 
             // cmsManageAuthors
             // 
             this.cmsManageAuthors.BackColor = System.Drawing.SystemColors.ControlDark;
@@ -164,12 +145,32 @@
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // showBookToolStripMenuItem
             // 
             this.showBookToolStripMenuItem.Name = "showBookToolStripMenuItem";
             this.showBookToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.showBookToolStripMenuItem.Text = "View author\'s books";
+            // 
+            // btnAddAuthor
+            // 
+            this.btnAddAuthor.Animated = true;
+            this.btnAddAuthor.AutoRoundedCorners = true;
+            this.btnAddAuthor.BorderRadius = 24;
+            this.btnAddAuthor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddAuthor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddAuthor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddAuthor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddAuthor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAddAuthor.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddAuthor.ForeColor = System.Drawing.Color.White;
+            this.btnAddAuthor.Location = new System.Drawing.Point(534, 601);
+            this.btnAddAuthor.Name = "btnAddAuthor";
+            this.btnAddAuthor.Size = new System.Drawing.Size(159, 51);
+            this.btnAddAuthor.TabIndex = 115;
+            this.btnAddAuthor.Text = "Add Author";
+            this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
             // 
             // frmManageAuthors
             // 

@@ -185,5 +185,9 @@ where Id=@Id";
         {
             return GenericData.Exist("select Found=1 from Books where Id=@Id", "@Id", Id);
         }
+        static public bool ExistBookByAuthorId(int AuthorId)
+        {
+            return GenericData.Exist("select Found=1 from Books where [Author Id]=@AuthorId", "@AuthorId", AuthorId);
+        }
     }
 }
