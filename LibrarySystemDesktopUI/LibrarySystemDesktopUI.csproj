@@ -94,6 +94,12 @@
     <Compile Include="Books\frmBookCopies.Designer.cs">
       <DependentUpon>frmBookCopies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customers\frmManageCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\frmManageCustomers.Designer.cs">
+      <DependentUpon>frmManageCustomers.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainMenuScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Books\frmBookCopies.resx">
       <DependentUpon>frmBookCopies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\frmManageCustomers.resx">
+      <DependentUpon>frmManageCustomers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMainMenuScreen.resx">
       <DependentUpon>frmMainMenuScreen.cs</DependentUpon>

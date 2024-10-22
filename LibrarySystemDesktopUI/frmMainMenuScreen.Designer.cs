@@ -152,6 +152,7 @@
             this.btnCustomers.TabIndex = 4;
             this.btnCustomers.Tag = "Customers";
             this.btnCustomers.Text = "Customers";
+            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
             // btnAllBooks
             // 
