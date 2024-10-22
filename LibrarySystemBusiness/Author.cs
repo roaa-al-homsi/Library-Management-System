@@ -5,8 +5,8 @@ namespace LibrarySystemBusiness
 {
     public class Author
     {
-        private enum ModeAuthor { Add, Update };
-        private ModeAuthor _Mode;
+        private enum Mode { Add, Update };
+        private Mode _Mode;
         public Person Person { get; private set; }//composition
 
         public int Id { get; set; }
@@ -21,7 +21,7 @@ namespace LibrarySystemBusiness
             this.PersonId = -1;
             this.Certificate = string.Empty;
             this.AdditionalDetails = string.Empty;
-            _Mode = ModeAuthor.Add;
+            _Mode = Mode.Add;
         }
         private Author(int Id, string Certificate, string AdditionalDetails, int PersonId)
         {
@@ -30,11 +30,15 @@ namespace LibrarySystemBusiness
             this.Certificate = Certificate;
             this.AdditionalDetails = AdditionalDetails;
             this.PersonId = PersonId;
-            _Mode = ModeAuthor.Update;
+            _Mode = Mode.Update;
         }
 
         private bool _Add()
         {//validation
+            if (!Person.Save())
+            {
+                return false;
+            }
             this.Id = AuthorData.Add(Certificate, this.PersonId, AdditionalDetails);
             return (Id != -1);
         }
@@ -42,13 +46,24 @@ namespace LibrarySystemBusiness
         {//validation
             return AuthorData.Update(this.Id, this.Certificate, this.PersonId, this.AdditionalDetails);
         }
+        public bool ReadyAuthor()
+        {
+            if (this.PersonId == 0)
+            {
+                return false;
+            }
+            return true;
+        }
         public bool Save()
         {
+            if (!ReadyAuthor())
+            { return false; }
+
             switch (_Mode)
             {
-                case ModeAuthor.Add:
+                case Mode.Add:
                     return _Add();
-                case ModeAuthor.Update:
+                case Mode.Update:
                     return _Update();
             }
             return false;

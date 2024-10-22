@@ -34,7 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllAuthors = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnAddAuthor = new Guna.UI2.WinForms.Guna2Button();
+            this.cmsManageAuthors = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showBookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAuthors)).BeginInit();
+            this.cmsManageAuthors.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAllAuthors
@@ -58,6 +63,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAllAuthors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAllAuthors.ColumnHeadersHeight = 30;
+            this.dgvAllAuthors.ContextMenuStrip = this.cmsManageAuthors;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,6 +132,44 @@
             this.btnAddAuthor.Text = "Add Author";
             this.btnAddAuthor.Click += new System.EventHandler(this.btnAddAuthor_Click);
             // 
+            // cmsManageAuthors
+            // 
+            this.cmsManageAuthors.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.cmsManageAuthors.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsManageAuthors.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.updateToolStripMenuItem,
+            this.deleteToolStripMenuItem,
+            this.showBookToolStripMenuItem});
+            this.cmsManageAuthors.Name = "cmsManageAuthors";
+            this.cmsManageAuthors.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.cmsManageAuthors.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageAuthors.RenderStyle.ColorTable = null;
+            this.cmsManageAuthors.RenderStyle.RoundedEdges = true;
+            this.cmsManageAuthors.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsManageAuthors.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.cmsManageAuthors.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsManageAuthors.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageAuthors.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsManageAuthors.Size = new System.Drawing.Size(211, 104);
+            // 
+            // updateToolStripMenuItem
+            // 
+            this.updateToolStripMenuItem.Name = "updateToolStripMenuItem";
+            this.updateToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.updateToolStripMenuItem.Text = "Update";
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            // 
+            // showBookToolStripMenuItem
+            // 
+            this.showBookToolStripMenuItem.Name = "showBookToolStripMenuItem";
+            this.showBookToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.showBookToolStripMenuItem.Text = "View author\'s books";
+            // 
             // frmManageAuthors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -140,6 +184,7 @@
             this.Text = "Manage Authors";
             this.Load += new System.EventHandler(this.frmManageAuthors_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllAuthors)).EndInit();
+            this.cmsManageAuthors.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -148,5 +193,9 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvAllAuthors;
         private Guna.UI2.WinForms.Guna2Button btnAddAuthor;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageAuthors;
+        private System.Windows.Forms.ToolStripMenuItem updateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showBookToolStripMenuItem;
     }
 }

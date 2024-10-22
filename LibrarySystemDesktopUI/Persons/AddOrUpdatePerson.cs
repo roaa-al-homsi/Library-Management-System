@@ -91,6 +91,7 @@ namespace LibraryStstem.Persons
         private void btnCancel_Click(object sender, System.EventArgs e)
         {
             _BackDefaultForm();
+            this.Close();
         }
         private void frmAddPerson_Load(object sender, EventArgs e)
         {

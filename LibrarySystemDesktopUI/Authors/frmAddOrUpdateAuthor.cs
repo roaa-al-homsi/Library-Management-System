@@ -66,5 +66,10 @@ namespace LibraryStstem.Authors
         {
             _LoadDataAuthor();
         }
+
+        private void btnCancel_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
