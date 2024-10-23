@@ -26,5 +26,11 @@ namespace LibraryStstem.Customers
         {
             _mainMenuScreen.OpenChildFormAsync(new frmAddOrUpdateCustomer(-1));
         }
+
+        private void ItemUpdate_Click(object sender, System.EventArgs e)
+        {
+            int CustomerId = (int)dgvAllCustomers.CurrentRow.Cells[0].Value;
+            _mainMenuScreen.OpenChildFormAsync(new frmAddOrUpdateCustomer(CustomerId));
+        }
     }
 }

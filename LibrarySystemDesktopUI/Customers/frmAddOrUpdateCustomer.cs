@@ -28,8 +28,7 @@ namespace LibraryStstem.Customers
             labCustomerId.Visible = true;
             labCustomerId.Text = _CustomerId.ToString();
             txtCardNumber.Text = _Customer.LibraryCardNumber.ToString();
-            labPersonID.Text = _Customer.PersonId.ToString();
-
+            labPersonId.Text = _Customer.PersonId.ToString();
         }
         private void frmAddOrUpdateCustomer_Load(object sender, EventArgs e)
         {
@@ -37,7 +36,7 @@ namespace LibraryStstem.Customers
         }
         private void btnSelectPerson_Click(object sender, EventArgs e)
         {
-            frmAddUpdatePerson addUpdatePerson = new frmAddUpdatePerson(-1);
+            frmAddUpdatePerson addUpdatePerson = new frmAddUpdatePerson(_Customer.PersonId);
             addUpdatePerson.DataBack += DataBackPerson;
             addUpdatePerson.ShowDialog();
         }
@@ -47,14 +46,14 @@ namespace LibraryStstem.Customers
             if (person != null)
             {
                 uc_PersonInfo1.ShowDataPerson(person);
-                labPerson.Text = PersonId.ToString();
+                labPersonId.Text = PersonId.ToString();
                 picPerson.ImageLocation = (!string.IsNullOrWhiteSpace(person.ImagePath)) ? person.ImagePath : null;
                 panelContainerCustomerInfo.Enabled = true;
             }
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            _Customer.PersonId = int.Parse(labPerson.Text);
+            _Customer.PersonId = int.Parse(labPersonId.Text);
             _Customer.LibraryCardNumber = txtCardNumber.Text;
             if (_Customer.Save())
             {
@@ -68,5 +67,6 @@ namespace LibraryStstem.Customers
                 MessageBox.Show("Failed Successfully", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

@@ -33,8 +33,8 @@
             this.picPerson = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelContainerCustomerInfo = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.labCustomerId = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labPerson = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.labPersonID = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.labPersonId = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.labPersonte = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtCardNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labCustomer = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -42,8 +42,8 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSelectPerson = new Guna.UI2.WinForms.Guna2Button();
             this.tabPersonInfo = new System.Windows.Forms.TabPage();
-            this.uc_PersonInfo1 = new LibraryStstem.uc_PersonInfo();
             this.TabCtrlAddOrUpdateCustomers = new Guna.UI2.WinForms.Guna2TabControl();
+            this.uc_PersonInfo1 = new LibraryStstem.uc_PersonInfo();
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).BeginInit();
             this.panelContainerCustomerInfo.SuspendLayout();
             this.tabAuthorInfo.SuspendLayout();
@@ -104,8 +104,8 @@
             // 
             this.panelContainerCustomerInfo.Controls.Add(this.picPerson);
             this.panelContainerCustomerInfo.Controls.Add(this.labCustomerId);
-            this.panelContainerCustomerInfo.Controls.Add(this.labPerson);
-            this.panelContainerCustomerInfo.Controls.Add(this.labPersonID);
+            this.panelContainerCustomerInfo.Controls.Add(this.labPersonId);
+            this.panelContainerCustomerInfo.Controls.Add(this.labPersonte);
             this.panelContainerCustomerInfo.Controls.Add(this.txtCardNumber);
             this.panelContainerCustomerInfo.Controls.Add(this.guna2HtmlLabel9);
             this.panelContainerCustomerInfo.Controls.Add(this.labCustomer);
@@ -129,30 +129,30 @@
             this.labCustomerId.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.labCustomerId.Visible = false;
             // 
-            // labPerson
+            // labPersonId
             // 
-            this.labPerson.AutoSize = false;
-            this.labPerson.BackColor = System.Drawing.Color.Transparent;
-            this.labPerson.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPerson.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labPerson.Location = new System.Drawing.Point(312, 304);
-            this.labPerson.Name = "labPerson";
-            this.labPerson.Size = new System.Drawing.Size(95, 32);
-            this.labPerson.TabIndex = 156;
-            this.labPerson.Text = "??";
-            this.labPerson.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.labPersonId.AutoSize = false;
+            this.labPersonId.BackColor = System.Drawing.Color.Transparent;
+            this.labPersonId.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labPersonId.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labPersonId.Location = new System.Drawing.Point(312, 304);
+            this.labPersonId.Name = "labPersonId";
+            this.labPersonId.Size = new System.Drawing.Size(95, 32);
+            this.labPersonId.TabIndex = 156;
+            this.labPersonId.Text = "??";
+            this.labPersonId.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // labPersonID
+            // labPersonte
             // 
-            this.labPersonID.AutoSize = false;
-            this.labPersonID.BackColor = System.Drawing.Color.Transparent;
-            this.labPersonID.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPersonID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labPersonID.Location = new System.Drawing.Point(85, 302);
-            this.labPersonID.Name = "labPersonID";
-            this.labPersonID.Size = new System.Drawing.Size(111, 34);
-            this.labPersonID.TabIndex = 155;
-            this.labPersonID.Text = "Person Id:";
+            this.labPersonte.AutoSize = false;
+            this.labPersonte.BackColor = System.Drawing.Color.Transparent;
+            this.labPersonte.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labPersonte.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.labPersonte.Location = new System.Drawing.Point(85, 302);
+            this.labPersonte.Name = "labPersonte";
+            this.labPersonte.Size = new System.Drawing.Size(111, 34);
+            this.labPersonte.TabIndex = 155;
+            this.labPersonte.Text = "Person Id:";
             // 
             // txtCardNumber
             // 
@@ -261,13 +261,6 @@
             this.tabPersonInfo.TabIndex = 0;
             this.tabPersonInfo.Text = "Person Info";
             // 
-            // uc_PersonInfo1
-            // 
-            this.uc_PersonInfo1.Location = new System.Drawing.Point(637, 6);
-            this.uc_PersonInfo1.Name = "uc_PersonInfo1";
-            this.uc_PersonInfo1.Size = new System.Drawing.Size(378, 493);
-            this.uc_PersonInfo1.TabIndex = 0;
-            // 
             // TabCtrlAddOrUpdateCustomers
             // 
             this.TabCtrlAddOrUpdateCustomers.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -298,6 +291,13 @@
             this.TabCtrlAddOrUpdateCustomers.TabIndex = 117;
             this.TabCtrlAddOrUpdateCustomers.TabMenuBackColor = System.Drawing.Color.Silver;
             // 
+            // uc_PersonInfo1
+            // 
+            this.uc_PersonInfo1.Location = new System.Drawing.Point(637, 6);
+            this.uc_PersonInfo1.Name = "uc_PersonInfo1";
+            this.uc_PersonInfo1.Size = new System.Drawing.Size(378, 493);
+            this.uc_PersonInfo1.TabIndex = 0;
+            // 
             // frmAddOrUpdateCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -327,8 +327,8 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox picPerson;
         private Guna.UI2.WinForms.Guna2GradientPanel panelContainerCustomerInfo;
         private Guna.UI2.WinForms.Guna2HtmlLabel labCustomerId;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labPerson;
-        private Guna.UI2.WinForms.Guna2HtmlLabel labPersonID;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labPersonId;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labPersonte;
         private Guna.UI2.WinForms.Guna2TextBox txtCardNumber;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel labCustomer;
