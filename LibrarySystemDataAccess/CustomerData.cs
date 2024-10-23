@@ -121,7 +121,26 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return IsFound;
         }
-
+        static public int GetPersonIdByCustomerId(int CustomerId)
+        {
+            int PersonID = 0;
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select [Person Id] from Customers where Id =@CustomerId";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@CustomerId", CustomerId);
+            try
+            {
+                connection.Open();
+                object Result = command.ExecuteScalar();
+                if (Result != null && int.TryParse(Result.ToString(), out int insertedId))
+                {
+                    PersonID = insertedId;
+                }
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return PersonID;
+        }
         static public bool Exist(int Id)
         {
             return GenericData.Exist("select Found=1 from Customers where Id =@Id", "@Id", Id);

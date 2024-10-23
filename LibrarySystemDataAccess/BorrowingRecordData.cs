@@ -45,7 +45,6 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return NewIdRecord;
         }
-
         static public bool Update(int Id, int CopyId, int CustomerId, DateTime BorrowingDate, DateTime DueDate, DateTime ActualReturnDate)
         {
             int RowAffected = 0;
@@ -79,22 +78,22 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return RowAffected > 0;
         }
-
         static public bool Delete(int Id)
         {
             return GenericData.Delete("Delete [Borrowing Records] where Id=@Id", "@Id", Id);
         }
-
         static public DataTable All()
         {
             return GenericData.All(" select *from [Borrowing Records]");
         }
-
         static public bool Exist(int Id)
         {
             return GenericData.Exist("select Found=1 from [Borrowing Records] where Id =@Id", "@Id", Id);
         }
-
+        static public bool ExistByCustomerId(int CustomerId)
+        {
+            return GenericData.Exist("select Found=1 from [Borrowing Records] where [Customer id] =@CustomerId", "@CustomerId", CustomerId);
+        }
         static public bool GetBorrowingRecordById(int Id, ref int CopyId, ref int CustomerId, ref DateTime BorrowingDate, ref DateTime DueDate, ref DateTime ActualReturnDate)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);

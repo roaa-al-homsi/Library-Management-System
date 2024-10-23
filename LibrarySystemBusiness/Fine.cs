@@ -71,6 +71,10 @@ namespace LibrarySystemBusiness
         {
             return FineData.Exist(Id);
         }
+        public static bool ExistByCustomerId(int CustomerId)
+        {
+            return FineData.ExistFineByCustomerId(CustomerId);
+        }
         public static Fine Find(int Id)
         {
             int BorrowingRecordId = -1;

@@ -87,5 +87,9 @@ namespace LibrarySystemBusiness
         {
             return BorrowingRecordData.Exist(Id);
         }
+        public static bool ExistByCustomerId(int CustomerId)
+        {
+            return BorrowingRecordData.ExistByCustomerId(CustomerId);
+        }
     }
 }

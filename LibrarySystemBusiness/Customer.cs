@@ -11,7 +11,6 @@ namespace LibrarySystemBusiness
         public int Id { get; set; }
         public string LibraryCardNumber { get; set; }
         public int PersonId { get; set; }
-
         public Customer()
         {
             Person Person = new Person();
@@ -50,16 +49,31 @@ namespace LibrarySystemBusiness
             return false;
 
         }
-        public static bool Delete(int LibraryCardNum)
+        public static bool Delete(int CustomerId)
         {
-            return CustomerData.Delete(LibraryCardNum);
-        }
+            if (!Exist(CustomerId))
+            {
+                return false;
+            }
 
+            if (Fine.ExistByCustomerId(CustomerId) || Reservation.ExistByCustomerId(CustomerId) || BorrowingRecord.ExistByCustomerId(CustomerId))
+            {
+                return false;
+            }
+            int PersonId = CustomerData.GetPersonIdByCustomerId(CustomerId);
+            if (!CustomerData.Delete(CustomerId))
+            {
+                return false;
+            }
+            else
+            {
+                return Person.DeletePerson(PersonId);
+            }
+        }
         public static DataTable All()
         {
             return CustomerData.All();
         }
-
         public static Customer FindByLibraryCard(string LibraryCardNumber)
         {
             int Id = -1;
@@ -73,7 +87,6 @@ namespace LibrarySystemBusiness
             }
             return null;
         }
-
         public static Customer Find(int Id)
         {
             string LibraryCardNumber = string.Empty;
@@ -90,7 +103,5 @@ namespace LibrarySystemBusiness
         {
             return CustomerData.Exist(Id);
         }
-
-
     }
 }

@@ -33,10 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllCustomers = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
             this.cmsManageCustomer = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.ItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.ItemDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddCustomer = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllCustomers)).BeginInit();
             this.cmsManageCustomer.SuspendLayout();
             this.SuspendLayout();
@@ -112,25 +112,6 @@
             this.dgvAllCustomers.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.dgvAllCustomers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
-            // btnAddCustomer
-            // 
-            this.btnAddCustomer.Animated = true;
-            this.btnAddCustomer.AutoRoundedCorners = true;
-            this.btnAddCustomer.BorderRadius = 19;
-            this.btnAddCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.btnAddCustomer.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnAddCustomer.Location = new System.Drawing.Point(502, 607);
-            this.btnAddCustomer.Name = "btnAddCustomer";
-            this.btnAddCustomer.Size = new System.Drawing.Size(215, 41);
-            this.btnAddCustomer.TabIndex = 116;
-            this.btnAddCustomer.Text = "Add Customer";
-            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
-            // 
             // cmsManageCustomer
             // 
             this.cmsManageCustomer.BackColor = System.Drawing.Color.Silver;
@@ -162,6 +143,26 @@
             this.ItemDelete.Name = "ItemDelete";
             this.ItemDelete.Size = new System.Drawing.Size(210, 24);
             this.ItemDelete.Text = "Delete";
+            this.ItemDelete.Click += new System.EventHandler(this.ItemDelete_Click);
+            // 
+            // btnAddCustomer
+            // 
+            this.btnAddCustomer.Animated = true;
+            this.btnAddCustomer.AutoRoundedCorners = true;
+            this.btnAddCustomer.BorderRadius = 19;
+            this.btnAddCustomer.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCustomer.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddCustomer.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddCustomer.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddCustomer.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAddCustomer.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnAddCustomer.Location = new System.Drawing.Point(502, 607);
+            this.btnAddCustomer.Name = "btnAddCustomer";
+            this.btnAddCustomer.Size = new System.Drawing.Size(215, 41);
+            this.btnAddCustomer.TabIndex = 116;
+            this.btnAddCustomer.Text = "Add Customer";
+            this.btnAddCustomer.Click += new System.EventHandler(this.btnAddCustomer_Click);
             // 
             // frmManageCustomers
             // 

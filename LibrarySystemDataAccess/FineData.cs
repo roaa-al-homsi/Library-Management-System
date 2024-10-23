@@ -31,7 +31,6 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return NewIdRecord;
         }
-
         static public bool Update(int Id, int CustomerId, int BorrowingRecordId, decimal Amount, short NumberOfLateDays, bool PaymentStatus)
         {
             int RowAffected = 0;
@@ -56,22 +55,22 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return RowAffected > 0;
         }
-
         static public bool Delete(int Id)
         {
             return GenericData.Delete("Delete Fines where Id=@Id", "@Id", Id);
         }
-
         static public DataTable All()
         {
             return GenericData.All(" select *from Fines");
         }
-
         static public bool Exist(int Id)
         {
             return GenericData.Exist("select Found=1 from Fines where Id =@Id", "@Id", Id);
         }
-
+        static public bool ExistFineByCustomerId(int CustomerId)
+        {
+            return GenericData.Exist("select Found=1 from Fines where [Customer Id] =@CustomerId", "@CustomerId", CustomerId);
+        }
         static public bool GetFineById(int Id, ref int CustomerId, ref int BorrowingRecordId, ref decimal Amount, ref short NumberOfLateDays, ref bool PaymentStatus)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
@@ -104,5 +103,6 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return IsFound;
         }
+
     }
 }

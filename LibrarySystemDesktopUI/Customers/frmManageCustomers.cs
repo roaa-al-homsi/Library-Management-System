@@ -32,5 +32,22 @@ namespace LibraryStstem.Customers
             int CustomerId = (int)dgvAllCustomers.CurrentRow.Cells[0].Value;
             _mainMenuScreen.OpenChildFormAsync(new frmAddOrUpdateCustomer(CustomerId));
         }
+
+        private void ItemDelete_Click(object sender, System.EventArgs e)
+        {
+            int CustomerId = (int)dgvAllCustomers.CurrentRow.Cells[0].Value;
+            if (MessageBox.Show("Are you sure delete this Customer?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                if (Customer.Delete(CustomerId))
+                {
+                    MessageBox.Show("Delete Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Delete Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            _RefreshCustomersData();
+        }
     }
 }

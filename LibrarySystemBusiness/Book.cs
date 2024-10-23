@@ -112,7 +112,7 @@ namespace LibrarySystemBusiness
         }
         static public bool ExistBookByAuthorId(int AuthorId)
         {
-            return BookData.ExistBookByAuthorId(AuthorId);
+            return BookData.IsExistBookByAuthorId(AuthorId);
         }
         static public bool Delete(int Id)
         {

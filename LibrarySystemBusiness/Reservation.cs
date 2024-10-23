@@ -74,6 +74,10 @@ namespace LibrarySystemBusiness
         {
             return ReservationData.Exist(Id);
         }
+        public static bool ExistByCustomerId(int CustomerId)
+        {
+            return ReservationData.ExistByCustomerId(CustomerId);
+        }
         public static Reservation Find(int Id)
         {
             int CustomerId = -1;

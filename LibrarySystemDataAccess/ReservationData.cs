@@ -78,6 +78,10 @@ namespace LibrarySystemDataAccess
         {
             return GenericData.Exist("select Found=1 from Reservations where Id =@Id", "@Id", Id);
         }
+        static public bool ExistByCustomerId(int CustomerId)
+        {
+            return GenericData.Exist("select Found=1 from Reservations where [Customer Id] =@CustomerId", "@CustomerId", CustomerId);
+        }
         static public bool GetReservationRecordById(int Id, ref int CustomerId, ref int CopyId, ref DateTime ReservationDate)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
