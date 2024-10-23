@@ -99,7 +99,7 @@ namespace LibrarySystem
         private void btnCustomers_Click(object sender, System.EventArgs e)
         {
             btnTitle.Image = btnCustomers.Image;
-            OpenChildFormAsync(new frmManageCustomers(), sender);
+            OpenChildFormAsync(new frmManageCustomers(this), sender);
         }
     }
 }
