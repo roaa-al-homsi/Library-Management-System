@@ -23,6 +23,7 @@ namespace LibraryStstem.Customers
                 _Customer = new Customer();
                 return;
             }
+            panelContainerCustomerInfo.Enabled = true;
             _Customer = Customer.Find(_CustomerId);
             labCustomer.Visible = true;
             labCustomerId.Visible = true;
