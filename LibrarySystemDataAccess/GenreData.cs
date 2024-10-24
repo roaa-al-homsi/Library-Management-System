@@ -10,10 +10,9 @@ namespace LibrarySystemDataAccess
         {
             int NewIdRecord = 0;
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"insert into Genres (Id,Name)values (@Id,@Name)
+            string query = @"insert into Genres (Name)values(@Name)
                            SELECT SCOPE_IDENTITY();";
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@Id", Id);
             command.Parameters.AddWithValue("@Name", Name);
             try
             {

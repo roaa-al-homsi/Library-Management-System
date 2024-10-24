@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllGeners = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnAddGenre = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllGeners)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,12 +107,32 @@
             this.dgvAllGeners.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.dgvAllGeners.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
+            // btnAddGenre
+            // 
+            this.btnAddGenre.Animated = true;
+            this.btnAddGenre.AutoRoundedCorners = true;
+            this.btnAddGenre.BorderRadius = 21;
+            this.btnAddGenre.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddGenre.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddGenre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddGenre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddGenre.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAddGenre.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddGenre.ForeColor = System.Drawing.Color.White;
+            this.btnAddGenre.Location = new System.Drawing.Point(520, 578);
+            this.btnAddGenre.Name = "btnAddGenre";
+            this.btnAddGenre.Size = new System.Drawing.Size(136, 45);
+            this.btnAddGenre.TabIndex = 117;
+            this.btnAddGenre.Text = "Add Genre";
+            this.btnAddGenre.Click += new System.EventHandler(this.btnAddGenre_Click);
+            // 
             // frmManageGenres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1245, 675);
+            this.Controls.Add(this.btnAddGenre);
             this.Controls.Add(this.dgvAllGeners);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageGenres";
@@ -126,5 +147,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvAllGeners;
+        private Guna.UI2.WinForms.Guna2Button btnAddGenre;
     }
 }

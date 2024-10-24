@@ -22,5 +22,12 @@ namespace LibraryStstem.Genres
         {
             _RefreshGenresData();
         }
+
+        private void btnAddGenre_Click(object sender, System.EventArgs e)
+        {
+            frmAddUpdateGenre frmAddUpdate = new frmAddUpdateGenre(-1);
+            frmAddUpdate.ShowDialog();
+            _RefreshGenresData();
+        }
     }
 }
