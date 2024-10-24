@@ -19,14 +19,27 @@ namespace LibrarySystemBusiness
         {
             this.Id = Id;
             this.Name = Name;
+            _Mode = Mode.Update;
+        }
+        static public bool Delete(int GenreId)
+        {
+            if (!Exist(GenreId) || Book.ExistByGenreId(GenreId))
+            {
+                return false;
+            }
+            return GenreData.Delete(GenreId);
+        }
+        static public bool Exist(int GenreId)
+        {
+            return GenreData.Exist(GenreId);
         }
         private bool _Add()
-        {//validation
+        {  //validation
             this.Id = GenreData.Add(this.Id, this.Name);
             return (this.Id != -1);
         }
         private bool _Update()
-        {//validation
+        {   //validation
             return GenreData.Update(this.Id, this.Name);
         }
         public bool Save()

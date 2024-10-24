@@ -34,7 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllGeners = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnAddGenre = new Guna.UI2.WinForms.Guna2Button();
+            this.cmsManageGenres = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.ItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.ItemDelete = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllGeners)).BeginInit();
+            this.cmsManageGenres.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAllGeners
@@ -58,6 +62,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAllGeners.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAllGeners.ColumnHeadersHeight = 30;
+            this.dgvAllGeners.ContextMenuStrip = this.cmsManageGenres;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,6 +131,39 @@
             this.btnAddGenre.Text = "Add Genre";
             this.btnAddGenre.Click += new System.EventHandler(this.btnAddGenre_Click);
             // 
+            // cmsManageGenres
+            // 
+            this.cmsManageGenres.BackColor = System.Drawing.Color.Silver;
+            this.cmsManageGenres.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsManageGenres.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ItemUpdate,
+            this.ItemDelete});
+            this.cmsManageGenres.Name = "cmsManageCustomer";
+            this.cmsManageGenres.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.cmsManageGenres.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageGenres.RenderStyle.ColorTable = null;
+            this.cmsManageGenres.RenderStyle.RoundedEdges = true;
+            this.cmsManageGenres.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsManageGenres.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.cmsManageGenres.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsManageGenres.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageGenres.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsManageGenres.Size = new System.Drawing.Size(211, 80);
+            // 
+            // ItemUpdate
+            // 
+            this.ItemUpdate.Name = "ItemUpdate";
+            this.ItemUpdate.Size = new System.Drawing.Size(210, 24);
+            this.ItemUpdate.Text = "Update";
+            this.ItemUpdate.Click += new System.EventHandler(this.ItemUpdate_Click);
+            // 
+            // ItemDelete
+            // 
+            this.ItemDelete.Name = "ItemDelete";
+            this.ItemDelete.Size = new System.Drawing.Size(210, 24);
+            this.ItemDelete.Text = "Delete";
+            this.ItemDelete.Click += new System.EventHandler(this.ItemDelete_Click);
+            // 
             // frmManageGenres
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -140,6 +178,7 @@
             this.Text = "Manage Genres";
             this.Load += new System.EventHandler(this.frmManageGenres_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllGeners)).EndInit();
+            this.cmsManageGenres.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -148,5 +187,8 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvAllGeners;
         private Guna.UI2.WinForms.Guna2Button btnAddGenre;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageGenres;
+        private System.Windows.Forms.ToolStripMenuItem ItemUpdate;
+        private System.Windows.Forms.ToolStripMenuItem ItemDelete;
     }
 }

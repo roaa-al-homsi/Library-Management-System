@@ -79,7 +79,7 @@ namespace LibrarySystemBusiness
                 return false;
             }
 
-            if (Book.ExistBookByAuthorId(Id))
+            if (Book.ExistByAuthorId(Id))
             {
                 return false;
             }

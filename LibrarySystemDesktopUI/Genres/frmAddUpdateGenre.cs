@@ -25,7 +25,7 @@ namespace LibraryStstem.Genres
             }
             _Genre = Genre.Find(_GenreId);
             this.Text = "Update Genre";
-            txtNameGenre.Name = txtNameGenre.Text;
+            txtNameGenre.Text = _Genre.Name;
             labGenre.Visible = true;
             labGenreId.Visible = true;
             labGenreId.Text = _Genre.Id.ToString();
@@ -53,6 +53,5 @@ namespace LibraryStstem.Genres
         {
             _LoadGenreData();
         }
-
     }
 }

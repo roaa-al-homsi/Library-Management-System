@@ -115,9 +115,9 @@
             // 
             this.labGenreId.AutoSize = false;
             this.labGenreId.BackColor = System.Drawing.Color.Transparent;
-            this.labGenreId.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labGenreId.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labGenreId.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labGenreId.Location = new System.Drawing.Point(191, 23);
+            this.labGenreId.Location = new System.Drawing.Point(204, 23);
             this.labGenreId.Name = "labGenreId";
             this.labGenreId.Size = new System.Drawing.Size(95, 32);
             this.labGenreId.TabIndex = 158;
@@ -129,11 +129,11 @@
             // 
             this.labGenre.AutoSize = false;
             this.labGenre.BackColor = System.Drawing.Color.Transparent;
-            this.labGenre.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labGenre.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labGenre.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labGenre.Location = new System.Drawing.Point(78, 23);
             this.labGenre.Name = "labGenre";
-            this.labGenre.Size = new System.Drawing.Size(111, 34);
+            this.labGenre.Size = new System.Drawing.Size(120, 32);
             this.labGenre.TabIndex = 157;
             this.labGenre.Text = "Genre Id:";
             this.labGenre.Visible = false;

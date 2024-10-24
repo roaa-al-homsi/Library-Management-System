@@ -31,7 +31,7 @@ namespace LibrarySystemDataAccess
         {
             int RowAffected = 0;
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"update Genres set Id=@Id ,Name=@Name where Id=@Id";
+            string query = @"update Genres set Name=@Name where Id=@Id";
 
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Id", Id);
