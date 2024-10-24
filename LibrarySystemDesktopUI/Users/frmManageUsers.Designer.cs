@@ -162,6 +162,7 @@
             this.ItemDelete.Name = "ItemDelete";
             this.ItemDelete.Size = new System.Drawing.Size(210, 24);
             this.ItemDelete.Text = "Delete";
+            this.ItemDelete.Click += new System.EventHandler(this.ItemDelete_Click);
             // 
             // frmManageUsers
             // 

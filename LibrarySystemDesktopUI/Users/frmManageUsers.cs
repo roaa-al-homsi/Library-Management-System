@@ -33,5 +33,23 @@ namespace LibraryStstem.Users
             int UserId = (int)dgvAllUsers.CurrentRow.Cells[0].Value;
             _MainMenuScreen.OpenChildFormAsync(new frmAddUpdateUser(UserId));
         }
+
+        private void ItemDelete_Click(object sender, System.EventArgs e)
+        {
+            int UserId = (int)dgvAllUsers.CurrentRow.Cells[0].Value;
+
+            if (MessageBox.Show("Are you sure delete this Customer?", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            {
+                if (User.Delete(UserId))
+                {
+                    MessageBox.Show("Delete Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Delete Failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            _RefreshUsersData();
+        }
     }
 }
