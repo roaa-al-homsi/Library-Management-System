@@ -118,7 +118,6 @@ namespace LibrarySystemBusiness
         {
             return BookData.ExistBookByGenreId(GenreId);
         }
-
         static public bool Delete(int Id)
         {
             return BookData.Delete(Id);
@@ -130,6 +129,10 @@ namespace LibrarySystemBusiness
         static public DataTable GetBooksForSpecificAuthor(int AuthorId)
         {
             return BookData.GetBooksForSpecificAuthor(AuthorId);
+        }
+        static public DataTable GetBooksForSpecificGenre(int GenreId)
+        {
+            return BookData.GetBooksForSpecificGenre(GenreId);
         }
     }
 }

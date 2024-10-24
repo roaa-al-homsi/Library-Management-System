@@ -33,10 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllGeners = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnAddGenre = new Guna.UI2.WinForms.Guna2Button();
             this.cmsManageGenres = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.ItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.ItemDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddGenre = new Guna.UI2.WinForms.Guna2Button();
+            this.viewBooksThisGenreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllGeners)).BeginInit();
             this.cmsManageGenres.SuspendLayout();
             this.SuspendLayout();
@@ -112,6 +113,40 @@
             this.dgvAllGeners.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.dgvAllGeners.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
+            // cmsManageGenres
+            // 
+            this.cmsManageGenres.BackColor = System.Drawing.Color.Silver;
+            this.cmsManageGenres.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsManageGenres.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ItemUpdate,
+            this.ItemDelete,
+            this.viewBooksThisGenreToolStripMenuItem});
+            this.cmsManageGenres.Name = "cmsManageCustomer";
+            this.cmsManageGenres.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.cmsManageGenres.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageGenres.RenderStyle.ColorTable = null;
+            this.cmsManageGenres.RenderStyle.RoundedEdges = true;
+            this.cmsManageGenres.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsManageGenres.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.cmsManageGenres.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsManageGenres.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageGenres.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsManageGenres.Size = new System.Drawing.Size(228, 104);
+            // 
+            // ItemUpdate
+            // 
+            this.ItemUpdate.Name = "ItemUpdate";
+            this.ItemUpdate.Size = new System.Drawing.Size(227, 24);
+            this.ItemUpdate.Text = "Update";
+            this.ItemUpdate.Click += new System.EventHandler(this.ItemUpdate_Click);
+            // 
+            // ItemDelete
+            // 
+            this.ItemDelete.Name = "ItemDelete";
+            this.ItemDelete.Size = new System.Drawing.Size(227, 24);
+            this.ItemDelete.Text = "Delete";
+            this.ItemDelete.Click += new System.EventHandler(this.ItemDelete_Click);
+            // 
             // btnAddGenre
             // 
             this.btnAddGenre.Animated = true;
@@ -124,45 +159,19 @@
             this.btnAddGenre.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
             this.btnAddGenre.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddGenre.ForeColor = System.Drawing.Color.White;
-            this.btnAddGenre.Location = new System.Drawing.Point(520, 578);
+            this.btnAddGenre.Location = new System.Drawing.Point(514, 581);
             this.btnAddGenre.Name = "btnAddGenre";
             this.btnAddGenre.Size = new System.Drawing.Size(136, 45);
             this.btnAddGenre.TabIndex = 117;
             this.btnAddGenre.Text = "Add Genre";
             this.btnAddGenre.Click += new System.EventHandler(this.btnAddGenre_Click);
             // 
-            // cmsManageGenres
+            // viewBooksThisGenreToolStripMenuItem
             // 
-            this.cmsManageGenres.BackColor = System.Drawing.Color.Silver;
-            this.cmsManageGenres.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.cmsManageGenres.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ItemUpdate,
-            this.ItemDelete});
-            this.cmsManageGenres.Name = "cmsManageCustomer";
-            this.cmsManageGenres.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.cmsManageGenres.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
-            this.cmsManageGenres.RenderStyle.ColorTable = null;
-            this.cmsManageGenres.RenderStyle.RoundedEdges = true;
-            this.cmsManageGenres.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
-            this.cmsManageGenres.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.cmsManageGenres.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.cmsManageGenres.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
-            this.cmsManageGenres.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageGenres.Size = new System.Drawing.Size(211, 80);
-            // 
-            // ItemUpdate
-            // 
-            this.ItemUpdate.Name = "ItemUpdate";
-            this.ItemUpdate.Size = new System.Drawing.Size(210, 24);
-            this.ItemUpdate.Text = "Update";
-            this.ItemUpdate.Click += new System.EventHandler(this.ItemUpdate_Click);
-            // 
-            // ItemDelete
-            // 
-            this.ItemDelete.Name = "ItemDelete";
-            this.ItemDelete.Size = new System.Drawing.Size(210, 24);
-            this.ItemDelete.Text = "Delete";
-            this.ItemDelete.Click += new System.EventHandler(this.ItemDelete_Click);
+            this.viewBooksThisGenreToolStripMenuItem.Name = "viewBooksThisGenreToolStripMenuItem";
+            this.viewBooksThisGenreToolStripMenuItem.Size = new System.Drawing.Size(227, 24);
+            this.viewBooksThisGenreToolStripMenuItem.Text = "View Books This Genre";
+            this.viewBooksThisGenreToolStripMenuItem.Click += new System.EventHandler(this.viewBooksThisGenreToolStripMenuItem_Click);
             // 
             // frmManageGenres
             // 
@@ -190,5 +199,6 @@
         private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageGenres;
         private System.Windows.Forms.ToolStripMenuItem ItemUpdate;
         private System.Windows.Forms.ToolStripMenuItem ItemDelete;
+        private System.Windows.Forms.ToolStripMenuItem viewBooksThisGenreToolStripMenuItem;
     }
 }

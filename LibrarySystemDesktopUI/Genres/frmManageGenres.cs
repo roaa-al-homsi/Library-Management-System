@@ -55,5 +55,12 @@ namespace LibraryStstem.Genres
             }
             _RefreshGenresData();
         }
+
+        private void viewBooksThisGenreToolStripMenuItem_Click(object sender, System.EventArgs e)
+        {
+            int GenreId = (int)dgvAllGeners.CurrentRow.Cells[0].Value;
+            frmViewGenresBooks frmViewGenres = new frmViewGenresBooks(GenreId);
+            frmViewGenres.ShowDialog();
+        }
     }
 }

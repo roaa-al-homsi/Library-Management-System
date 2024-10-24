@@ -124,6 +124,12 @@
     <Compile Include="Genres\frmManageGenres.Designer.cs">
       <DependentUpon>frmManageGenres.cs</DependentUpon>
     </Compile>
+    <Compile Include="Genres\frmViewGenresBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Genres\frmViewGenresBooks.Designer.cs">
+      <DependentUpon>frmViewGenresBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persons\AddOrUpdatePerson.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Genres\frmManageGenres.resx">
       <DependentUpon>frmManageGenres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Genres\frmViewGenresBooks.resx">
+      <DependentUpon>frmViewGenresBooks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persons\AddOrUpdatePerson.resx">
       <DependentUpon>AddOrUpdatePerson.cs</DependentUpon>

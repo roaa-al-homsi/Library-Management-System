@@ -197,5 +197,9 @@ where Id=@Id";
         {
             return GenericData.ShowDataForSpecificObject("select * from Books where [Author Id]=@AuthorId", "@AuthorId", AuthorId);
         }
+        static public DataTable GetBooksForSpecificGenre(int GenreId)
+        {
+            return GenericData.ShowDataForSpecificObject("select * from Books where [Genre Id]=@GenreId", "@GenreId", GenreId);
+        }
     }
 }
