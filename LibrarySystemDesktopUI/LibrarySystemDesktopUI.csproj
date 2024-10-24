@@ -132,6 +132,12 @@
     <Compile Include="uc_PersonInfo.Designer.cs">
       <DependentUpon>uc_PersonInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users\frmAllUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\frmAllUsers.Designer.cs">
+      <DependentUpon>frmAllUsers.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Authors\frmAddOrUpdateAuthor.resx">
       <DependentUpon>frmAddOrUpdateAuthor.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,6 +185,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uc_PersonInfo.resx">
       <DependentUpon>uc_PersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\frmAllUsers.resx">
+      <DependentUpon>frmAllUsers.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

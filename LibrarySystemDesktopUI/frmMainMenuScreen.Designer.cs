@@ -131,6 +131,7 @@
             this.btnUsers.TabIndex = 5;
             this.btnUsers.Tag = "Users";
             this.btnUsers.Text = "Users";
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnCustomers
             // 
