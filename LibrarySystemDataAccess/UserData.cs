@@ -98,6 +98,37 @@ namespace LibrarySystemDataAccess
             return IsFound;
         }
 
+        static public bool GetUserById(ref int PersonId, int Id, ref string username, ref string Password, ref int Permission)
+        {
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select * from Users where Id=@Id";
+
+            bool IsFound = false;
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", Id);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    IsFound = true;
+                    username = (string)reader["UserName"];
+                    PersonId = (int)reader["Person Id"];
+                    Password = (string)reader["Password"];
+                    Permission = (int)reader["Permission"];
+                }
+                else
+                {
+                    IsFound = false;
+                }
+                reader.Close();
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return IsFound;
+        }
+
         static public bool Exist(int Id)
         {
             return GenericData.Exist("select Found=1 from Users where Id =@Id", "@Id", Id);

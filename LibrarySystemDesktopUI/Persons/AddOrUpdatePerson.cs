@@ -13,19 +13,21 @@ namespace LibraryStstem.Persons
         private Mode _Mode;
         private int _PersonId;
         private Person _Person;
-        public frmAddUpdatePerson(int Id)
+        public frmAddUpdatePerson(int PersonId)
         {
             InitializeComponent();
-            _PersonId = Id;
+            _PersonId = PersonId;
             _Mode = (_PersonId == -1) ? Mode.Add : Mode.Update;
         }
         private void _LoadPersonData()
         {
             if (_Mode == Mode.Add)
             {
+                this.Text = "Add Person";
                 _Person = new Person();
                 return;
             }
+            this.Text = "Update Person";
             _Person = Person.Find(_PersonId);
             txtFullName.Text = _Person.Name;
             txtCountry.Text = _Person.Country;

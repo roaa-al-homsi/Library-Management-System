@@ -22,5 +22,10 @@ namespace LibraryStstem.Users
         {
             _RefreshUsersData();
         }
+
+        private void btnAddUser_Click(object sender, System.EventArgs e)
+        {
+            _MainMenuScreen.OpenChildFormAsync(new frmAddUpdateUser(-1));
+        }
     }
 }

@@ -66,7 +66,6 @@ namespace LibrarySystemBusiness
         {
             return UserData.All();
         }
-
         public static User Find(string UserName)
         {
             int Id = -1;
@@ -80,7 +79,19 @@ namespace LibrarySystemBusiness
             }
             return null;
         }
+        public static User FindById(int UserId)
+        {
+            string UserName = string.Empty;
+            int PersonId = -1;
+            string Password = string.Empty;
+            int Permission = 0;
 
+            if (UserData.GetUserById(ref PersonId, UserId, ref UserName, ref Password, ref Permission))
+            {
+                return new User(UserId, PersonId, UserName, Password, Permission);
+            }
+            return null;
+        }
         public static bool Exist(int Id)
         {
             return UserData.Exist(Id);
@@ -89,6 +100,5 @@ namespace LibrarySystemBusiness
         {
             return UserData.ExistByUserName(UserName);
         }
-
     }
 }
