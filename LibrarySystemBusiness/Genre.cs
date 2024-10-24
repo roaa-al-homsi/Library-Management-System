@@ -49,6 +49,10 @@ namespace LibrarySystemBusiness
             }
             return null;
         }
+        static public DataTable All()
+        {
+            return GenreData.All();
+        }
         static public DataTable GetGenresNames()
         {
             return GenreData.GetGenresNames();

@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainMenuScreen));
             this.btnTitle = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            this.btnGenres = new Guna.UI2.WinForms.Guna2Button();
             this.labUserName = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
@@ -43,6 +43,7 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlOptions = new Guna.UI2.WinForms.Guna2Panel();
             this.panelMainMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.pnlOptions.SuspendLayout();
@@ -67,25 +68,26 @@
             this.btnTitle.Text = "Home";
             this.btnTitle.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnLogout
+            // btnGenres
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(225)))), ((int)(((byte)(209)))));
-            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.btnLogout.Font = new System.Drawing.Font("Andalus", 10.8F);
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnLogout.Location = new System.Drawing.Point(0, 373);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(210, 51);
-            this.btnLogout.TabIndex = 8;
-            this.btnLogout.Tag = "Logout";
-            this.btnLogout.Text = "Logout ";
+            this.btnGenres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(225)))), ((int)(((byte)(209)))));
+            this.btnGenres.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGenres.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGenres.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGenres.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGenres.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGenres.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnGenres.Font = new System.Drawing.Font("Andalus", 10.8F);
+            this.btnGenres.ForeColor = System.Drawing.Color.White;
+            this.btnGenres.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnGenres.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnGenres.Location = new System.Drawing.Point(0, 373);
+            this.btnGenres.Name = "btnGenres";
+            this.btnGenres.Size = new System.Drawing.Size(210, 51);
+            this.btnGenres.TabIndex = 8;
+            this.btnGenres.Tag = "Genres";
+            this.btnGenres.Text = "Genres";
+            this.btnGenres.Click += new System.EventHandler(this.btnGenres_Click);
             // 
             // labUserName
             // 
@@ -250,6 +252,7 @@
             // 
             this.pnlOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
             this.pnlOptions.Controls.Add(this.btnLogout);
+            this.pnlOptions.Controls.Add(this.btnGenres);
             this.pnlOptions.Controls.Add(this.btnUsers);
             this.pnlOptions.Controls.Add(this.btnCustomers);
             this.pnlOptions.Controls.Add(this.btnAuthors);
@@ -269,6 +272,27 @@
             this.panelMainMenu.Name = "panelMainMenu";
             this.panelMainMenu.Size = new System.Drawing.Size(1245, 675);
             this.panelMainMenu.TabIndex = 5;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnLogout.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnLogout.Location = new System.Drawing.Point(0, 424);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(210, 51);
+            this.btnLogout.TabIndex = 9;
+            this.btnLogout.Tag = "Logout";
+            this.btnLogout.Text = "Logout";
             // 
             // frmMainMenuScreen
             // 
@@ -291,7 +315,7 @@
 
         #endregion
         private Guna.UI2.WinForms.Guna2Button btnTitle;
-        private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private Guna.UI2.WinForms.Guna2Button btnGenres;
         private Guna.UI2.WinForms.Guna2HtmlLabel labUserName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnUsers;
@@ -304,6 +328,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2Panel pnlOptions;
         private Guna.UI2.WinForms.Guna2Panel panelMainMenu;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
     }
 }
 
