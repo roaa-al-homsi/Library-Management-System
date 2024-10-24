@@ -26,6 +26,7 @@ namespace LibraryStstem.Users
                 return;
             }
             this.Tag = "Update User";
+            panelContainerUserInfo.Enabled = true;
             _user = User.FindById(_UserId);
             txtUserName.Text = _user.UserName;
             txtPassword.Text = _user.Password;
@@ -68,7 +69,7 @@ namespace LibraryStstem.Users
                 uc_PersonInfo1.ShowDataPerson(person);
                 labPersonId.Text = PersonId.ToString();
                 picPerson.ImageLocation = (!string.IsNullOrWhiteSpace(person.ImagePath)) ? person.ImagePath : null;
-                panelContainerCustomerInfo.Enabled = true;
+                panelContainerUserInfo.Enabled = true;
             }
         }
     }

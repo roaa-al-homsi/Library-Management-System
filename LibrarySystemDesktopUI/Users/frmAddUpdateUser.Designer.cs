@@ -31,7 +31,7 @@
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.picPerson = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.panelContainerCustomerInfo = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.panelContainerUserInfo = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.txtPermission = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -42,15 +42,15 @@
             this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labUser = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.tabAuthorInfo = new System.Windows.Forms.TabPage();
+            this.tabUserInfo = new System.Windows.Forms.TabPage();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSelectPerson = new Guna.UI2.WinForms.Guna2Button();
             this.tabPersonInfo = new System.Windows.Forms.TabPage();
-            this.uc_PersonInfo1 = new LibraryStstem.uc_PersonInfo();
             this.TabCtrlAddOrUpdateCustomers = new Guna.UI2.WinForms.Guna2TabControl();
+            this.uc_PersonInfo1 = new LibraryStstem.uc_PersonInfo();
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).BeginInit();
-            this.panelContainerCustomerInfo.SuspendLayout();
-            this.tabAuthorInfo.SuspendLayout();
+            this.panelContainerUserInfo.SuspendLayout();
+            this.tabUserInfo.SuspendLayout();
             this.tabPersonInfo.SuspendLayout();
             this.TabCtrlAddOrUpdateCustomers.SuspendLayout();
             this.SuspendLayout();
@@ -104,24 +104,24 @@
             this.picPerson.TabIndex = 157;
             this.picPerson.TabStop = false;
             // 
-            // panelContainerCustomerInfo
+            // panelContainerUserInfo
             // 
-            this.panelContainerCustomerInfo.Controls.Add(this.txtPermission);
-            this.panelContainerCustomerInfo.Controls.Add(this.guna2HtmlLabel3);
-            this.panelContainerCustomerInfo.Controls.Add(this.txtPassword);
-            this.panelContainerCustomerInfo.Controls.Add(this.guna2HtmlLabel2);
-            this.panelContainerCustomerInfo.Controls.Add(this.picPerson);
-            this.panelContainerCustomerInfo.Controls.Add(this.labUserId);
-            this.panelContainerCustomerInfo.Controls.Add(this.labPersonId);
-            this.panelContainerCustomerInfo.Controls.Add(this.labPersonte);
-            this.panelContainerCustomerInfo.Controls.Add(this.txtUserName);
-            this.panelContainerCustomerInfo.Controls.Add(this.guna2HtmlLabel9);
-            this.panelContainerCustomerInfo.Controls.Add(this.labUser);
-            this.panelContainerCustomerInfo.Enabled = false;
-            this.panelContainerCustomerInfo.Location = new System.Drawing.Point(6, 8);
-            this.panelContainerCustomerInfo.Name = "panelContainerCustomerInfo";
-            this.panelContainerCustomerInfo.Size = new System.Drawing.Size(1045, 540);
-            this.panelContainerCustomerInfo.TabIndex = 150;
+            this.panelContainerUserInfo.Controls.Add(this.txtPermission);
+            this.panelContainerUserInfo.Controls.Add(this.guna2HtmlLabel3);
+            this.panelContainerUserInfo.Controls.Add(this.txtPassword);
+            this.panelContainerUserInfo.Controls.Add(this.guna2HtmlLabel2);
+            this.panelContainerUserInfo.Controls.Add(this.picPerson);
+            this.panelContainerUserInfo.Controls.Add(this.labUserId);
+            this.panelContainerUserInfo.Controls.Add(this.labPersonId);
+            this.panelContainerUserInfo.Controls.Add(this.labPersonte);
+            this.panelContainerUserInfo.Controls.Add(this.txtUserName);
+            this.panelContainerUserInfo.Controls.Add(this.guna2HtmlLabel9);
+            this.panelContainerUserInfo.Controls.Add(this.labUser);
+            this.panelContainerUserInfo.Enabled = false;
+            this.panelContainerUserInfo.Location = new System.Drawing.Point(6, 8);
+            this.panelContainerUserInfo.Name = "panelContainerUserInfo";
+            this.panelContainerUserInfo.Size = new System.Drawing.Size(1045, 540);
+            this.panelContainerUserInfo.TabIndex = 150;
             // 
             // txtPermission
             // 
@@ -289,17 +289,17 @@
             this.labUser.Text = "User Id:";
             this.labUser.Visible = false;
             // 
-            // tabAuthorInfo
+            // tabUserInfo
             // 
-            this.tabAuthorInfo.BackColor = System.Drawing.Color.Silver;
-            this.tabAuthorInfo.Controls.Add(this.panelContainerCustomerInfo);
-            this.tabAuthorInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tabAuthorInfo.Location = new System.Drawing.Point(184, 4);
-            this.tabAuthorInfo.Name = "tabAuthorInfo";
-            this.tabAuthorInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAuthorInfo.Size = new System.Drawing.Size(1057, 572);
-            this.tabAuthorInfo.TabIndex = 1;
-            this.tabAuthorInfo.Text = "Customer Info";
+            this.tabUserInfo.BackColor = System.Drawing.Color.Silver;
+            this.tabUserInfo.Controls.Add(this.panelContainerUserInfo);
+            this.tabUserInfo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tabUserInfo.Location = new System.Drawing.Point(184, 4);
+            this.tabUserInfo.Name = "tabUserInfo";
+            this.tabUserInfo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabUserInfo.Size = new System.Drawing.Size(1057, 572);
+            this.tabUserInfo.TabIndex = 1;
+            this.tabUserInfo.Text = "User Info";
             // 
             // guna2HtmlLabel1
             // 
@@ -345,18 +345,11 @@
             this.tabPersonInfo.TabIndex = 0;
             this.tabPersonInfo.Text = "Person Info";
             // 
-            // uc_PersonInfo1
-            // 
-            this.uc_PersonInfo1.Location = new System.Drawing.Point(637, 6);
-            this.uc_PersonInfo1.Name = "uc_PersonInfo1";
-            this.uc_PersonInfo1.Size = new System.Drawing.Size(378, 493);
-            this.uc_PersonInfo1.TabIndex = 0;
-            // 
             // TabCtrlAddOrUpdateCustomers
             // 
             this.TabCtrlAddOrUpdateCustomers.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.TabCtrlAddOrUpdateCustomers.Controls.Add(this.tabPersonInfo);
-            this.TabCtrlAddOrUpdateCustomers.Controls.Add(this.tabAuthorInfo);
+            this.TabCtrlAddOrUpdateCustomers.Controls.Add(this.tabUserInfo);
             this.TabCtrlAddOrUpdateCustomers.Dock = System.Windows.Forms.DockStyle.Top;
             this.TabCtrlAddOrUpdateCustomers.ItemSize = new System.Drawing.Size(180, 40);
             this.TabCtrlAddOrUpdateCustomers.Location = new System.Drawing.Point(0, 0);
@@ -382,6 +375,13 @@
             this.TabCtrlAddOrUpdateCustomers.TabIndex = 120;
             this.TabCtrlAddOrUpdateCustomers.TabMenuBackColor = System.Drawing.Color.Silver;
             // 
+            // uc_PersonInfo1
+            // 
+            this.uc_PersonInfo1.Location = new System.Drawing.Point(637, 6);
+            this.uc_PersonInfo1.Name = "uc_PersonInfo1";
+            this.uc_PersonInfo1.Size = new System.Drawing.Size(378, 493);
+            this.uc_PersonInfo1.TabIndex = 0;
+            // 
             // frmAddUpdateUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -397,8 +397,8 @@
             this.Text = "Add|Update User";
             this.Load += new System.EventHandler(this.frmAddUpdateUser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).EndInit();
-            this.panelContainerCustomerInfo.ResumeLayout(false);
-            this.tabAuthorInfo.ResumeLayout(false);
+            this.panelContainerUserInfo.ResumeLayout(false);
+            this.tabUserInfo.ResumeLayout(false);
             this.tabPersonInfo.ResumeLayout(false);
             this.TabCtrlAddOrUpdateCustomers.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -410,14 +410,14 @@
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picPerson;
-        private Guna.UI2.WinForms.Guna2GradientPanel panelContainerCustomerInfo;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelContainerUserInfo;
         private Guna.UI2.WinForms.Guna2HtmlLabel labUserId;
         private Guna.UI2.WinForms.Guna2HtmlLabel labPersonId;
         private Guna.UI2.WinForms.Guna2HtmlLabel labPersonte;
         private Guna.UI2.WinForms.Guna2TextBox txtUserName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel labUser;
-        private System.Windows.Forms.TabPage tabAuthorInfo;
+        private System.Windows.Forms.TabPage tabUserInfo;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnSelectPerson;
         private System.Windows.Forms.TabPage tabPersonInfo;

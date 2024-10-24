@@ -27,5 +27,11 @@ namespace LibraryStstem.Users
         {
             _MainMenuScreen.OpenChildFormAsync(new frmAddUpdateUser(-1));
         }
+
+        private void ItemUpdate_Click(object sender, System.EventArgs e)
+        {
+            int UserId = (int)dgvAllUsers.CurrentRow.Cells[0].Value;
+            _MainMenuScreen.OpenChildFormAsync(new frmAddUpdateUser(UserId));
+        }
     }
 }
