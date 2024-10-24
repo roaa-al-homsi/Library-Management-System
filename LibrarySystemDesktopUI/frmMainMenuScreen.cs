@@ -1,6 +1,7 @@
 ﻿using Guna.UI2.WinForms;
 using LibraryStstem.Authors;
 using LibraryStstem.Customers;
+using LibraryStstem.Fines;
 using LibraryStstem.Genres;
 using LibraryStstem.Users;
 using LibrarySystem.Books;
@@ -115,6 +116,12 @@ namespace LibrarySystem
         {
             btnTitle.Image = btnGenres.Image;
             OpenChildFormAsync(new frmManageGenres(this), sender);
+        }
+
+        private void btnFines_Click(object sender, System.EventArgs e)
+        {
+            btnTitle.Image = btnFines.Image;
+            OpenChildFormAsync(new frmManageFines(), sender);
         }
     }
 }
