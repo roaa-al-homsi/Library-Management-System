@@ -128,18 +128,20 @@
             this.cmsManageFines.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageFines.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageFines.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageFines.Size = new System.Drawing.Size(161, 52);
+            this.cmsManageFines.Size = new System.Drawing.Size(211, 80);
+            this.cmsManageFines.Opening += new System.ComponentModel.CancelEventHandler(this.cmsManageFines_Opening);
             // 
             // ItemPay
             // 
             this.ItemPay.Name = "ItemPay";
-            this.ItemPay.Size = new System.Drawing.Size(160, 24);
+            this.ItemPay.Size = new System.Drawing.Size(210, 24);
             this.ItemPay.Text = "Pay";
+            this.ItemPay.Click += new System.EventHandler(this.ItemPay_Click);
             // 
             // ItemViewDetails
             // 
             this.ItemViewDetails.Name = "ItemViewDetails";
-            this.ItemViewDetails.Size = new System.Drawing.Size(160, 24);
+            this.ItemViewDetails.Size = new System.Drawing.Size(210, 24);
             this.ItemViewDetails.Text = "View Details";
             // 
             // frmManageFines
