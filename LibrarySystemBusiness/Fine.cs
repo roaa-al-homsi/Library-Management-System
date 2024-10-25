@@ -5,6 +5,7 @@ namespace LibrarySystemBusiness
 {
     public class Fine
     {
+        public const int DefaultFinePerDay = 5;
         private enum Mode { Add, Update }
         private Mode _Mode;
         public Customer Customer { get; private set; }//composition 
@@ -15,6 +16,7 @@ namespace LibrarySystemBusiness
         public decimal Amount { get; set; }
         public short NumberOfLateDays { get; set; }
         public bool PaymentStatus { get; set; }
+
         public Fine()
         {
             this.Customer = new Customer();

@@ -74,6 +74,10 @@ namespace LibrarySystemBusiness
         {
             return CustomerData.All();
         }
+        public static DataTable ViewSpecificCustomer(int CustomerId)
+        {
+            return CustomerData.ViewSpecificCustomer(CustomerId);
+        }
         public static Customer FindByLibraryCard(string LibraryCardNumber)
         {
             int Id = -1;

@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllFines = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cmsManageFines = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.ItemPay = new System.Windows.Forms.ToolStripMenuItem();
             this.ItemViewDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddFine = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllFines)).BeginInit();
             this.cmsManageFines.SuspendLayout();
             this.SuspendLayout();
@@ -45,44 +46,44 @@
             this.dgvAllFines.AllowDrop = true;
             this.dgvAllFines.AllowUserToAddRows = false;
             this.dgvAllFines.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
-            this.dgvAllFines.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
+            this.dgvAllFines.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAllFines.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgvAllFines.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvAllFines.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.NullValue = "NULL";
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllFines.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.NullValue = "NULL";
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllFines.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAllFines.ColumnHeadersHeight = 30;
             this.dgvAllFines.ContextMenuStrip = this.cmsManageFines;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAllFines.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAllFines.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvAllFines.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvAllFines.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.dgvAllFines.Location = new System.Drawing.Point(0, 0);
             this.dgvAllFines.Name = "dgvAllFines";
             this.dgvAllFines.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllFines.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllFines.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvAllFines.RowHeadersVisible = false;
             this.dgvAllFines.RowHeadersWidth = 51;
             this.dgvAllFines.RowTemplate.Height = 24;
@@ -128,22 +129,41 @@
             this.cmsManageFines.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageFines.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageFines.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageFines.Size = new System.Drawing.Size(211, 80);
+            this.cmsManageFines.Size = new System.Drawing.Size(161, 52);
             this.cmsManageFines.Opening += new System.ComponentModel.CancelEventHandler(this.cmsManageFines_Opening);
             // 
             // ItemPay
             // 
             this.ItemPay.Name = "ItemPay";
-            this.ItemPay.Size = new System.Drawing.Size(210, 24);
+            this.ItemPay.Size = new System.Drawing.Size(160, 24);
             this.ItemPay.Text = "Pay";
             this.ItemPay.Click += new System.EventHandler(this.ItemPay_Click);
             // 
             // ItemViewDetails
             // 
             this.ItemViewDetails.Name = "ItemViewDetails";
-            this.ItemViewDetails.Size = new System.Drawing.Size(210, 24);
+            this.ItemViewDetails.Size = new System.Drawing.Size(160, 24);
             this.ItemViewDetails.Text = "View Details";
             this.ItemViewDetails.Click += new System.EventHandler(this.ItemViewDetails_Click);
+            // 
+            // btnAddFine
+            // 
+            this.btnAddFine.Animated = true;
+            this.btnAddFine.AutoRoundedCorners = true;
+            this.btnAddFine.BorderRadius = 19;
+            this.btnAddFine.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddFine.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddFine.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddFine.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddFine.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAddFine.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddFine.ForeColor = System.Drawing.Color.White;
+            this.btnAddFine.Location = new System.Drawing.Point(537, 582);
+            this.btnAddFine.Name = "btnAddFine";
+            this.btnAddFine.Size = new System.Drawing.Size(116, 40);
+            this.btnAddFine.TabIndex = 117;
+            this.btnAddFine.Text = "Add Fine";
+            this.btnAddFine.Click += new System.EventHandler(this.btnAddFine_Click);
             // 
             // frmManageFines
             // 
@@ -151,6 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1245, 675);
+            this.Controls.Add(this.btnAddFine);
             this.Controls.Add(this.dgvAllFines);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageFines";
@@ -169,5 +190,6 @@
         private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageFines;
         private System.Windows.Forms.ToolStripMenuItem ItemPay;
         private System.Windows.Forms.ToolStripMenuItem ItemViewDetails;
+        private Guna.UI2.WinForms.Guna2Button btnAddFine;
     }
 }

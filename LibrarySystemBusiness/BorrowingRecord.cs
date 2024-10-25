@@ -70,6 +70,10 @@ namespace LibrarySystemBusiness
         {
             return BorrowingRecordData.All();
         }
+        public static DataTable ViewSpecificBorrowingRecord(int Id)
+        {
+            return BorrowingRecordData.ViewSpecificBorrowingRecord(Id);
+        }
         public static BorrowingRecord Find(int Id)
         {
             int CopyId = -1;

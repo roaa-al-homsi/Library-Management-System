@@ -86,6 +86,10 @@ namespace LibrarySystemDataAccess
         {
             return GenericData.All(" select *from [Borrowing Records]");
         }
+        static public DataTable ViewSpecificBorrowingRecord(int Id)
+        {
+            return GenericData.ShowDataForSpecificObject("select *from [Borrowing Records] where Id=@Id", "@Id", Id);
+        }
         static public bool Exist(int Id)
         {
             return GenericData.Exist("select Found=1 from [Borrowing Records] where Id =@Id", "@Id", Id);

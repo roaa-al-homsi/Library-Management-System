@@ -106,6 +106,12 @@
     <Compile Include="Customers\frmManageCustomers.Designer.cs">
       <DependentUpon>frmManageCustomers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fines\frmAddFine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fines\frmAddFine.Designer.cs">
+      <DependentUpon>frmAddFine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Fines\frmDetailsFinescs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\frmManageCustomers.resx">
       <DependentUpon>frmManageCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fines\frmAddFine.resx">
+      <DependentUpon>frmAddFine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Fines\frmDetailsFinescs.resx">
       <DependentUpon>frmDetailsFinescs.cs</DependentUpon>

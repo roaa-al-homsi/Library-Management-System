@@ -60,7 +60,11 @@ namespace LibrarySystemDataAccess
         {
             return GenericData.All("select * from View_Customers_Details");
         }
+        static public DataTable ViewSpecificCustomer(int CustomerId)
+        {
+            return GenericData.ShowDataForSpecificObject("select * from View_Customers_Details where [Customer Id]=@CustomerId", "@CustomerId", CustomerId);
 
+        }
         static public bool GetCustomerByCard(string LibraryCardNum, ref int Id, ref int PersonId)
 
         {
@@ -91,7 +95,6 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return IsFound;
         }
-
         static public bool GetCustomerById(int Id, ref string LibraryCardNum, ref int PersonId)
 
         {

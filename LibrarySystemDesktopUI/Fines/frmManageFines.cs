@@ -1,12 +1,15 @@
-﻿using LibrarySystemBusiness;
+﻿using LibrarySystem;
+using LibrarySystemBusiness;
 using System.Windows.Forms;
 namespace LibraryStstem.Fines
 {
     public partial class frmManageFines : Form
     {
-        public frmManageFines()
+        private frmMainMenuScreen _frmMainMenu;
+        public frmManageFines(frmMainMenuScreen frmMainMenu)
         {
             InitializeComponent();
+            _frmMainMenu = frmMainMenu;
         }
         private void _RefreshFinesData()
         {
@@ -43,6 +46,11 @@ namespace LibraryStstem.Fines
 
             frmDetailsFines frmDetails = new frmDetailsFines(CustomerId, BorrowingId);
             frmDetails.ShowDialog();
+        }
+        private void btnAddFine_Click(object sender, System.EventArgs e)
+        {
+            _frmMainMenu.OpenChildFormAsync(new frmAddFine());
+
         }
     }
 }

@@ -121,7 +121,7 @@ namespace LibrarySystem
         private void btnFines_Click(object sender, System.EventArgs e)
         {
             btnTitle.Image = btnFines.Image;
-            OpenChildFormAsync(new frmManageFines(), sender);
+            OpenChildFormAsync(new frmManageFines(this), sender);
         }
     }
 }
