@@ -35,5 +35,14 @@ namespace LibraryStstem.Fines
             bool IsPaid = (bool)dgvAllFines.CurrentRow.Cells[5].Value;
             ItemPay.Visible = (!IsPaid);
         }
+
+        private void ItemViewDetails_Click(object sender, System.EventArgs e)
+        {
+            int CustomerId = (int)dgvAllFines.CurrentRow.Cells[1].Value;
+            int BorrowingId = (int)dgvAllFines.CurrentRow.Cells[2].Value;
+
+            frmDetailsFines frmDetails = new frmDetailsFines(CustomerId, BorrowingId);
+            frmDetails.ShowDialog();
+        }
     }
 }

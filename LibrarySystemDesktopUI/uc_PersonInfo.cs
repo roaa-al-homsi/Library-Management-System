@@ -4,6 +4,17 @@ namespace LibraryStstem
 {
     public partial class uc_PersonInfo : UserControl
     {
+        public bool BirthDateStatus
+        {
+            set
+            {
+                TimePicBirthDate.Enabled = value;
+            }
+            get
+            {
+                return TimePicBirthDate.Enabled;
+            }
+        }
         public uc_PersonInfo()
         {
             InitializeComponent();
@@ -20,5 +31,6 @@ namespace LibraryStstem
                 picPerson.ImageLocation = (!string.IsNullOrWhiteSpace(person.ImagePath)) ? person.ImagePath : null;
             }
         }
+
     }
 }
