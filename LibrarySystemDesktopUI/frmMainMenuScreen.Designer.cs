@@ -42,9 +42,10 @@
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlOptions = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnBorrowing = new Guna.UI2.WinForms.Guna2Button();
             this.btnFines = new Guna.UI2.WinForms.Guna2Button();
             this.panelMainMenu = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.pnlOptions.SuspendLayout();
@@ -252,7 +253,8 @@
             // pnlOptions
             // 
             this.pnlOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.pnlOptions.Controls.Add(this.guna2Button1);
+            this.pnlOptions.Controls.Add(this.guna2Button2);
+            this.pnlOptions.Controls.Add(this.btnBorrowing);
             this.pnlOptions.Controls.Add(this.btnFines);
             this.pnlOptions.Controls.Add(this.btnGenres);
             this.pnlOptions.Controls.Add(this.btnUsers);
@@ -265,6 +267,28 @@
             this.pnlOptions.Name = "pnlOptions";
             this.pnlOptions.Size = new System.Drawing.Size(210, 759);
             this.pnlOptions.TabIndex = 3;
+            // 
+            // btnBorrowing
+            // 
+            this.btnBorrowing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnBorrowing.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBorrowing.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBorrowing.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBorrowing.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBorrowing.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnBorrowing.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnBorrowing.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrowing.ForeColor = System.Drawing.Color.White;
+            this.btnBorrowing.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrowing.Image")));
+            this.btnBorrowing.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnBorrowing.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnBorrowing.Location = new System.Drawing.Point(0, 475);
+            this.btnBorrowing.Name = "btnBorrowing";
+            this.btnBorrowing.Size = new System.Drawing.Size(210, 51);
+            this.btnBorrowing.TabIndex = 10;
+            this.btnBorrowing.Tag = "Borrowing";
+            this.btnBorrowing.Text = "Borrowing";
+            this.btnBorrowing.Click += new System.EventHandler(this.btnBorrowing_Click);
             // 
             // btnFines
             // 
@@ -297,26 +321,26 @@
             this.panelMainMenu.Size = new System.Drawing.Size(1245, 675);
             this.panelMainMenu.TabIndex = 5;
             // 
-            // guna2Button1
+            // guna2Button2
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 475);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(210, 51);
-            this.guna2Button1.TabIndex = 10;
-            this.guna2Button1.Tag = "Logout";
-            this.guna2Button1.Text = "Logout";
+            this.guna2Button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button2.Image")));
+            this.guna2Button2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button2.ImageSize = new System.Drawing.Size(40, 40);
+            this.guna2Button2.Location = new System.Drawing.Point(0, 526);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(210, 51);
+            this.guna2Button2.TabIndex = 11;
+            this.guna2Button2.Tag = "Logout";
+            this.guna2Button2.Text = "Logout";
             // 
             // frmMainMenuScreen
             // 
@@ -353,7 +377,8 @@
         private Guna.UI2.WinForms.Guna2Panel pnlOptions;
         private Guna.UI2.WinForms.Guna2Panel panelMainMenu;
         private Guna.UI2.WinForms.Guna2Button btnFines;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnBorrowing;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }
 
