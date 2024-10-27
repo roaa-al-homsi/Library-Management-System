@@ -59,6 +59,10 @@ namespace LibrarySystemBusiness
         {
             return BookCopyData.GetCopiesForSpecificBook(BookId);
         }
+        public static DataTable ViewInfoSpecificCopyBook(int CopyId)
+        {
+            return BookCopyData.ViewInfoSpecificCopyBook(CopyId);
+        }
         public static bool Exist(int Id)
         {
             return BookCopyData.Exist(Id);

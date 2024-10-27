@@ -128,7 +128,7 @@ namespace LibrarySystem
         private void btnBorrowing_Click(object sender, System.EventArgs e)
         {
             btnTitle.Image = btnBorrowing.Image;
-            OpenChildFormAsync(new frmManageBorrowing(), sender);
+            OpenChildFormAsync(new frmManageBorrowing(this), sender);
         }
     }
 }

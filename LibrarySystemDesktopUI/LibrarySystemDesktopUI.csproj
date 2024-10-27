@@ -94,6 +94,12 @@
     <Compile Include="Books\frmBookCopies.Designer.cs">
       <DependentUpon>frmBookCopies.cs</DependentUpon>
     </Compile>
+    <Compile Include="BorrowingReturn\frmAddUpdateRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BorrowingReturn\frmAddUpdateRecord.Designer.cs">
+      <DependentUpon>frmAddUpdateRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="BorrowingReturn\Manage Borrowing And Return.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Books\frmBookCopies.resx">
       <DependentUpon>frmBookCopies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BorrowingReturn\frmAddUpdateRecord.resx">
+      <DependentUpon>frmAddUpdateRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BorrowingReturn\Manage Borrowing And Return.resx">
       <DependentUpon>Manage Borrowing And Return.cs</DependentUpon>

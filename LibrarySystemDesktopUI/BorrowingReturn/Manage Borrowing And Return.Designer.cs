@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllBorrowingRecords = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnAllCopies = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAddBook = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddRecord = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllBorrowingRecords)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,43 +42,43 @@
             this.dgvAllBorrowingRecords.AllowDrop = true;
             this.dgvAllBorrowingRecords.AllowUserToAddRows = false;
             this.dgvAllBorrowingRecords.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
-            this.dgvAllBorrowingRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
+            this.dgvAllBorrowingRecords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAllBorrowingRecords.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dgvAllBorrowingRecords.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvAllBorrowingRecords.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.NullValue = "NULL";
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllBorrowingRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(16)))), ((int)(((byte)(18)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.NullValue = "NULL";
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllBorrowingRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAllBorrowingRecords.ColumnHeadersHeight = 30;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAllBorrowingRecords.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAllBorrowingRecords.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAllBorrowingRecords.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvAllBorrowingRecords.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(56)))), ((int)(((byte)(62)))));
             this.dgvAllBorrowingRecords.Location = new System.Drawing.Point(0, 0);
             this.dgvAllBorrowingRecords.Name = "dgvAllBorrowingRecords";
             this.dgvAllBorrowingRecords.ReadOnly = true;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllBorrowingRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllBorrowingRecords.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAllBorrowingRecords.RowHeadersVisible = false;
             this.dgvAllBorrowingRecords.RowHeadersWidth = 51;
             this.dgvAllBorrowingRecords.RowTemplate.Height = 24;
@@ -108,41 +107,24 @@
             this.dgvAllBorrowingRecords.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.dgvAllBorrowingRecords.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
-            // btnAllCopies
+            // btnAddRecord
             // 
-            this.btnAllCopies.Animated = true;
-            this.btnAllCopies.AutoRoundedCorners = true;
-            this.btnAllCopies.BorderRadius = 26;
-            this.btnAllCopies.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAllCopies.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAllCopies.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAllCopies.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAllCopies.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.btnAllCopies.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAllCopies.ForeColor = System.Drawing.Color.White;
-            this.btnAllCopies.Location = new System.Drawing.Point(606, 583);
-            this.btnAllCopies.Name = "btnAllCopies";
-            this.btnAllCopies.Size = new System.Drawing.Size(133, 54);
-            this.btnAllCopies.TabIndex = 116;
-            this.btnAllCopies.Text = "All Copies";
-            // 
-            // btnAddBook
-            // 
-            this.btnAddBook.Animated = true;
-            this.btnAddBook.AutoRoundedCorners = true;
-            this.btnAddBook.BorderRadius = 26;
-            this.btnAddBook.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.btnAddBook.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddBook.ForeColor = System.Drawing.Color.White;
-            this.btnAddBook.Location = new System.Drawing.Point(419, 583);
-            this.btnAddBook.Name = "btnAddBook";
-            this.btnAddBook.Size = new System.Drawing.Size(133, 54);
-            this.btnAddBook.TabIndex = 115;
-            this.btnAddBook.Text = "Add Book";
+            this.btnAddRecord.Animated = true;
+            this.btnAddRecord.AutoRoundedCorners = true;
+            this.btnAddRecord.BorderRadius = 26;
+            this.btnAddRecord.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddRecord.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddRecord.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddRecord.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddRecord.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAddRecord.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddRecord.ForeColor = System.Drawing.Color.White;
+            this.btnAddRecord.Location = new System.Drawing.Point(521, 587);
+            this.btnAddRecord.Name = "btnAddRecord";
+            this.btnAddRecord.Size = new System.Drawing.Size(140, 54);
+            this.btnAddRecord.TabIndex = 115;
+            this.btnAddRecord.Text = "Add Record";
+            this.btnAddRecord.Click += new System.EventHandler(this.btnAddRecord_Click);
             // 
             // frmManageBorrowing
             // 
@@ -150,8 +132,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1245, 675);
-            this.Controls.Add(this.btnAllCopies);
-            this.Controls.Add(this.btnAddBook);
+            this.Controls.Add(this.btnAddRecord);
             this.Controls.Add(this.dgvAllBorrowingRecords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmManageBorrowing";
@@ -165,7 +146,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvAllBorrowingRecords;
-        private Guna.UI2.WinForms.Guna2Button btnAllCopies;
-        private Guna.UI2.WinForms.Guna2Button btnAddBook;
+        private Guna.UI2.WinForms.Guna2Button btnAddRecord;
     }
 }
