@@ -5,7 +5,7 @@ namespace LibrarySystemBusiness
 {
     public class Fine
     {
-        public const int DefaultFinePerDay = 5;
+        public const byte DefaultFinePerDay = 5;
         private enum Mode { Add, Update }
         private Mode _Mode;
         public Customer Customer { get; private set; }//composition 
@@ -14,7 +14,7 @@ namespace LibrarySystemBusiness
         public int BorrowingRecordId { get; set; }//Fk
         public int Id { get; set; }
         public decimal Amount { get; set; }
-        public short NumberOfLateDays { get; set; }
+        public byte NumberOfLateDays { get; set; }
         public bool PaymentStatus { get; set; }
 
         public Fine()
@@ -29,7 +29,7 @@ namespace LibrarySystemBusiness
             this.PaymentStatus = false;
             _Mode = Mode.Add;
         }
-        private Fine(int Id, int CustomerId, int BorrowingRecordId, decimal Amount, short NumberOfLateDays, bool PaymentStatus)
+        private Fine(int Id, int CustomerId, int BorrowingRecordId, decimal Amount, byte NumberOfLateDays, bool PaymentStatus)
         {
             this.Id = Id;
             this.CustomerId = CustomerId;
@@ -82,7 +82,7 @@ namespace LibrarySystemBusiness
             int BorrowingRecordId = -1;
             int CustomerId = -1;
             decimal Amount = 1;
-            short NumberOfLateDays = 0;
+            byte NumberOfLateDays = 0;
             bool PaymentStatus = false;
             if (FineData.GetFineById(Id, ref CustomerId, ref BorrowingRecordId, ref Amount, ref NumberOfLateDays, ref PaymentStatus))
             {

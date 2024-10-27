@@ -5,6 +5,7 @@ namespace LibrarySystemBusiness
 {
     public class BorrowingRecord
     {
+        public const byte DefaultBorrowDays = 10;
         private enum Mode { Add, Update };
         private Mode _Mode;
 

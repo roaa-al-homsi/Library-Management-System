@@ -15,7 +15,7 @@ namespace LibraryStstem.Fines
         {
             _Fine.CustomerId = int.Parse(txtCustomerId.Text);
             _Fine.BorrowingRecordId = int.Parse(txtBorrowingId.Text);
-            _Fine.NumberOfLateDays = short.Parse(txtNumberOfLate.Text);
+            _Fine.NumberOfLateDays = byte.Parse(txtNumberOfLate.Text);
             _Fine.PaymentStatus = (cbPayment.Text == "paid") ? true : false;
             _Fine.Amount = _Fine.NumberOfLateDays * Fine.DefaultFinePerDay;
         }

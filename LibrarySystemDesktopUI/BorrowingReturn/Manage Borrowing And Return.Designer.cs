@@ -172,6 +172,7 @@
             this.ItemUpdate.Name = "ItemUpdate";
             this.ItemUpdate.Size = new System.Drawing.Size(210, 24);
             this.ItemUpdate.Text = "Update";
+            this.ItemUpdate.Click += new System.EventHandler(this.ItemUpdate_Click);
             // 
             // frmManageBorrowing
             // 

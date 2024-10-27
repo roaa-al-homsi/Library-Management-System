@@ -29,6 +29,20 @@ namespace LibraryStstem.BorrowingReturn
         {
             ItemReturn.Visible = (dgvAllBorrowingRecords.CurrentRow.Cells[5].Value == System.DBNull.Value);
         }
+        private void _CheckFine(BorrowingRecord borrowingRecord)
+        {
+            if (borrowingRecord.ActualReturnDate > borrowingRecord.DueDate)
+            {
+                TimeSpan NumberOfLateDays = (borrowingRecord.ActualReturnDate) - (borrowingRecord.DueDate);
+                Fine fine = new Fine();
+                fine.CustomerId = borrowingRecord.CustomerId;
+                fine.BorrowingRecordId = borrowingRecord.Id;
+                fine.NumberOfLateDays = (byte)NumberOfLateDays.TotalDays;
+                fine.Amount = Fine.DefaultFinePerDay * fine.NumberOfLateDays;
+                fine.PaymentStatus = false;
+                fine.Save();
+            }
+        }
         private void ItemReturn_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want return this copy?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -44,11 +58,17 @@ namespace LibraryStstem.BorrowingReturn
                     MessageBox.Show("The return process was completed successfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 _RefreshBorrowingData();
+                _CheckFine(borrowingRecord);
             }
             else
             {
                 return;
             }
+        }
+        private void ItemUpdate_Click(object sender, EventArgs e)
+        {
+            int RecordId = (int)dgvAllBorrowingRecords.CurrentRow.Cells[0].Value;
+            _frmMainMenu.OpenChildFormAsync(new frmAddUpdateRecord(RecordId));
         }
     }
 

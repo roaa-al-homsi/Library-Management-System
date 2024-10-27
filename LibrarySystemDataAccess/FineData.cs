@@ -6,7 +6,7 @@ namespace LibrarySystemDataAccess
 {
     static public class FineData
     {
-        static public int Add(int CustomerId, int BorrowingRecordId, decimal Amount, short NumberOfLateDays, bool PaymentStatus)
+        static public int Add(int CustomerId, int BorrowingRecordId, decimal Amount, byte NumberOfLateDays, bool PaymentStatus)
         {
             int NewIdRecord = 0;
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
@@ -31,7 +31,7 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return NewIdRecord;
         }
-        static public bool Update(int Id, int CustomerId, int BorrowingRecordId, decimal Amount, short NumberOfLateDays, bool PaymentStatus)
+        static public bool Update(int Id, int CustomerId, int BorrowingRecordId, decimal Amount, byte NumberOfLateDays, bool PaymentStatus)
         {
             int RowAffected = 0;
 
@@ -71,7 +71,7 @@ namespace LibrarySystemDataAccess
         {
             return GenericData.Exist("select Found=1 from Fines where [Customer Id] =@CustomerId", "@CustomerId", CustomerId);
         }
-        static public bool GetFineById(int Id, ref int CustomerId, ref int BorrowingRecordId, ref decimal Amount, ref short NumberOfLateDays, ref bool PaymentStatus)
+        static public bool GetFineById(int Id, ref int CustomerId, ref int BorrowingRecordId, ref decimal Amount, ref byte NumberOfLateDays, ref bool PaymentStatus)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
             string query = @"select * from Fines where [Id] =@Id";
@@ -89,7 +89,7 @@ namespace LibrarySystemDataAccess
                     BorrowingRecordId = (int)reader["Borrowing Record Id"];
                     CustomerId = (int)reader["Customer id"];
                     Amount = (decimal)reader["Amount"];
-                    NumberOfLateDays = (short)reader["Number Of Late Days"];
+                    NumberOfLateDays = (byte)reader["Number Of Late Days"];
                     PaymentStatus = (bool)reader["Payment Status"];
                 }
                 else
