@@ -94,37 +94,31 @@ namespace LibrarySystem
             btnTitle.Image = btnAllBooks.Image;
             OpenChildFormAsync(new frmAllBooks(this), sender);
         }
-
         private void btnAuthors_Click(object sender, System.EventArgs e)
         {
             btnTitle.Image = btnAuthors.Image;
             OpenChildFormAsync(new frmManageAuthors(this), sender);
         }
-
         private void btnCustomers_Click(object sender, System.EventArgs e)
         {
             btnTitle.Image = btnCustomers.Image;
             OpenChildFormAsync(new frmManageCustomers(this), sender);
         }
-
         private void btnUsers_Click(object sender, System.EventArgs e)
         {
             btnTitle.Image = btnUsers.Image;
             OpenChildFormAsync(new frmManageUsers(this), sender);
         }
-
         private void btnGenres_Click(object sender, System.EventArgs e)
         {
             btnTitle.Image = btnGenres.Image;
             OpenChildFormAsync(new frmManageGenres(this), sender);
         }
-
         private void btnFines_Click(object sender, System.EventArgs e)
         {
             btnTitle.Image = btnFines.Image;
             OpenChildFormAsync(new frmManageFines(this), sender);
         }
-
         private void btnBorrowing_Click(object sender, System.EventArgs e)
         {
             btnTitle.Image = btnBorrowing.Image;

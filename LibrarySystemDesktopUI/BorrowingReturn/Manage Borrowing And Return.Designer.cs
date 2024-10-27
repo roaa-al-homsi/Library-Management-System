@@ -34,7 +34,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllBorrowingRecords = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnAddRecord = new Guna.UI2.WinForms.Guna2Button();
+            this.cmsManageBorrowingRecord = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.ItemReturn = new System.Windows.Forms.ToolStripMenuItem();
+            this.ItemViewDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.ItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllBorrowingRecords)).BeginInit();
+            this.cmsManageBorrowingRecord.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAllBorrowingRecords
@@ -58,6 +63,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAllBorrowingRecords.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAllBorrowingRecords.ColumnHeadersHeight = 30;
+            this.dgvAllBorrowingRecords.ContextMenuStrip = this.cmsManageBorrowingRecord;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,6 +132,47 @@
             this.btnAddRecord.Text = "Add Record";
             this.btnAddRecord.Click += new System.EventHandler(this.btnAddRecord_Click);
             // 
+            // cmsManageBorrowingRecord
+            // 
+            this.cmsManageBorrowingRecord.BackColor = System.Drawing.Color.Silver;
+            this.cmsManageBorrowingRecord.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsManageBorrowingRecord.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ItemReturn,
+            this.ItemViewDetails,
+            this.ItemUpdate});
+            this.cmsManageBorrowingRecord.Name = "cmsManageCustomer";
+            this.cmsManageBorrowingRecord.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.cmsManageBorrowingRecord.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageBorrowingRecord.RenderStyle.ColorTable = null;
+            this.cmsManageBorrowingRecord.RenderStyle.RoundedEdges = true;
+            this.cmsManageBorrowingRecord.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsManageBorrowingRecord.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.cmsManageBorrowingRecord.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsManageBorrowingRecord.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageBorrowingRecord.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsManageBorrowingRecord.Size = new System.Drawing.Size(211, 104);
+            this.cmsManageBorrowingRecord.Opening += new System.ComponentModel.CancelEventHandler(this.cmsManageBorrowingRecord_Opening);
+            // 
+            // ItemReturn
+            // 
+            this.ItemReturn.Name = "ItemReturn";
+            this.ItemReturn.Size = new System.Drawing.Size(210, 24);
+            this.ItemReturn.Text = "Return";
+            this.ItemReturn.Visible = false;
+            this.ItemReturn.Click += new System.EventHandler(this.ItemReturn_Click);
+            // 
+            // ItemViewDetails
+            // 
+            this.ItemViewDetails.Name = "ItemViewDetails";
+            this.ItemViewDetails.Size = new System.Drawing.Size(210, 24);
+            this.ItemViewDetails.Text = "View Details";
+            // 
+            // ItemUpdate
+            // 
+            this.ItemUpdate.Name = "ItemUpdate";
+            this.ItemUpdate.Size = new System.Drawing.Size(210, 24);
+            this.ItemUpdate.Text = "Update";
+            // 
             // frmManageBorrowing
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -139,6 +186,7 @@
             this.Text = "Manage Borrowing And Return";
             this.Load += new System.EventHandler(this.frmManageBorrowing_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllBorrowingRecords)).EndInit();
+            this.cmsManageBorrowingRecord.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -147,5 +195,9 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvAllBorrowingRecords;
         private Guna.UI2.WinForms.Guna2Button btnAddRecord;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageBorrowingRecord;
+        private System.Windows.Forms.ToolStripMenuItem ItemReturn;
+        private System.Windows.Forms.ToolStripMenuItem ItemViewDetails;
+        private System.Windows.Forms.ToolStripMenuItem ItemUpdate;
     }
 }
