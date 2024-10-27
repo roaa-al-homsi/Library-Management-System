@@ -35,7 +35,6 @@ namespace LibraryStstem.BorrowingReturn
             txtCustomerId.Text = _borrowingRecord.CustomerId.ToString();
             TimePicBorrowingDate.Value = _borrowingRecord.BorrowingDate;
             TimePicDueDate.Value = _borrowingRecord.DueDate;
-            TimePicActualReturn.Value = _borrowingRecord.ActualReturnDate;
         }
         private void frmAddUpdateRecord_Load(object sender, EventArgs e)
         {
@@ -47,7 +46,7 @@ namespace LibraryStstem.BorrowingReturn
             _borrowingRecord.CustomerId = int.Parse(txtCustomerId.Text);
             _borrowingRecord.BorrowingDate = TimePicBorrowingDate.Value;
             _borrowingRecord.DueDate = (_borrowingRecord.BorrowingDate).AddDays(BorrowingRecord.DefaultBorrowDays);
-            _borrowingRecord.ActualReturnDate = (TimePicActualReturn.Value.Date == new DateTime(2024, 10, 19)) ? DateTime.MinValue : TimePicActualReturn.Value;
+            _borrowingRecord.ActualReturnDate = DateTime.MinValue;
         }
         private void _PrintMessage(string Text, string Caption, MessageBoxIcon icon)
         {

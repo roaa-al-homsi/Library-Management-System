@@ -43,6 +43,15 @@ namespace LibraryStstem.BorrowingReturn
                 fine.Save();
             }
         }
+        private void _ChangeAvailabilityCopy(int CopyId)
+        {
+            BookCopy bookCopy = BookCopy.Find(CopyId);
+            if (bookCopy != null)
+            {
+                bookCopy.AvailabilityStatus = true;
+                bookCopy.Save();
+            }
+        }
         private void ItemReturn_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want return this copy?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -52,6 +61,7 @@ namespace LibraryStstem.BorrowingReturn
                 if (borrowingRecord != null)
                 {
                     borrowingRecord.ActualReturnDate = DateTime.Now;
+                    //borrowingRecord.BookCopy.AvailabilityStatus = true;
                 }
                 if (borrowingRecord.Save())
                 {
@@ -59,6 +69,7 @@ namespace LibraryStstem.BorrowingReturn
                 }
                 _RefreshBorrowingData();
                 _CheckFine(borrowingRecord);
+                _ChangeAvailabilityCopy(borrowingRecord.CopyId);
             }
             else
             {
