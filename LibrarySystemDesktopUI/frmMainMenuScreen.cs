@@ -4,6 +4,7 @@ using LibraryStstem.BorrowingReturn;
 using LibraryStstem.Customers;
 using LibraryStstem.Fines;
 using LibraryStstem.Genres;
+using LibraryStstem.Reservations;
 using LibraryStstem.Users;
 using LibrarySystem.Books;
 using System.Drawing;
@@ -123,6 +124,11 @@ namespace LibrarySystem
         {
             btnTitle.Image = btnBorrowing.Image;
             OpenChildFormAsync(new frmManageBorrowing(this), sender);
+        }
+        private void btnManageReservation_Click(object sender, System.EventArgs e)
+        {
+            btnTitle.Image = btnManageReservation.Image;
+            OpenChildFormAsync(new frmManageReservations(this), sender);
         }
     }
 }
