@@ -175,7 +175,7 @@
             this.Controls.Add(this.uc_Customer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDetailsBorrowing";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmDetailsBorrowing";
             this.Load += new System.EventHandler(this.frmDetailsBorrowing_Load);
             this.PanelCopyBookInfo.ResumeLayout(false);

@@ -238,6 +238,7 @@
             this.Controls.Add(this.guna2GradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDetailsFines";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmDetailsFinescs";
             this.Load += new System.EventHandler(this.frmDetailsFinescs_Load);
             this.guna2GradientPanel1.ResumeLayout(false);

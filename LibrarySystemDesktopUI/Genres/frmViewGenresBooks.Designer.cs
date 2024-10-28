@@ -114,6 +114,7 @@
             this.ClientSize = new System.Drawing.Size(1020, 223);
             this.Controls.Add(this.dgvAllBooksGeners);
             this.Name = "frmViewGenresBooks";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "View Books Genres";
             this.Load += new System.EventHandler(this.frmViewGenresBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllBooksGeners)).EndInit();

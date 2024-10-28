@@ -152,6 +152,7 @@
             this.Controls.Add(this.guna2HtmlLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmAddUpdateGenre";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "AddUpdateGenre";
             this.Load += new System.EventHandler(this.frmAddUpdateGenre_Load);
             this.ResumeLayout(false);

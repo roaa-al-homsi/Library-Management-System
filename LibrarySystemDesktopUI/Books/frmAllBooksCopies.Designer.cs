@@ -115,6 +115,7 @@
             this.ClientSize = new System.Drawing.Size(705, 305);
             this.Controls.Add(this.dgvAllBooksCopies);
             this.Name = "frmAllBooksCopies";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Tag = "Show Books Copies";
             this.Text = "Show Books Copies";
             this.Load += new System.EventHandler(this.frmAllBooksCopies_Load);
