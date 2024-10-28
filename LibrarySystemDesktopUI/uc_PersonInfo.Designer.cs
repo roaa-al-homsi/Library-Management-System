@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem
+﻿namespace LibrarySystem
 {
     partial class uc_PersonInfo
     {

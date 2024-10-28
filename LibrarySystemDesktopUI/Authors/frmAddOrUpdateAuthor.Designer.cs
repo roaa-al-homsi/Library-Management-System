@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Authors
+﻿namespace LibrarySystem.Authors
 {
     partial class frmAddOrUpdateAuthor
     {
@@ -45,7 +45,7 @@
             this.labAuthor = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.uc_PersonInfo1 = new LibraryStstem.uc_PersonInfo();
+            this.uc_PersonInfo1 = new LibrarySystem.uc_PersonInfo();
             this.guna2TabControl1.SuspendLayout();
             this.tabPersonInfo.SuspendLayout();
             this.tabAuthorInfo.SuspendLayout();

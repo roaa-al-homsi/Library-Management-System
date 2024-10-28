@@ -1,7 +1,7 @@
 ﻿using LibrarySystemBusiness;
 using System.Data;
 using System.Windows.Forms;
-namespace LibraryStstem
+namespace LibrarySystem
 {
     public partial class UctrlBookInfo : UserControl
     {

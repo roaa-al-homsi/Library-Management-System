@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Fines
+﻿namespace LibrarySystem.Fines
 {
     partial class frmAddFine
     {

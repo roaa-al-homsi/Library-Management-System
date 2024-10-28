@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem
+﻿namespace LibrarySystem
 {
     partial class uc_Customer
     {
@@ -32,7 +32,7 @@
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labCustomerid = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.uc_PersonInfo2 = new LibraryStstem.uc_PersonInfo();
+            this.uc_PersonInfo2 = new LibrarySystem.uc_PersonInfo();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labCustId = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtCardNum = new Guna.UI2.WinForms.Guna2TextBox();
@@ -102,6 +102,7 @@
             // 
             // uc_PersonInfo2
             // 
+            this.uc_PersonInfo2.BirthDateStatus = true;
             this.uc_PersonInfo2.Location = new System.Drawing.Point(3, 3);
             this.uc_PersonInfo2.Name = "uc_PersonInfo2";
             this.uc_PersonInfo2.Size = new System.Drawing.Size(365, 498);

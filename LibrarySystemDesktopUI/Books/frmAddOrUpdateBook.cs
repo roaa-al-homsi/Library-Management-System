@@ -1,6 +1,6 @@
 ﻿using LibrarySystemBusiness;
 using System.Windows.Forms;
-namespace LibraryStstem.Books
+namespace LibrarySystem.Books
 {
     public partial class frmAddOrUpdateBook : Form
     {

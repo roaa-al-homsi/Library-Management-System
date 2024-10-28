@@ -1,9 +1,8 @@
-﻿using LibrarySystem;
-using LibrarySystemBusiness;
+﻿using LibrarySystemBusiness;
 using System;
 using System.Windows.Forms;
 
-namespace LibraryStstem.Reservations
+namespace LibrarySystem.Reservations
 {
     public partial class frmManageReservations : Form
     {
@@ -21,6 +20,12 @@ namespace LibraryStstem.Reservations
         private void frmManageReservation_Load(object sender, EventArgs e)
         {
             _RefreshData();
+        }
+
+        private void btnAddReservation_Click(object sender, EventArgs e)
+        {
+            _frmMainMenuScreen.OpenChildFormAsync(new frmAddUpdateReservations(-1));
+
         }
     }
 }

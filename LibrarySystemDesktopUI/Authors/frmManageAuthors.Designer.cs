@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Authors
+﻿namespace LibrarySystem.Authors
 {
     partial class frmManageAuthors
     {

@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace LibraryStstem.Authors
+namespace LibrarySystem.Authors
 {
     public partial class frmAuthor_sBooks : Form
     {

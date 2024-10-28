@@ -1,7 +1,7 @@
 ﻿using LibrarySystemBusiness;
 using System.Windows.Forms;
 
-namespace LibraryStstem.Genres
+namespace LibrarySystem.Genres
 {
     public partial class frmAddUpdateGenre : Form
     {

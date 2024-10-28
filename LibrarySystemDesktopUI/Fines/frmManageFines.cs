@@ -1,7 +1,7 @@
 ﻿using LibrarySystem;
 using LibrarySystemBusiness;
 using System.Windows.Forms;
-namespace LibraryStstem.Fines
+namespace LibrarySystem.Fines
 {
     public partial class frmManageFines : Form
     {

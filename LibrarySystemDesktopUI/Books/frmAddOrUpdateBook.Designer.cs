@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Books
+﻿namespace LibrarySystem.Books
 {
     partial class frmAddOrUpdateBook
     {
@@ -30,7 +30,7 @@
         {
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.uctrlBookInfo1 = new LibraryStstem.UctrlBookInfo();
+            this.uctrlBookInfo1 = new LibrarySystem.UctrlBookInfo();
             this.SuspendLayout();
             // 
             // btnSave

@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.BorrowingReturn
+﻿namespace LibrarySystem.BorrowingReturn
 {
     partial class frmDetailsBorrowing
     {
@@ -38,7 +38,7 @@
             this.PanelCopyBookInfo = new Guna.UI2.WinForms.Guna2Panel();
             this.dgvCopyInfo = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.uc_Customer1 = new LibraryStstem.uc_Customer();
+            this.uc_Customer1 = new LibrarySystem.uc_Customer();
             this.PanelCopyBookInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCopyInfo)).BeginInit();
             this.SuspendLayout();

@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.BorrowingReturn
+﻿namespace LibrarySystem.BorrowingReturn
 {
     partial class frmAddUpdateRecord
     {

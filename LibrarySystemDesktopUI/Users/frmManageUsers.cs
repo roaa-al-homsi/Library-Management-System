@@ -2,7 +2,7 @@
 using LibrarySystemBusiness;
 using System.Windows.Forms;
 
-namespace LibraryStstem.Users
+namespace LibrarySystem.Users
 {
     public partial class frmManageUsers : Form
     {

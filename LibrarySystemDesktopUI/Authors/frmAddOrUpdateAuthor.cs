@@ -1,8 +1,8 @@
-﻿using LibraryStstem.Persons;
+﻿using LibrarySystem.Persons;
 using LibrarySystemBusiness;
 using System.Windows.Forms;
 
-namespace LibraryStstem.Authors
+namespace LibrarySystem.Authors
 {
     public partial class frmAddOrUpdateAuthor : Form
     {

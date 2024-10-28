@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Genres
+﻿namespace LibrarySystem.Genres
 {
     partial class frmAddUpdateGenre
     {

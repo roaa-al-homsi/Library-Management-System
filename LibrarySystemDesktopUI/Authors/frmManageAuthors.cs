@@ -3,7 +3,7 @@ using LibrarySystemBusiness;
 using System;
 using System.Windows.Forms;
 
-namespace LibraryStstem.Authors
+namespace LibrarySystem.Authors
 {
     public partial class frmManageAuthors : Form
     {

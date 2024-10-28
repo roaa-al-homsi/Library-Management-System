@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Books
+﻿namespace LibrarySystem.Books
 {
     partial class frmAllBooksCopies
     {

@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Customers
+﻿namespace LibrarySystem.Customers
 {
     partial class frmManageCustomers
     {

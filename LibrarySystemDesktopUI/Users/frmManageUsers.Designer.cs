@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Users
+﻿namespace LibrarySystem.Users
 {
     partial class frmManageUsers
     {

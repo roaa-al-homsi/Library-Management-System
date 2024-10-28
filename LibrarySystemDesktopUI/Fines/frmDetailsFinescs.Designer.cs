@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Fines
+﻿namespace LibrarySystem.Fines
 {
     partial class frmDetailsFines
     {
@@ -41,7 +41,7 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.uc_Customer1 = new LibraryStstem.uc_Customer();
+            this.uc_Customer1 = new LibrarySystem.uc_Customer();
             this.guna2GradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 

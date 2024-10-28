@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Reservations
+﻿namespace LibrarySystem.Reservations
 {
     partial class frmManageReservations
     {
@@ -124,6 +124,7 @@
             this.btnAddReservation.Size = new System.Drawing.Size(167, 45);
             this.btnAddReservation.TabIndex = 118;
             this.btnAddReservation.Text = "Add Record";
+            this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
             // 
             // frmManageReservations
             // 

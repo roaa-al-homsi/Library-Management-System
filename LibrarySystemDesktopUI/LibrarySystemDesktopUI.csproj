@@ -174,6 +174,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservation\frmAddUpdateReservationcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reservation\frmAddUpdateReservationcs.Designer.cs">
+      <DependentUpon>frmAddUpdateReservationcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reservation\frmManageReservation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +285,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Reservation\frmAddUpdateReservationcs.resx">
+      <DependentUpon>frmAddUpdateReservationcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reservation\frmManageReservation.resx">
       <DependentUpon>frmManageReservation.cs</DependentUpon>
     </EmbeddedResource>

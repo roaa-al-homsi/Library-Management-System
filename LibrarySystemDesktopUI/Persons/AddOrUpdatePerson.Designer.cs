@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Persons
+﻿namespace LibrarySystem.Persons
 {
     partial class frmAddUpdatePerson
     {

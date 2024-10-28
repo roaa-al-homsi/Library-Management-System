@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace LibraryStstem.Books
+namespace LibrarySystem.Books
 {
     public partial class frmBookCopies : Form
     {

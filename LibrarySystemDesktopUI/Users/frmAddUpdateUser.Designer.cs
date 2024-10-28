@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Users
+﻿namespace LibrarySystem.Users
 {
     partial class frmAddUpdateUser
     {
@@ -47,7 +47,7 @@
             this.btnSelectPerson = new Guna.UI2.WinForms.Guna2Button();
             this.tabPersonInfo = new System.Windows.Forms.TabPage();
             this.TabCtrlAddOrUpdateCustomers = new Guna.UI2.WinForms.Guna2TabControl();
-            this.uc_PersonInfo1 = new LibraryStstem.uc_PersonInfo();
+            this.uc_PersonInfo1 = new LibrarySystem.uc_PersonInfo();
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).BeginInit();
             this.panelContainerUserInfo.SuspendLayout();
             this.tabUserInfo.SuspendLayout();

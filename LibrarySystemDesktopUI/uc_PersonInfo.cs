@@ -1,6 +1,6 @@
 ﻿using LibrarySystemBusiness;
 using System.Windows.Forms;
-namespace LibraryStstem
+namespace LibrarySystem
 {
     public partial class uc_PersonInfo : UserControl
     {

@@ -1,8 +1,8 @@
-﻿using LibraryStstem.Persons;
+﻿using LibrarySystem.Persons;
 using LibrarySystemBusiness;
 using System.Windows.Forms;
 
-namespace LibraryStstem.Users
+namespace LibrarySystem.Users
 {
     public partial class frmAddUpdateUser : Form
     {

@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace LibraryStstem.BorrowingReturn
+namespace LibrarySystem.BorrowingReturn
 {
     public partial class frmAddUpdateRecord : Form
     {
