@@ -34,7 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllReservation = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnAddReservation = new Guna.UI2.WinForms.Guna2Button();
+            this.cmsManageReservationRecord = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
+            this.ItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllReservation)).BeginInit();
+            this.cmsManageReservationRecord.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvAllReservation
@@ -58,6 +62,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvAllReservation.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAllReservation.ColumnHeadersHeight = 30;
+            this.dgvAllReservation.ContextMenuStrip = this.cmsManageReservationRecord;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(37)))), ((int)(((byte)(41)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Andalus", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,6 +131,39 @@
             this.btnAddReservation.Text = "Add Record";
             this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
             // 
+            // cmsManageReservationRecord
+            // 
+            this.cmsManageReservationRecord.BackColor = System.Drawing.Color.Silver;
+            this.cmsManageReservationRecord.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.cmsManageReservationRecord.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ItemUpdate,
+            this.deleteToolStripMenuItem});
+            this.cmsManageReservationRecord.Name = "cmsManageCustomer";
+            this.cmsManageReservationRecord.RenderStyle.ArrowColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.cmsManageReservationRecord.RenderStyle.BorderColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageReservationRecord.RenderStyle.ColorTable = null;
+            this.cmsManageReservationRecord.RenderStyle.RoundedEdges = true;
+            this.cmsManageReservationRecord.RenderStyle.SelectionArrowColor = System.Drawing.Color.White;
+            this.cmsManageReservationRecord.RenderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.cmsManageReservationRecord.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.cmsManageReservationRecord.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
+            this.cmsManageReservationRecord.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.cmsManageReservationRecord.Size = new System.Drawing.Size(211, 80);
+            // 
+            // ItemUpdate
+            // 
+            this.ItemUpdate.Name = "ItemUpdate";
+            this.ItemUpdate.Size = new System.Drawing.Size(210, 24);
+            this.ItemUpdate.Text = "Update";
+            this.ItemUpdate.Click += new System.EventHandler(this.ItemUpdate_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
             // frmManageReservations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -140,6 +178,7 @@
             this.Text = "Manage Reservations";
             this.Load += new System.EventHandler(this.frmManageReservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllReservation)).EndInit();
+            this.cmsManageReservationRecord.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -148,5 +187,8 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView dgvAllReservation;
         private Guna.UI2.WinForms.Guna2Button btnAddReservation;
+        private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageReservationRecord;
+        private System.Windows.Forms.ToolStripMenuItem ItemUpdate;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }
