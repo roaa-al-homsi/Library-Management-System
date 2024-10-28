@@ -166,6 +166,7 @@
             this.ItemViewDetails.Name = "ItemViewDetails";
             this.ItemViewDetails.Size = new System.Drawing.Size(210, 24);
             this.ItemViewDetails.Text = "View Details";
+            this.ItemViewDetails.Click += new System.EventHandler(this.ItemViewDetails_Click);
             // 
             // ItemUpdate
             // 

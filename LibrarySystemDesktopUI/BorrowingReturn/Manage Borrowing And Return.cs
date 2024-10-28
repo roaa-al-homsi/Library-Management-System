@@ -81,6 +81,14 @@ namespace LibraryStstem.BorrowingReturn
             int RecordId = (int)dgvAllBorrowingRecords.CurrentRow.Cells[0].Value;
             _frmMainMenu.OpenChildFormAsync(new frmAddUpdateRecord(RecordId));
         }
+
+        private void ItemViewDetails_Click(object sender, EventArgs e)
+        {
+            int CustomerId = (int)dgvAllBorrowingRecords.CurrentRow.Cells[2].Value;
+            int CopyId = (int)dgvAllBorrowingRecords.CurrentRow.Cells[1].Value;
+            frmDetailsBorrowing frmDetailsBorrowing = new frmDetailsBorrowing(CustomerId, CopyId);
+            frmDetailsBorrowing.ShowDialog();
+        }
     }
 
 }
