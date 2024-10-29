@@ -34,11 +34,7 @@ namespace LibrarySystemBusiness
         }
 
         private bool _Add()
-        {//validation
-            //if (!Person.Save())
-            //{
-            //    return false;
-            //}
+        {
             this.Id = AuthorData.Add(Certificate, this.PersonId, AdditionalDetails);
             return (Id != -1);
         }
@@ -48,7 +44,7 @@ namespace LibrarySystemBusiness
         }
         public bool ReadyAuthor()
         {
-            if (this.PersonId == 0)
+            if (!Person.Exist(this.PersonId))
             {
                 return false;
             }

@@ -38,7 +38,6 @@ namespace LibrarySystemBusiness
         {
             this.Id = PersonData.Add(this.Name, this.BirthDate, this.Country, this.ContactInfo, this.ImagePath);
             return (Id != -1);
-
         }
         private bool _Update()
         {
@@ -48,8 +47,20 @@ namespace LibrarySystemBusiness
         {
             return PersonData.Delete(Id);
         }
+        private bool ReadyPerson()
+        {
+            if (this.Name == null || this.ContactInfo == null || this.Country == null)
+            {
+                return false;
+            }
+            return true;
+        }
         public bool Save()
         {
+            if (!ReadyPerson())
+            {
+                return false;
+            }
             switch (this._Mode)
             {
                 case Mode.Add:
