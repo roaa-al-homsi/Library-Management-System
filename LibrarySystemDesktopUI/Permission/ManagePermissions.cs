@@ -13,7 +13,14 @@ namespace LibraryStstem.Permission
             }
             return (((int)menuPermission & frmMainLogin.CurrentUser.Permission) == (int)menuPermission);
         }
-
+        public static bool CheckAccessPermission(int Permission_User, enMainMenuPermission menuPermission)
+        {
+            if (frmMainLogin.CurrentUser.Permission == -1)
+            {
+                return true;
+            }
+            return (((int)menuPermission & Permission_User) == (int)menuPermission);
+        }
     }
 
 }

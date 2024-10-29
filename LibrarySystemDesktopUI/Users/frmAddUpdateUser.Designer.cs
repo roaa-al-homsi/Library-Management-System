@@ -32,8 +32,6 @@
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.picPerson = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelContainerUserInfo = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.txtPermission = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labUserId = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -46,8 +44,10 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSelectPerson = new Guna.UI2.WinForms.Guna2Button();
             this.tabPersonInfo = new System.Windows.Forms.TabPage();
-            this.TabCtrlAddOrUpdateCustomers = new Guna.UI2.WinForms.Guna2TabControl();
             this.uc_PersonInfo1 = new LibrarySystem.uc_PersonInfo();
+            this.TabCtrlAddOrUpdateCustomers = new Guna.UI2.WinForms.Guna2TabControl();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).BeginInit();
             this.panelContainerUserInfo.SuspendLayout();
             this.tabUserInfo.SuspendLayout();
@@ -99,14 +99,14 @@
             this.picPerson.Location = new System.Drawing.Point(388, 3);
             this.picPerson.Name = "picPerson";
             this.picPerson.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picPerson.Size = new System.Drawing.Size(241, 221);
+            this.picPerson.Size = new System.Drawing.Size(217, 200);
             this.picPerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPerson.TabIndex = 157;
             this.picPerson.TabStop = false;
             // 
             // panelContainerUserInfo
             // 
-            this.panelContainerUserInfo.Controls.Add(this.txtPermission);
+            this.panelContainerUserInfo.Controls.Add(this.checkedListBox1);
             this.panelContainerUserInfo.Controls.Add(this.guna2HtmlLabel3);
             this.panelContainerUserInfo.Controls.Add(this.txtPassword);
             this.panelContainerUserInfo.Controls.Add(this.guna2HtmlLabel2);
@@ -122,44 +122,6 @@
             this.panelContainerUserInfo.Name = "panelContainerUserInfo";
             this.panelContainerUserInfo.Size = new System.Drawing.Size(1045, 540);
             this.panelContainerUserInfo.TabIndex = 150;
-            // 
-            // txtPermission
-            // 
-            this.txtPermission.Animated = true;
-            this.txtPermission.AutoRoundedCorners = true;
-            this.txtPermission.BorderRadius = 17;
-            this.txtPermission.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPermission.DefaultText = "";
-            this.txtPermission.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPermission.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPermission.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPermission.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPermission.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.txtPermission.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPermission.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtPermission.ForeColor = System.Drawing.Color.White;
-            this.txtPermission.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPermission.Location = new System.Drawing.Point(312, 500);
-            this.txtPermission.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPermission.Name = "txtPermission";
-            this.txtPermission.PasswordChar = '\0';
-            this.txtPermission.PlaceholderText = "";
-            this.txtPermission.SelectedText = "";
-            this.txtPermission.Size = new System.Drawing.Size(200, 36);
-            this.txtPermission.TabIndex = 161;
-            this.txtPermission.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // guna2HtmlLabel3
-            // 
-            this.guna2HtmlLabel3.AutoSize = false;
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(85, 500);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(146, 36);
-            this.guna2HtmlLabel3.TabIndex = 160;
-            this.guna2HtmlLabel3.Text = "Permission:";
             // 
             // txtPassword
             // 
@@ -205,7 +167,7 @@
             this.labUserId.BackColor = System.Drawing.Color.Transparent;
             this.labUserId.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labUserId.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labUserId.Location = new System.Drawing.Point(567, 255);
+            this.labUserId.Location = new System.Drawing.Point(551, 209);
             this.labUserId.Name = "labUserId";
             this.labUserId.Size = new System.Drawing.Size(95, 32);
             this.labUserId.TabIndex = 146;
@@ -282,7 +244,7 @@
             this.labUser.BackColor = System.Drawing.Color.Transparent;
             this.labUser.Font = new System.Drawing.Font("Impact", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labUser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.labUser.Location = new System.Drawing.Point(404, 255);
+            this.labUser.Location = new System.Drawing.Point(388, 209);
             this.labUser.Name = "labUser";
             this.labUser.Size = new System.Drawing.Size(157, 32);
             this.labUser.TabIndex = 154;
@@ -297,7 +259,7 @@
             this.tabUserInfo.Location = new System.Drawing.Point(184, 4);
             this.tabUserInfo.Name = "tabUserInfo";
             this.tabUserInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabUserInfo.Size = new System.Drawing.Size(1057, 572);
+            this.tabUserInfo.Size = new System.Drawing.Size(1057, 583);
             this.tabUserInfo.TabIndex = 1;
             this.tabUserInfo.Text = "User Info";
             // 
@@ -345,6 +307,14 @@
             this.tabPersonInfo.TabIndex = 0;
             this.tabPersonInfo.Text = "Person Info";
             // 
+            // uc_PersonInfo1
+            // 
+            this.uc_PersonInfo1.BirthDateStatus = true;
+            this.uc_PersonInfo1.Location = new System.Drawing.Point(637, 6);
+            this.uc_PersonInfo1.Name = "uc_PersonInfo1";
+            this.uc_PersonInfo1.Size = new System.Drawing.Size(378, 493);
+            this.uc_PersonInfo1.TabIndex = 0;
+            // 
             // TabCtrlAddOrUpdateCustomers
             // 
             this.TabCtrlAddOrUpdateCustomers.Alignment = System.Windows.Forms.TabAlignment.Left;
@@ -355,7 +325,7 @@
             this.TabCtrlAddOrUpdateCustomers.Location = new System.Drawing.Point(0, 0);
             this.TabCtrlAddOrUpdateCustomers.Name = "TabCtrlAddOrUpdateCustomers";
             this.TabCtrlAddOrUpdateCustomers.SelectedIndex = 0;
-            this.TabCtrlAddOrUpdateCustomers.Size = new System.Drawing.Size(1245, 580);
+            this.TabCtrlAddOrUpdateCustomers.Size = new System.Drawing.Size(1245, 591);
             this.TabCtrlAddOrUpdateCustomers.TabButtonHoverState.BorderColor = System.Drawing.Color.Empty;
             this.TabCtrlAddOrUpdateCustomers.TabButtonHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(70)))));
             this.TabCtrlAddOrUpdateCustomers.TabButtonHoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 10F);
@@ -375,12 +345,37 @@
             this.TabCtrlAddOrUpdateCustomers.TabIndex = 120;
             this.TabCtrlAddOrUpdateCustomers.TabMenuBackColor = System.Drawing.Color.Silver;
             // 
-            // uc_PersonInfo1
+            // guna2HtmlLabel3
             // 
-            this.uc_PersonInfo1.Location = new System.Drawing.Point(637, 6);
-            this.uc_PersonInfo1.Name = "uc_PersonInfo1";
-            this.uc_PersonInfo1.Size = new System.Drawing.Size(378, 493);
-            this.uc_PersonInfo1.TabIndex = 0;
+            this.guna2HtmlLabel3.AutoSize = false;
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(534, 300);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(146, 36);
+            this.guna2HtmlLabel3.TabIndex = 162;
+            this.guna2HtmlLabel3.Text = "Permission:";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.checkedListBox1.ForeColor = System.Drawing.Color.Silver;
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Items.AddRange(new object[] {
+            "Books",
+            "Authors",
+            "Customers",
+            "Users",
+            "Genres",
+            "Fines",
+            "Borrowing",
+            "Reservations"});
+            this.checkedListBox1.Location = new System.Drawing.Point(686, 304);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(230, 140);
+            this.checkedListBox1.TabIndex = 164;
+            this.checkedListBox1.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox1_ItemCheck);
             // 
             // frmAddUpdateUser
             // 
@@ -423,9 +418,9 @@
         private System.Windows.Forms.TabPage tabPersonInfo;
         private uc_PersonInfo uc_PersonInfo1;
         private Guna.UI2.WinForms.Guna2TabControl TabCtrlAddOrUpdateCustomers;
-        private Guna.UI2.WinForms.Guna2TextBox txtPermission;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
