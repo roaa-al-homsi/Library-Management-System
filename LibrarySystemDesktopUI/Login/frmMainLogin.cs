@@ -1,5 +1,6 @@
 ﻿using LibrarySystem;
 using LibrarySystemBusiness;
+using System;
 using System.Windows.Forms;
 
 namespace LibraryStstem.Login
@@ -7,6 +8,8 @@ namespace LibraryStstem.Login
     public partial class frmMainLogin : Form
     {
         static public User CurrentUser = User.FindByUserNameAndPassword(string.Empty, string.Empty);
+        public static DateTime DateLoginToSystem;
+        public static DateTime DateLogoutFromSystem;
         private byte _CounterFailedLogin = 0;
         private short _CounterTick = 60;
         public frmMainLogin()

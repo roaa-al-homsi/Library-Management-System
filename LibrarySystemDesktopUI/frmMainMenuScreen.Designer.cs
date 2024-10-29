@@ -37,6 +37,7 @@
             this.btnCustomers = new Guna.UI2.WinForms.Guna2Button();
             this.btnAllBooks = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.picCurrentUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnAuthors = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -47,11 +48,12 @@
             this.btnBorrowing = new Guna.UI2.WinForms.Guna2Button();
             this.btnFines = new Guna.UI2.WinForms.Guna2Button();
             this.panelMainMenu = new Guna.UI2.WinForms.Guna2Panel();
-            this.picCurrentUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.labLoginDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCurrentUser)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.pnlOptions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picCurrentUser)).BeginInit();
+            this.panelMainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnTitle
@@ -196,6 +198,18 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(1245, 84);
             this.guna2Panel2.TabIndex = 4;
+            // 
+            // picCurrentUser
+            // 
+            this.picCurrentUser.Image = ((System.Drawing.Image)(resources.GetObject("picCurrentUser.Image")));
+            this.picCurrentUser.ImageRotate = 0F;
+            this.picCurrentUser.Location = new System.Drawing.Point(1142, 3);
+            this.picCurrentUser.Name = "picCurrentUser";
+            this.picCurrentUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picCurrentUser.Size = new System.Drawing.Size(91, 75);
+            this.picCurrentUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCurrentUser.TabIndex = 3;
+            this.picCurrentUser.TabStop = false;
             // 
             // btnAuthors
             // 
@@ -363,22 +377,24 @@
             // panelMainMenu
             // 
             this.panelMainMenu.BackColor = System.Drawing.Color.Gray;
+            this.panelMainMenu.Controls.Add(this.labLoginDate);
             this.panelMainMenu.Location = new System.Drawing.Point(210, 84);
             this.panelMainMenu.Name = "panelMainMenu";
             this.panelMainMenu.Size = new System.Drawing.Size(1245, 651);
             this.panelMainMenu.TabIndex = 5;
             // 
-            // picCurrentUser
+            // labLoginDate
             // 
-            this.picCurrentUser.Image = ((System.Drawing.Image)(resources.GetObject("picCurrentUser.Image")));
-            this.picCurrentUser.ImageRotate = 0F;
-            this.picCurrentUser.Location = new System.Drawing.Point(1142, 3);
-            this.picCurrentUser.Name = "picCurrentUser";
-            this.picCurrentUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.picCurrentUser.Size = new System.Drawing.Size(91, 75);
-            this.picCurrentUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picCurrentUser.TabIndex = 3;
-            this.picCurrentUser.TabStop = false;
+            this.labLoginDate.AutoSize = false;
+            this.labLoginDate.BackColor = System.Drawing.Color.Transparent;
+            this.labLoginDate.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLoginDate.ForeColor = System.Drawing.SystemColors.Control;
+            this.labLoginDate.Location = new System.Drawing.Point(367, 221);
+            this.labLoginDate.Name = "labLoginDate";
+            this.labLoginDate.Size = new System.Drawing.Size(256, 59);
+            this.labLoginDate.TabIndex = 0;
+            this.labLoginDate.Text = "guna2HtmlLabel1";
+            this.labLoginDate.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMainMenuScreen
             // 
@@ -395,9 +411,10 @@
             this.Load += new System.EventHandler(this.frmMainMenuScreen_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCurrentUser)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.pnlOptions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picCurrentUser)).EndInit();
+            this.panelMainMenu.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -422,6 +439,7 @@
         private Guna.UI2.WinForms.Guna2Button btnManageReservation;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picCurrentUser;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labLoginDate;
     }
 }
 

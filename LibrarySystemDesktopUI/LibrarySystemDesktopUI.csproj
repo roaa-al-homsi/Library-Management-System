@@ -172,6 +172,7 @@
     <Compile Include="Login\frmMainLogin.Designer.cs">
       <DependentUpon>frmMainLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Permission\ManagePermissions.cs" />
     <Compile Include="Persons\AddOrUpdatePerson.cs">
       <SubType>Form</SubType>
     </Compile>
