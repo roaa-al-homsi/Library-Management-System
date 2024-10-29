@@ -29,17 +29,28 @@ namespace LibrarySystemBusiness
             _Mode = Mode.Update;
         }
         private bool _Add()
-        {//validation
+        {
             this.Id = BookCopyData.Add(this.BookId, this.AvailabilityStatus);
             return (this.Id != -1);
         }
         private bool _Update()
         {
-            //validation
             return BookCopyData.Update(this.Id, this.BookId, this.AvailabilityStatus);
+        }
+        private bool _ReadyBookCopy()
+        {
+            if (!BookData.IsExist(this.BookId))
+            {
+                return false;
+            }
+            return true;
         }
         public bool Save()
         {
+            if (!_ReadyBookCopy())
+            {
+                return false;
+            }
             switch (this._Mode)
             {
                 case Mode.Add: return _Add();

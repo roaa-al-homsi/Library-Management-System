@@ -44,7 +44,7 @@ namespace LibrarySystemBusiness
             _Mode = Mode.Update;
         }
         private bool _Add()
-        {//validation
+        {
             this.Id = BorrowingRecordData.Add(this.CopyId, this.CustomerId, this.BorrowingDate, this.DueDate, this.ActualReturnDate);
             return (this.Id != -1);
         }
@@ -52,8 +52,24 @@ namespace LibrarySystemBusiness
         {
             return BorrowingRecordData.Update(this.Id, this.CopyId, this.CustomerId, this.BorrowingDate, this.DueDate, this.ActualReturnDate);
         }
+        private bool _ReadyRecord()
+        {
+            if (!BookCopyData.Exist(this.CopyId) || !CustomerData.Exist(this.CustomerId))
+            {
+                return false;
+            }
+            if (this.BorrowingDate == DateTime.MinValue || this.DueDate == DateTime.MinValue)
+            {
+                return false;
+            }
+            return true;
+        }
         public bool Save()
         {
+            if (!_ReadyRecord())
+            {
+                return false;
+            }
             switch (_Mode)
             {
                 case Mode.Add:
