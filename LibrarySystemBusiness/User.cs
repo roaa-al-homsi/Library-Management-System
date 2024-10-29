@@ -5,6 +5,7 @@ namespace LibrarySystemBusiness
 {
     public class User
     {
+
         private enum ModeUser { Add, Update };
         private ModeUser _Mode;
         public Person Person { get; private set; }//composition
@@ -104,6 +105,17 @@ namespace LibrarySystemBusiness
             if (UserData.GetUserById(ref PersonId, UserId, ref UserName, ref Password, ref Permission))
             {
                 return new User(UserId, PersonId, UserName, Password, Permission);
+            }
+            return null;
+        }
+        static public User FindByUserNameAndPassword(string UserName, string Password)
+        {
+            int Id = -1;
+            int PersonId = -1;
+            int Permission = 0;
+            if (UserData.GetUserByUserNameAndPassword(ref PersonId, ref Id, UserName, Password, ref Permission))
+            {
+                return new User(Id, PersonId, UserName, Password, Permission);
             }
             return null;
         }

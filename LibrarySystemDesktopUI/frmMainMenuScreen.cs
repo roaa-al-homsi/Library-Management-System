@@ -1,12 +1,13 @@
 ﻿using Guna.UI2.WinForms;
+using LibraryStstem.Login;
 using LibrarySystem.Authors;
+using LibrarySystem.Books;
 using LibrarySystem.BorrowingReturn;
 using LibrarySystem.Customers;
 using LibrarySystem.Fines;
 using LibrarySystem.Genres;
 using LibrarySystem.Reservations;
 using LibrarySystem.Users;
-using LibrarySystem.Books;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -21,7 +22,6 @@ namespace LibrarySystem
 
         private Guna2Button _currentButton;
         private Form _activeForm;
-
 
         private void _ActivateButton(object btnSender)
         {
@@ -130,5 +130,15 @@ namespace LibrarySystem
             btnTitle.Image = btnManageReservation.Image;
             OpenChildFormAsync(new frmManageReservations(this), sender);
         }
+        private void frmMainMenuScreen_Load(object sender, System.EventArgs e)
+        {
+            labCurrentUser.Text = frmMainLogin.CurrentUser.UserName;
+            if (!string.IsNullOrEmpty(frmMainLogin.CurrentUser.Person.ImagePath))
+            {
+                picCurrentUser.ImageLocation = frmMainLogin.CurrentUser.Person.ImagePath;
+            }
+        }
+
+
     }
 }

@@ -59,6 +59,7 @@
             this.btnClose.Size = new System.Drawing.Size(54, 50);
             this.btnClose.TabIndex = 57;
             this.btnClose.Text = "X";
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // labTimer
             // 
@@ -90,20 +91,22 @@
             this.btnLogin.Animated = true;
             this.btnLogin.AutoRoundedCorners = true;
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogin.BorderRadius = 24;
+            this.btnLogin.BorderRadius = 26;
             this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnLogin.FillColor = System.Drawing.Color.Silver;
-            this.btnLogin.Font = new System.Drawing.Font("Andalus", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(667, 522);
+            this.btnLogin.HoverState.CustomBorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnLogin.Location = new System.Drawing.Point(701, 526);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(185, 50);
+            this.btnLogin.Size = new System.Drawing.Size(139, 54);
             this.btnLogin.TabIndex = 54;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseTransparentBackground = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // guna2HtmlLabel2
             // 
@@ -135,17 +138,19 @@
             this.txtPassword.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPassword.ForeColor = System.Drawing.Color.Transparent;
-            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPassword.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtPassword.IconLeftSize = new System.Drawing.Size(35, 35);
             this.txtPassword.Location = new System.Drawing.Point(618, 352);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '\0';
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.txtPassword.PlaceholderText = "";
             this.txtPassword.SelectedText = "";
             this.txtPassword.Size = new System.Drawing.Size(319, 41);
             this.txtPassword.TabIndex = 52;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // guna2HtmlLabel1
             // 
@@ -177,7 +182,7 @@
             this.txtUserName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUserName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUserName.ForeColor = System.Drawing.Color.Transparent;
-            this.txtUserName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtUserName.HoverState.BorderColor = System.Drawing.Color.Silver;
             this.txtUserName.IconLeftSize = new System.Drawing.Size(35, 35);
             this.txtUserName.Location = new System.Drawing.Point(618, 190);
             this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -186,8 +191,14 @@
             this.txtUserName.PlaceholderForeColor = System.Drawing.Color.Transparent;
             this.txtUserName.PlaceholderText = "";
             this.txtUserName.SelectedText = "";
+            this.txtUserName.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.txtUserName.Size = new System.Drawing.Size(319, 41);
             this.txtUserName.TabIndex = 50;
+            this.txtUserName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
             // frmMainLogin
             // 
@@ -205,6 +216,7 @@
             this.Controls.Add(this.txtUserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMainLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMainLogin";
             this.ResumeLayout(false);
 

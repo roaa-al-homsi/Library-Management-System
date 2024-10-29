@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibraryStstem.Login;
+using System;
 using System.Windows.Forms;
 
 namespace LibrarySystem
@@ -18,7 +19,7 @@ namespace LibrarySystem
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMainMenuScreen());
+            Application.Run(new frmMainLogin());
         }
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();

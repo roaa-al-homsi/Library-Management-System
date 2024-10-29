@@ -32,7 +32,7 @@
             this.btnTitle = new Guna.UI2.WinForms.Guna2Button();
             this.btnGenres = new Guna.UI2.WinForms.Guna2Button();
             this.labUserName = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.labCurrentUser = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnCustomers = new Guna.UI2.WinForms.Guna2Button();
             this.btnAllBooks = new Guna.UI2.WinForms.Guna2Button();
@@ -47,9 +47,11 @@
             this.btnBorrowing = new Guna.UI2.WinForms.Guna2Button();
             this.btnFines = new Guna.UI2.WinForms.Guna2Button();
             this.panelMainMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.picCurrentUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.pnlOptions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picCurrentUser)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTitle
@@ -104,17 +106,17 @@
             this.labUserName.Text = null;
             this.labUserName.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // guna2HtmlLabel1
+            // labCurrentUser
             // 
-            this.guna2HtmlLabel1.AutoSize = false;
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(1078, 36);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(51, 29);
-            this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "User :";
+            this.labCurrentUser.AutoSize = false;
+            this.labCurrentUser.BackColor = System.Drawing.Color.Transparent;
+            this.labCurrentUser.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labCurrentUser.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labCurrentUser.Location = new System.Drawing.Point(990, 36);
+            this.labCurrentUser.Name = "labCurrentUser";
+            this.labCurrentUser.Size = new System.Drawing.Size(160, 37);
+            this.labCurrentUser.TabIndex = 0;
+            this.labCurrentUser.Text = "User :";
             // 
             // btnUsers
             // 
@@ -185,9 +187,10 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.guna2Panel2.Controls.Add(this.picCurrentUser);
             this.guna2Panel2.Controls.Add(this.btnTitle);
             this.guna2Panel2.Controls.Add(this.labUserName);
-            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel2.Controls.Add(this.labCurrentUser);
             this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel2.Location = new System.Drawing.Point(210, 0);
             this.guna2Panel2.Name = "guna2Panel2";
@@ -360,11 +363,22 @@
             // panelMainMenu
             // 
             this.panelMainMenu.BackColor = System.Drawing.Color.Gray;
-            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMainMenu.Location = new System.Drawing.Point(210, 84);
             this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(1245, 675);
+            this.panelMainMenu.Size = new System.Drawing.Size(1245, 651);
             this.panelMainMenu.TabIndex = 5;
+            // 
+            // picCurrentUser
+            // 
+            this.picCurrentUser.Image = ((System.Drawing.Image)(resources.GetObject("picCurrentUser.Image")));
+            this.picCurrentUser.ImageRotate = 0F;
+            this.picCurrentUser.Location = new System.Drawing.Point(1142, 3);
+            this.picCurrentUser.Name = "picCurrentUser";
+            this.picCurrentUser.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.picCurrentUser.Size = new System.Drawing.Size(91, 75);
+            this.picCurrentUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picCurrentUser.TabIndex = 3;
+            this.picCurrentUser.TabStop = false;
             // 
             // frmMainMenuScreen
             // 
@@ -378,10 +392,12 @@
             this.Name = "frmMainMenuScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmMainMenuScreen_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.pnlOptions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picCurrentUser)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -390,7 +406,7 @@
         private Guna.UI2.WinForms.Guna2Button btnTitle;
         private Guna.UI2.WinForms.Guna2Button btnGenres;
         private Guna.UI2.WinForms.Guna2HtmlLabel labUserName;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel labCurrentUser;
         private Guna.UI2.WinForms.Guna2Button btnUsers;
         private Guna.UI2.WinForms.Guna2Button btnCustomers;
         private Guna.UI2.WinForms.Guna2Button btnAllBooks;
@@ -405,6 +421,7 @@
         private Guna.UI2.WinForms.Guna2Button btnBorrowing;
         private Guna.UI2.WinForms.Guna2Button btnManageReservation;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox picCurrentUser;
     }
 }
 

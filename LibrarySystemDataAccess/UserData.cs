@@ -66,6 +66,37 @@ namespace LibrarySystemDataAccess
             return GenericData.All("select * from View_Users_Details");
         }
 
+        static public bool GetUserByUserNameAndPassword(ref int PersonId, ref int Id, string username, string Password, ref int Permission)
+        {
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"select * from Users where UserName=@username and Password=@Password";
+
+            bool IsFound = false;
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@UserName", username);
+            command.Parameters.AddWithValue("@Password", Password);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    IsFound = true;
+                    Id = (int)reader["Id"];
+                    PersonId = (int)reader["Person Id"];
+                    Permission = (int)reader["Permission"];
+                }
+                else
+                {
+                    IsFound = false;
+                }
+
+                reader.Close();
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return IsFound;
+        }
         static public bool GetUserByUserName(ref int PersonId, ref int Id, string username, ref string Password, ref int Permission)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
