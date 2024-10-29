@@ -70,8 +70,32 @@ namespace LibrarySystemBusiness
         {
             return BookData.Update(this.Id, this.Title, this.ISBN, this.PublicationDate, this.GenreId, this.AdditionalDetails, this.NumberOfPages, this.PublishingHouse, this.SellingPrice, this.BorrowingPrice, this.ImagePath, this.AuthorId);
         }
+        private bool ReadyBook()
+        {
+            if (BookData.IsExistByISBN(int.Parse(this.ISBN)) && _Mode == Mode.Add)
+            {
+                return false;
+            }
+            if (string.IsNullOrEmpty(this.Title) || this.PublicationDate == 0 || this.SellingPrice == 0 || this.BorrowingPrice == 0 || this.NumberOfPages == 0)
+            {
+                return false;
+            }
+            if (!AuthorData.Exist(this.AuthorId))
+            {
+                return false;
+            }
+            if (!GenreData.Exist(this.AuthorId))
+            {
+                return false;
+            }
+            return true;
+        }
         public bool Save()
         {
+            if (!ReadyBook())
+            {
+                return false;
+            }
             switch (this._Mode)
             {
                 case Mode.Add:
