@@ -44,6 +44,8 @@ namespace LibrarySystemBusiness
         }
         public bool Save()
         {
+            if (string.IsNullOrEmpty(this.Name))
+            { return false; }
             switch (_Mode)
             {
                 case Mode.Add:

@@ -42,16 +42,30 @@ namespace LibrarySystemBusiness
             _Mode = Mode.Update;
         }
         private bool _Add()
-        {//validation
+        {
             this.Id = FineData.Add(this.CustomerId, this.BorrowingRecordId, this.Amount, this.NumberOfLateDays, this.PaymentStatus);
             return (this.Id != -1);
         }
         private bool _Update()
-        {//validation
+        {
             return FineData.Update(this.Id, this.CustomerId, this.BorrowingRecordId, this.Amount, this.NumberOfLateDays, this.PaymentStatus);
+        }
+        private bool _ReadyFine()
+        {
+            if (!CustomerData.Exist(this.CustomerId) || !BorrowingRecordData.Exist(this.BorrowingRecordId))
+            {
+                return false;
+            }
+            if (this.Amount == 0 || this.NumberOfLateDays == 0)
+            {
+                return false;
+            }
+            return true;
         }
         public bool Save()
         {
+            if (!_ReadyFine())
+            { return false; }
             switch (_Mode)
             {
                 case Mode.Add:

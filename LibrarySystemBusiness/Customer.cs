@@ -37,8 +37,18 @@ namespace LibrarySystemBusiness
             //validatioin
             return CustomerData.Update(this.Id, this.LibraryCardNumber, this.PersonId);
         }
+        private bool _ReadyCustomer()
+        {
+            if (!PersonData.Exist(this.PersonId) || CustomerData.ExistByCard(this.LibraryCardNumber))
+            {
+                return false;
+            }
+            return true;
+        }
         public bool Save()
         {
+            if (!_ReadyCustomer())
+            { return false; }
             switch (_Mode)
             {
                 case ModeCustomer.Add:

@@ -51,8 +51,20 @@ namespace LibrarySystemBusiness
         {//validation
             return ReservationData.Update(this.Id, this.CustomerId, this.CopyId, this.ReservationDate);
         }
+        private bool _ReadyReservationRecord()
+        {
+            if (!CustomerData.Exist(this.CustomerId) || !BookCopyData.Exist(this.CopyId) || this.ReservationDate == DateTime.MinValue)
+            {
+                return false;
+            }
+            return true;
+        }
         public bool Save()
         {
+            if (!_ReadyReservationRecord())
+            {
+                return false;
+            }
             switch (_Mode)
             {
                 case Mode.Add:

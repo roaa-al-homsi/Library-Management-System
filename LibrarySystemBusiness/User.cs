@@ -24,7 +24,6 @@ namespace LibrarySystemBusiness
             this.Permission = 0;
             _Mode = ModeUser.Add;
         }
-
         private User(int Id, int PersonId, string UerName, string Password, int Permission)
         {
             Person = Person.Find(PersonId);
@@ -36,25 +35,41 @@ namespace LibrarySystemBusiness
             _Mode = ModeUser.Update;
         }
 
-        private bool Add()
+        private bool _Add()
         {
             //validation
             this.Id = UserData.Add(this.UserName, this.Password, this.Permission, this.PersonId);
             return (Id != -1);
         }
-        private bool Update()
+        private bool _Update()
         {
             //validation
             return UserData.Update(this.Id, this.UserName, this.Password, this.Permission, this.PersonId);
         }
+        private bool _ReadyUser()
+        {
+            if (ExistByUserName(this.UserName))
+            {
+                return false;
+            }
+            if (!PersonData.Exist(this.PersonId) || string.IsNullOrWhiteSpace(this.Password) || this.Permission == 0)
+            {
+                return false;
+            }
+            return true;
+        }
         public bool Save()
         {
+            if (!_ReadyUser())
+            {
+                return false;
+            }
             switch (_Mode)
             {
                 case ModeUser.Add:
-                    return Add();
+                    return _Add();
                 case ModeUser.Update:
-                    return Update();
+                    return _Update();
             }
             return false;
         }

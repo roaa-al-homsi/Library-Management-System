@@ -148,5 +148,9 @@ namespace LibrarySystemDataAccess
         {
             return GenericData.Exist("select Found=1 from Customers where Id =@Id", "@Id", Id);
         }
+        static public bool ExistByCard(string LibCard)
+        {
+            return GenericData.Exist("select Found=1 from Customers where [Library Card Number] =@LibCard", "@LibCard", LibCard);
+        }
     }
 }
