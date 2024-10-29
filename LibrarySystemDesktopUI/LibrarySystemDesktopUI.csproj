@@ -166,6 +166,12 @@
     <Compile Include="Genres\frmViewGenresBooks.Designer.cs">
       <DependentUpon>frmViewGenresBooks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\frmMainLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\frmMainLogin.Designer.cs">
+      <DependentUpon>frmMainLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Persons\AddOrUpdatePerson.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Genres\frmViewGenresBooks.resx">
       <DependentUpon>frmViewGenresBooks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\frmMainLogin.resx">
+      <DependentUpon>frmMainLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persons\AddOrUpdatePerson.resx">
       <DependentUpon>AddOrUpdatePerson.cs</DependentUpon>
