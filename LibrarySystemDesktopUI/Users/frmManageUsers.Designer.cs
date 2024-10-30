@@ -33,10 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllUsers = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.cmsManageUser = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.ItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.ItemDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllUsers)).BeginInit();
             this.cmsManageUser.SuspendLayout();
             this.SuspendLayout();
@@ -112,25 +112,6 @@
             this.dgvAllUsers.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.dgvAllUsers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
-            // btnAddUser
-            // 
-            this.btnAddUser.Animated = true;
-            this.btnAddUser.AutoRoundedCorners = true;
-            this.btnAddUser.BorderRadius = 19;
-            this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.btnAddUser.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.Location = new System.Drawing.Point(500, 587);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(215, 41);
-            this.btnAddUser.TabIndex = 117;
-            this.btnAddUser.Text = "Add User";
-            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
-            // 
             // cmsManageUser
             // 
             this.cmsManageUser.BackColor = System.Drawing.Color.Silver;
@@ -148,21 +129,40 @@
             this.cmsManageUser.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageUser.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageUser.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageUser.Size = new System.Drawing.Size(211, 80);
+            this.cmsManageUser.Size = new System.Drawing.Size(128, 52);
             // 
             // ItemUpdate
             // 
             this.ItemUpdate.Name = "ItemUpdate";
-            this.ItemUpdate.Size = new System.Drawing.Size(210, 24);
+            this.ItemUpdate.Size = new System.Drawing.Size(127, 24);
             this.ItemUpdate.Text = "Update";
             this.ItemUpdate.Click += new System.EventHandler(this.ItemUpdate_Click);
             // 
             // ItemDelete
             // 
             this.ItemDelete.Name = "ItemDelete";
-            this.ItemDelete.Size = new System.Drawing.Size(210, 24);
+            this.ItemDelete.Size = new System.Drawing.Size(127, 24);
             this.ItemDelete.Text = "Delete";
             this.ItemDelete.Click += new System.EventHandler(this.ItemDelete_Click);
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.Animated = true;
+            this.btnAddUser.AutoRoundedCorners = true;
+            this.btnAddUser.BorderRadius = 18;
+            this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddUser.FillColor = System.Drawing.Color.Black;
+            this.btnAddUser.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddUser.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.Location = new System.Drawing.Point(563, 591);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(139, 38);
+            this.btnAddUser.TabIndex = 117;
+            this.btnAddUser.Text = "Add User";
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // frmManageUsers
             // 

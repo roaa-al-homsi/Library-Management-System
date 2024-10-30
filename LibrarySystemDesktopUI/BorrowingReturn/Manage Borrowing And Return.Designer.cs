@@ -33,11 +33,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllBorrowingRecords = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnAddRecord = new Guna.UI2.WinForms.Guna2Button();
             this.cmsManageBorrowingRecord = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.ItemReturn = new System.Windows.Forms.ToolStripMenuItem();
             this.ItemViewDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.ItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddRecord = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllBorrowingRecords)).BeginInit();
             this.cmsManageBorrowingRecord.SuspendLayout();
             this.SuspendLayout();
@@ -113,25 +113,6 @@
             this.dgvAllBorrowingRecords.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.dgvAllBorrowingRecords.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
-            // btnAddRecord
-            // 
-            this.btnAddRecord.Animated = true;
-            this.btnAddRecord.AutoRoundedCorners = true;
-            this.btnAddRecord.BorderRadius = 26;
-            this.btnAddRecord.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddRecord.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddRecord.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddRecord.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddRecord.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.btnAddRecord.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddRecord.ForeColor = System.Drawing.Color.White;
-            this.btnAddRecord.Location = new System.Drawing.Point(521, 587);
-            this.btnAddRecord.Name = "btnAddRecord";
-            this.btnAddRecord.Size = new System.Drawing.Size(140, 54);
-            this.btnAddRecord.TabIndex = 115;
-            this.btnAddRecord.Text = "Add Record";
-            this.btnAddRecord.Click += new System.EventHandler(this.btnAddRecord_Click);
-            // 
             // cmsManageBorrowingRecord
             // 
             this.cmsManageBorrowingRecord.BackColor = System.Drawing.Color.Silver;
@@ -150,13 +131,13 @@
             this.cmsManageBorrowingRecord.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageBorrowingRecord.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageBorrowingRecord.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageBorrowingRecord.Size = new System.Drawing.Size(211, 104);
+            this.cmsManageBorrowingRecord.Size = new System.Drawing.Size(161, 76);
             this.cmsManageBorrowingRecord.Opening += new System.ComponentModel.CancelEventHandler(this.cmsManageBorrowingRecord_Opening);
             // 
             // ItemReturn
             // 
             this.ItemReturn.Name = "ItemReturn";
-            this.ItemReturn.Size = new System.Drawing.Size(210, 24);
+            this.ItemReturn.Size = new System.Drawing.Size(160, 24);
             this.ItemReturn.Text = "Return";
             this.ItemReturn.Visible = false;
             this.ItemReturn.Click += new System.EventHandler(this.ItemReturn_Click);
@@ -164,16 +145,35 @@
             // ItemViewDetails
             // 
             this.ItemViewDetails.Name = "ItemViewDetails";
-            this.ItemViewDetails.Size = new System.Drawing.Size(210, 24);
+            this.ItemViewDetails.Size = new System.Drawing.Size(160, 24);
             this.ItemViewDetails.Text = "View Details";
             this.ItemViewDetails.Click += new System.EventHandler(this.ItemViewDetails_Click);
             // 
             // ItemUpdate
             // 
             this.ItemUpdate.Name = "ItemUpdate";
-            this.ItemUpdate.Size = new System.Drawing.Size(210, 24);
+            this.ItemUpdate.Size = new System.Drawing.Size(160, 24);
             this.ItemUpdate.Text = "Update";
             this.ItemUpdate.Click += new System.EventHandler(this.ItemUpdate_Click);
+            // 
+            // btnAddRecord
+            // 
+            this.btnAddRecord.Animated = true;
+            this.btnAddRecord.AutoRoundedCorners = true;
+            this.btnAddRecord.BorderRadius = 26;
+            this.btnAddRecord.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddRecord.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddRecord.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddRecord.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddRecord.FillColor = System.Drawing.Color.Black;
+            this.btnAddRecord.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddRecord.ForeColor = System.Drawing.Color.White;
+            this.btnAddRecord.Location = new System.Drawing.Point(521, 587);
+            this.btnAddRecord.Name = "btnAddRecord";
+            this.btnAddRecord.Size = new System.Drawing.Size(140, 54);
+            this.btnAddRecord.TabIndex = 115;
+            this.btnAddRecord.Text = "Add Record";
+            this.btnAddRecord.Click += new System.EventHandler(this.btnAddRecord_Click);
             // 
             // frmManageBorrowing
             // 

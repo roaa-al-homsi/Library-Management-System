@@ -82,7 +82,7 @@
             this.dgvBookCopies.RowHeadersVisible = false;
             this.dgvBookCopies.RowHeadersWidth = 51;
             this.dgvBookCopies.RowTemplate.Height = 24;
-            this.dgvBookCopies.Size = new System.Drawing.Size(711, 204);
+            this.dgvBookCopies.Size = new System.Drawing.Size(649, 204);
             this.dgvBookCopies.TabIndex = 1;
             this.dgvBookCopies.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Dark;
             this.dgvBookCopies.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(48)))), ((int)(((byte)(52)))));
@@ -112,7 +112,7 @@
             this.guna2HtmlLabel1.AutoSize = false;
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(212, 211);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(253, 211);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(84, 37);
             this.guna2HtmlLabel1.TabIndex = 2;
@@ -123,7 +123,7 @@
             this.labNameBook.AutoSize = false;
             this.labNameBook.BackColor = System.Drawing.Color.Transparent;
             this.labNameBook.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labNameBook.Location = new System.Drawing.Point(302, 211);
+            this.labNameBook.Location = new System.Drawing.Point(343, 211);
             this.labNameBook.Name = "labNameBook";
             this.labNameBook.Size = new System.Drawing.Size(127, 37);
             this.labNameBook.TabIndex = 3;

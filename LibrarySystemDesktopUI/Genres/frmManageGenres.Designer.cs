@@ -36,8 +36,8 @@
             this.cmsManageGenres = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.ItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.ItemDelete = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAddGenre = new Guna.UI2.WinForms.Guna2Button();
             this.viewBooksThisGenreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddGenre = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllGeners)).BeginInit();
             this.cmsManageGenres.SuspendLayout();
             this.SuspendLayout();
@@ -131,7 +131,7 @@
             this.cmsManageGenres.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageGenres.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageGenres.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageGenres.Size = new System.Drawing.Size(228, 104);
+            this.cmsManageGenres.Size = new System.Drawing.Size(228, 76);
             // 
             // ItemUpdate
             // 
@@ -147,6 +147,13 @@
             this.ItemDelete.Text = "Delete";
             this.ItemDelete.Click += new System.EventHandler(this.ItemDelete_Click);
             // 
+            // viewBooksThisGenreToolStripMenuItem
+            // 
+            this.viewBooksThisGenreToolStripMenuItem.Name = "viewBooksThisGenreToolStripMenuItem";
+            this.viewBooksThisGenreToolStripMenuItem.Size = new System.Drawing.Size(227, 24);
+            this.viewBooksThisGenreToolStripMenuItem.Text = "View Books This Genre";
+            this.viewBooksThisGenreToolStripMenuItem.Click += new System.EventHandler(this.viewBooksThisGenreToolStripMenuItem_Click);
+            // 
             // btnAddGenre
             // 
             this.btnAddGenre.Animated = true;
@@ -156,7 +163,7 @@
             this.btnAddGenre.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddGenre.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAddGenre.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddGenre.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAddGenre.FillColor = System.Drawing.Color.Black;
             this.btnAddGenre.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddGenre.ForeColor = System.Drawing.Color.White;
             this.btnAddGenre.Location = new System.Drawing.Point(514, 581);
@@ -165,13 +172,6 @@
             this.btnAddGenre.TabIndex = 117;
             this.btnAddGenre.Text = "Add Genre";
             this.btnAddGenre.Click += new System.EventHandler(this.btnAddGenre_Click);
-            // 
-            // viewBooksThisGenreToolStripMenuItem
-            // 
-            this.viewBooksThisGenreToolStripMenuItem.Name = "viewBooksThisGenreToolStripMenuItem";
-            this.viewBooksThisGenreToolStripMenuItem.Size = new System.Drawing.Size(227, 24);
-            this.viewBooksThisGenreToolStripMenuItem.Text = "View Books This Genre";
-            this.viewBooksThisGenreToolStripMenuItem.Click += new System.EventHandler(this.viewBooksThisGenreToolStripMenuItem_Click);
             // 
             // frmManageGenres
             // 

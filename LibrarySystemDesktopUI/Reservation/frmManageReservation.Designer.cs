@@ -33,10 +33,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAllReservation = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnAddReservation = new Guna.UI2.WinForms.Guna2Button();
             this.cmsManageReservationRecord = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.ItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAddReservation = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllReservation)).BeginInit();
             this.cmsManageReservationRecord.SuspendLayout();
             this.SuspendLayout();
@@ -112,25 +112,6 @@
             this.dgvAllReservation.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(114)))), ((int)(((byte)(117)))), ((int)(((byte)(119)))));
             this.dgvAllReservation.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
             // 
-            // btnAddReservation
-            // 
-            this.btnAddReservation.Animated = true;
-            this.btnAddReservation.AutoRoundedCorners = true;
-            this.btnAddReservation.BorderRadius = 21;
-            this.btnAddReservation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddReservation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddReservation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddReservation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddReservation.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.btnAddReservation.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
-            this.btnAddReservation.ForeColor = System.Drawing.Color.White;
-            this.btnAddReservation.Location = new System.Drawing.Point(510, 567);
-            this.btnAddReservation.Name = "btnAddReservation";
-            this.btnAddReservation.Size = new System.Drawing.Size(167, 45);
-            this.btnAddReservation.TabIndex = 118;
-            this.btnAddReservation.Text = "Add Record";
-            this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
-            // 
             // cmsManageReservationRecord
             // 
             this.cmsManageReservationRecord.BackColor = System.Drawing.Color.Silver;
@@ -148,21 +129,40 @@
             this.cmsManageReservationRecord.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageReservationRecord.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageReservationRecord.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageReservationRecord.Size = new System.Drawing.Size(211, 80);
+            this.cmsManageReservationRecord.Size = new System.Drawing.Size(128, 52);
             // 
             // ItemUpdate
             // 
             this.ItemUpdate.Name = "ItemUpdate";
-            this.ItemUpdate.Size = new System.Drawing.Size(210, 24);
+            this.ItemUpdate.Size = new System.Drawing.Size(127, 24);
             this.ItemUpdate.Text = "Update";
             this.ItemUpdate.Click += new System.EventHandler(this.ItemUpdate_Click);
             // 
             // deleteToolStripMenuItem
             // 
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(127, 24);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // btnAddReservation
+            // 
+            this.btnAddReservation.Animated = true;
+            this.btnAddReservation.AutoRoundedCorners = true;
+            this.btnAddReservation.BorderRadius = 21;
+            this.btnAddReservation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddReservation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddReservation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddReservation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddReservation.FillColor = System.Drawing.Color.Black;
+            this.btnAddReservation.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
+            this.btnAddReservation.ForeColor = System.Drawing.Color.White;
+            this.btnAddReservation.Location = new System.Drawing.Point(510, 567);
+            this.btnAddReservation.Name = "btnAddReservation";
+            this.btnAddReservation.Size = new System.Drawing.Size(167, 45);
+            this.btnAddReservation.TabIndex = 118;
+            this.btnAddReservation.Text = "Add Record";
+            this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
             // 
             // frmManageReservations
             // 

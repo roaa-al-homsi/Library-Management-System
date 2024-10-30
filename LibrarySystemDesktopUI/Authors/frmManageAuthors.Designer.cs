@@ -131,7 +131,7 @@
             this.cmsManageAuthors.RenderStyle.SelectionForeColor = System.Drawing.Color.White;
             this.cmsManageAuthors.RenderStyle.SeparatorColor = System.Drawing.Color.Gainsboro;
             this.cmsManageAuthors.RenderStyle.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.cmsManageAuthors.Size = new System.Drawing.Size(211, 104);
+            this.cmsManageAuthors.Size = new System.Drawing.Size(211, 76);
             // 
             // updateToolStripMenuItem
             // 
@@ -163,7 +163,7 @@
             this.btnAddAuthor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddAuthor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAddAuthor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddAuthor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAddAuthor.FillColor = System.Drawing.Color.Black;
             this.btnAddAuthor.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddAuthor.ForeColor = System.Drawing.Color.White;
             this.btnAddAuthor.Location = new System.Drawing.Point(534, 601);

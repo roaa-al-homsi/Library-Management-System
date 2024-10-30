@@ -20,9 +20,11 @@ namespace LibrarySystem.Customers
         {
             if (_Mode == Mode.Add)
             {
+                this.Tag = "Add Customer";
                 _Customer = new Customer();
                 return;
             }
+            this.Tag = "Update Customer";
             panelContainerCustomerInfo.Enabled = true;
             _Customer = Customer.Find(_CustomerId);
             labCustomer.Visible = true;

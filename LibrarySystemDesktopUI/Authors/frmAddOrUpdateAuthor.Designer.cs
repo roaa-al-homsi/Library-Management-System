@@ -45,7 +45,7 @@
             this.labAuthor = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
-            this.uc_PersonInfo1 = new LibrarySystem.uc_PersonInfo();
+            this.uc_PersonInfo2 = new LibrarySystem.uc_PersonInfo();
             this.guna2TabControl1.SuspendLayout();
             this.tabPersonInfo.SuspendLayout();
             this.tabAuthorInfo.SuspendLayout();
@@ -86,9 +86,9 @@
             // tabPersonInfo
             // 
             this.tabPersonInfo.BackColor = System.Drawing.Color.Silver;
+            this.tabPersonInfo.Controls.Add(this.uc_PersonInfo2);
             this.tabPersonInfo.Controls.Add(this.guna2HtmlLabel1);
             this.tabPersonInfo.Controls.Add(this.btnAddPerson);
-            this.tabPersonInfo.Controls.Add(this.uc_PersonInfo1);
             this.tabPersonInfo.Location = new System.Drawing.Point(184, 4);
             this.tabPersonInfo.Name = "tabPersonInfo";
             this.tabPersonInfo.Padding = new System.Windows.Forms.Padding(3);
@@ -116,7 +116,7 @@
             this.btnAddPerson.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddPerson.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAddPerson.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddPerson.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAddPerson.FillColor = System.Drawing.Color.Black;
             this.btnAddPerson.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddPerson.ForeColor = System.Drawing.Color.White;
             this.btnAddPerson.HoverState.CustomBorderColor = System.Drawing.Color.HotPink;
@@ -218,7 +218,7 @@
             this.txtAdditionalDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtAdditionalDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtAdditionalDetails.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtAdditionalDetails.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.txtAdditionalDetails.FillColor = System.Drawing.Color.Black;
             this.txtAdditionalDetails.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAdditionalDetails.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtAdditionalDetails.ForeColor = System.Drawing.Color.White;
@@ -245,7 +245,7 @@
             this.txtCertificate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCertificate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCertificate.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCertificate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.txtCertificate.FillColor = System.Drawing.Color.Black;
             this.txtCertificate.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCertificate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCertificate.ForeColor = System.Drawing.Color.White;
@@ -306,7 +306,7 @@
             this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnCancel.FillColor = System.Drawing.Color.Black;
             this.btnCancel.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(671, 573);
@@ -325,7 +325,7 @@
             this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnSave.FillColor = System.Drawing.Color.Black;
             this.btnSave.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(514, 573);
@@ -335,12 +335,13 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // uc_PersonInfo1
+            // uc_PersonInfo2
             // 
-            this.uc_PersonInfo1.Location = new System.Drawing.Point(637, 6);
-            this.uc_PersonInfo1.Name = "uc_PersonInfo1";
-            this.uc_PersonInfo1.Size = new System.Drawing.Size(378, 493);
-            this.uc_PersonInfo1.TabIndex = 0;
+            this.uc_PersonInfo2.BirthDateStatus = true;
+            this.uc_PersonInfo2.Location = new System.Drawing.Point(617, 0);
+            this.uc_PersonInfo2.Name = "uc_PersonInfo2";
+            this.uc_PersonInfo2.Size = new System.Drawing.Size(379, 498);
+            this.uc_PersonInfo2.TabIndex = 3;
             // 
             // frmAddOrUpdateAuthor
             // 
@@ -369,7 +370,6 @@
 
         private Guna.UI2.WinForms.Guna2TabControl guna2TabControl1;
         private System.Windows.Forms.TabPage tabPersonInfo;
-        private uc_PersonInfo uc_PersonInfo1;
         private System.Windows.Forms.TabPage tabAuthorInfo;
         private Guna.UI2.WinForms.Guna2Button btnAddPerson;
         private Guna.UI2.WinForms.Guna2HtmlLabel labAuthorId;
@@ -385,5 +385,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel labAuthor;
+        private uc_PersonInfo uc_PersonInfo2;
     }
 }

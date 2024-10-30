@@ -16,8 +16,8 @@ namespace LibrarySystem
             {
                 txtCardNum.Text = _customer.LibraryCardNumber;
                 labCustId.Text = _customer.Id.ToString();
-                uc_PersonInfo2.ShowDataPerson(_customer.Person);
-                uc_PersonInfo2.BirthDateStatus = false;
+                uc_PersonInfo3.ShowDataPerson(_customer.Person);
+                uc_PersonInfo3.BirthDateStatus = false;
             }
         }
     }

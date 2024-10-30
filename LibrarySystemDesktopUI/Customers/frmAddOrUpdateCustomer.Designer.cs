@@ -42,8 +42,8 @@
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnSelectPerson = new Guna.UI2.WinForms.Guna2Button();
             this.tabPersonInfo = new System.Windows.Forms.TabPage();
-            this.TabCtrlAddOrUpdateCustomers = new Guna.UI2.WinForms.Guna2TabControl();
             this.uc_PersonInfo1 = new LibrarySystem.uc_PersonInfo();
+            this.TabCtrlAddOrUpdateCustomers = new Guna.UI2.WinForms.Guna2TabControl();
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).BeginInit();
             this.panelContainerCustomerInfo.SuspendLayout();
             this.tabAuthorInfo.SuspendLayout();
@@ -60,7 +60,7 @@
             this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnCancel.FillColor = System.Drawing.Color.Black;
             this.btnCancel.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.Location = new System.Drawing.Point(671, 597);
@@ -78,7 +78,7 @@
             this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnSave.FillColor = System.Drawing.Color.Black;
             this.btnSave.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(514, 597);
@@ -165,7 +165,7 @@
             this.txtCardNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCardNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCardNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCardNumber.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.txtCardNumber.FillColor = System.Drawing.Color.Black;
             this.txtCardNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCardNumber.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCardNumber.ForeColor = System.Drawing.Color.White;
@@ -237,7 +237,7 @@
             this.btnSelectPerson.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSelectPerson.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSelectPerson.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSelectPerson.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnSelectPerson.FillColor = System.Drawing.Color.Black;
             this.btnSelectPerson.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectPerson.ForeColor = System.Drawing.Color.White;
             this.btnSelectPerson.HoverState.CustomBorderColor = System.Drawing.Color.HotPink;
@@ -260,6 +260,14 @@
             this.tabPersonInfo.Size = new System.Drawing.Size(1057, 504);
             this.tabPersonInfo.TabIndex = 0;
             this.tabPersonInfo.Text = "Person Info";
+            // 
+            // uc_PersonInfo1
+            // 
+            this.uc_PersonInfo1.BirthDateStatus = true;
+            this.uc_PersonInfo1.Location = new System.Drawing.Point(637, 6);
+            this.uc_PersonInfo1.Name = "uc_PersonInfo1";
+            this.uc_PersonInfo1.Size = new System.Drawing.Size(378, 493);
+            this.uc_PersonInfo1.TabIndex = 0;
             // 
             // TabCtrlAddOrUpdateCustomers
             // 
@@ -291,13 +299,6 @@
             this.TabCtrlAddOrUpdateCustomers.TabIndex = 117;
             this.TabCtrlAddOrUpdateCustomers.TabMenuBackColor = System.Drawing.Color.Silver;
             // 
-            // uc_PersonInfo1
-            // 
-            this.uc_PersonInfo1.Location = new System.Drawing.Point(637, 6);
-            this.uc_PersonInfo1.Name = "uc_PersonInfo1";
-            this.uc_PersonInfo1.Size = new System.Drawing.Size(378, 493);
-            this.uc_PersonInfo1.TabIndex = 0;
-            // 
             // frmAddOrUpdateCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -309,7 +310,7 @@
             this.Controls.Add(this.TabCtrlAddOrUpdateCustomers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddOrUpdateCustomer";
-            this.Text = "frmAddOrUpdateCustomer";
+            this.Text = "AddOrUpdateCustomer";
             this.Load += new System.EventHandler(this.frmAddOrUpdateCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).EndInit();
             this.panelContainerCustomerInfo.ResumeLayout(false);

@@ -163,7 +163,7 @@
             this.btnAddBook.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAddBook.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAddBook.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddBook.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAddBook.FillColor = System.Drawing.Color.Black;
             this.btnAddBook.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
             this.btnAddBook.ForeColor = System.Drawing.Color.White;
             this.btnAddBook.Location = new System.Drawing.Point(435, 566);
@@ -182,7 +182,7 @@
             this.btnAllCopies.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAllCopies.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAllCopies.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAllCopies.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAllCopies.FillColor = System.Drawing.Color.Black;
             this.btnAllCopies.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Bold);
             this.btnAllCopies.ForeColor = System.Drawing.Color.White;
             this.btnAllCopies.Location = new System.Drawing.Point(636, 566);
@@ -203,7 +203,7 @@
             this.Controls.Add(this.dgvAllBooks);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAllBooks";
-            this.Text = "frmAllBooks";
+            this.Text = "View Books";
             this.Load += new System.EventHandler(this.frmAllBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllBooks)).EndInit();
             this.cmsBooks.ResumeLayout(false);

@@ -32,11 +32,11 @@
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labCustomerid = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.uc_PersonInfo2 = new LibrarySystem.uc_PersonInfo();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.labCustId = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtCardNum = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.uc_PersonInfo3 = new LibrarySystem.uc_PersonInfo();
             this.SuspendLayout();
             // 
             // txtCardNumber
@@ -100,14 +100,6 @@
             this.labCustomerid.Text = "??";
             this.labCustomerid.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // uc_PersonInfo2
-            // 
-            this.uc_PersonInfo2.BirthDateStatus = true;
-            this.uc_PersonInfo2.Location = new System.Drawing.Point(3, 3);
-            this.uc_PersonInfo2.Name = "uc_PersonInfo2";
-            this.uc_PersonInfo2.Size = new System.Drawing.Size(365, 498);
-            this.uc_PersonInfo2.TabIndex = 0;
-            // 
             // guna2HtmlLabel2
             // 
             this.guna2HtmlLabel2.AutoSize = false;
@@ -142,7 +134,7 @@
             this.txtCardNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtCardNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtCardNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtCardNum.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.txtCardNum.FillColor = System.Drawing.Color.Black;
             this.txtCardNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCardNum.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtCardNum.ForeColor = System.Drawing.Color.White;
@@ -169,16 +161,24 @@
             this.guna2HtmlLabel3.TabIndex = 141;
             this.guna2HtmlLabel3.Text = "Card Number:";
             // 
+            // uc_PersonInfo3
+            // 
+            this.uc_PersonInfo3.BirthDateStatus = true;
+            this.uc_PersonInfo3.Location = new System.Drawing.Point(0, 0);
+            this.uc_PersonInfo3.Name = "uc_PersonInfo3";
+            this.uc_PersonInfo3.Size = new System.Drawing.Size(368, 501);
+            this.uc_PersonInfo3.TabIndex = 143;
+            // 
             // uc_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.uc_PersonInfo3);
             this.Controls.Add(this.txtCardNum);
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.labCustId);
             this.Controls.Add(this.guna2HtmlLabel2);
-            this.Controls.Add(this.uc_PersonInfo2);
             this.Name = "uc_Customer";
             this.Size = new System.Drawing.Size(368, 618);
             this.ResumeLayout(false);
@@ -192,10 +192,10 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel labCustomerid;
-        private uc_PersonInfo uc_PersonInfo2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel labCustId;
         private Guna.UI2.WinForms.Guna2TextBox txtCardNum;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private uc_PersonInfo uc_PersonInfo3;
     }
 }

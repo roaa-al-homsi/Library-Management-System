@@ -31,15 +31,15 @@ namespace LibrarySystem
             {
                 if (_currentButton != null)
                 {
-                    _currentButton.BackColor = Color.FromArgb(53, 41, 123);
+                    _currentButton.BackColor = Color.FromArgb(175, 238, 238);
                     _currentButton.ForeColor = Color.White;
                     _currentButton.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                 }
 
                 _currentButton = (Guna2Button)btnSender;
                 _currentButton.BackColor = Color.White;
-                _currentButton.ForeColor = Color.FromArgb(53, 41, 123);
-                _currentButton.Font = new System.Drawing.Font("Segoe UI", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                _currentButton.ForeColor = Color.FromArgb(175, 238, 238);
+                _currentButton.Font = new System.Drawing.Font("Comic Sans MS", 12.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
         public void OpenChildFormAsync(Form childForm, object btnSender)
@@ -48,7 +48,6 @@ namespace LibrarySystem
             {
                 _activeForm.Close();
             }
-
             _ActivateButton(btnSender);
             _activeForm = childForm;
             childForm.TopLevel = false;

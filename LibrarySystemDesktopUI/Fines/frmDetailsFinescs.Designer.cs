@@ -72,10 +72,10 @@
             this.txtBorrowingId.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtBorrowingId.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtBorrowingId.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtBorrowingId.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.txtBorrowingId.FillColor = System.Drawing.Color.Black;
             this.txtBorrowingId.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBorrowingId.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtBorrowingId.ForeColor = System.Drawing.Color.White;
+            this.txtBorrowingId.ForeColor = System.Drawing.SystemColors.Control;
             this.txtBorrowingId.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtBorrowingId.Location = new System.Drawing.Point(237, 21);
             this.txtBorrowingId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -94,8 +94,9 @@
             this.TimePicActualReturn.BorderRadius = 17;
             this.TimePicActualReturn.Checked = true;
             this.TimePicActualReturn.Enabled = false;
-            this.TimePicActualReturn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.TimePicActualReturn.FillColor = System.Drawing.Color.Black;
             this.TimePicActualReturn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TimePicActualReturn.ForeColor = System.Drawing.SystemColors.Control;
             this.TimePicActualReturn.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.TimePicActualReturn.Location = new System.Drawing.Point(237, 177);
             this.TimePicActualReturn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -111,8 +112,9 @@
             this.TimePicDueDate.BorderRadius = 17;
             this.TimePicDueDate.Checked = true;
             this.TimePicDueDate.Enabled = false;
-            this.TimePicDueDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.TimePicDueDate.FillColor = System.Drawing.Color.Black;
             this.TimePicDueDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TimePicDueDate.ForeColor = System.Drawing.SystemColors.Control;
             this.TimePicDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.TimePicDueDate.Location = new System.Drawing.Point(237, 125);
             this.TimePicDueDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -128,8 +130,9 @@
             this.TimePicBorrowingDate.BorderRadius = 17;
             this.TimePicBorrowingDate.Checked = true;
             this.TimePicBorrowingDate.Enabled = false;
-            this.TimePicBorrowingDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.TimePicBorrowingDate.FillColor = System.Drawing.Color.Black;
             this.TimePicBorrowingDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.TimePicBorrowingDate.ForeColor = System.Drawing.SystemColors.Control;
             this.TimePicBorrowingDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.TimePicBorrowingDate.Location = new System.Drawing.Point(237, 73);
             this.TimePicBorrowingDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -194,7 +197,7 @@
             this.guna2HtmlLabel5.AutoSize = false;
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Bold);
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
             this.guna2HtmlLabel5.Location = new System.Drawing.Point(392, 27);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(327, 35);
@@ -207,7 +210,7 @@
             this.guna2CircleButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2CircleButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2CircleButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2CircleButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.Black;
             this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
             this.guna2CircleButton1.Location = new System.Drawing.Point(769, 10);

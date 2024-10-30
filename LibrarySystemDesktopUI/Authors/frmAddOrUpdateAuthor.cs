@@ -20,12 +20,14 @@ namespace LibrarySystem.Authors
         {
             if (_Mode == Mode.Add)
             {
+                this.Tag = "Add Author";
                 _Author = new Author();
                 return;
             }
             _Author = Author.Find(_AuthorId);
             if (_Author != null)
             {
+                this.Tag = "Update Author";
                 labAuthor.Visible = true;
                 labAuthorId.Visible = true;
                 labAuthorId.Text = _Author.Id.ToString();
@@ -46,7 +48,7 @@ namespace LibrarySystem.Authors
             Person person = Person.Find(PersonId);
             if (person != null)
             {
-                uc_PersonInfo1.ShowDataPerson(person);
+                uc_PersonInfo2.ShowDataPerson(person);
                 labPerson.Text = PersonId.ToString();
                 picPerson.ImageLocation = (!string.IsNullOrWhiteSpace(person.ImagePath)) ? person.ImagePath : null;
                 panelContainerAuthorInfo.Enabled = true;

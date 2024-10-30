@@ -40,7 +40,7 @@
             this.picCurrentUser = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnAuthors = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlOptions = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -52,6 +52,7 @@
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCurrentUser)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnlOptions.SuspendLayout();
             this.panelMainMenu.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +65,7 @@
             this.btnTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTitle.FillColor = System.Drawing.Color.Transparent;
             this.btnTitle.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTitle.ForeColor = System.Drawing.Color.White;
+            this.btnTitle.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.btnTitle.Image = ((System.Drawing.Image)(resources.GetObject("btnTitle.Image")));
             this.btnTitle.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTitle.ImageSize = new System.Drawing.Size(40, 40);
@@ -77,15 +78,16 @@
             // 
             // btnGenres
             // 
-            this.btnGenres.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(225)))), ((int)(((byte)(209)))));
+            this.btnGenres.BackColor = System.Drawing.Color.Black;
             this.btnGenres.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnGenres.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnGenres.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnGenres.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnGenres.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnGenres.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnGenres.FillColor = System.Drawing.Color.Black;
             this.btnGenres.Font = new System.Drawing.Font("Andalus", 10.8F);
             this.btnGenres.ForeColor = System.Drawing.Color.White;
+            this.btnGenres.Image = ((System.Drawing.Image)(resources.GetObject("btnGenres.Image")));
             this.btnGenres.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnGenres.ImageSize = new System.Drawing.Size(40, 40);
             this.btnGenres.Location = new System.Drawing.Point(0, 373);
@@ -118,17 +120,17 @@
             this.labCurrentUser.Name = "labCurrentUser";
             this.labCurrentUser.Size = new System.Drawing.Size(160, 37);
             this.labCurrentUser.TabIndex = 0;
-            this.labCurrentUser.Text = "User :";
+            this.labCurrentUser.Text = null;
             // 
             // btnUsers
             // 
-            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnUsers.BackColor = System.Drawing.Color.Black;
             this.btnUsers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnUsers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnUsers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnUsers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnUsers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnUsers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnUsers.FillColor = System.Drawing.Color.Black;
             this.btnUsers.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
@@ -144,13 +146,13 @@
             // 
             // btnCustomers
             // 
-            this.btnCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnCustomers.BackColor = System.Drawing.Color.Black;
             this.btnCustomers.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCustomers.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCustomers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnCustomers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCustomers.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCustomers.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnCustomers.FillColor = System.Drawing.Color.Black;
             this.btnCustomers.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCustomers.ForeColor = System.Drawing.Color.White;
             this.btnCustomers.Image = ((System.Drawing.Image)(resources.GetObject("btnCustomers.Image")));
@@ -166,18 +168,18 @@
             // 
             // btnAllBooks
             // 
-            this.btnAllBooks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAllBooks.BackColor = System.Drawing.Color.Black;
             this.btnAllBooks.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAllBooks.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAllBooks.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAllBooks.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAllBooks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAllBooks.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAllBooks.FillColor = System.Drawing.Color.Black;
             this.btnAllBooks.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAllBooks.ForeColor = System.Drawing.Color.White;
             this.btnAllBooks.Image = ((System.Drawing.Image)(resources.GetObject("btnAllBooks.Image")));
             this.btnAllBooks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnAllBooks.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnAllBooks.ImageSize = new System.Drawing.Size(30, 30);
             this.btnAllBooks.Location = new System.Drawing.Point(0, 169);
             this.btnAllBooks.Name = "btnAllBooks";
             this.btnAllBooks.Size = new System.Drawing.Size(210, 51);
@@ -188,7 +190,7 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.guna2Panel2.BackColor = System.Drawing.Color.Black;
             this.guna2Panel2.Controls.Add(this.picCurrentUser);
             this.guna2Panel2.Controls.Add(this.btnTitle);
             this.guna2Panel2.Controls.Add(this.labUserName);
@@ -213,13 +215,13 @@
             // 
             // btnAuthors
             // 
-            this.btnAuthors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAuthors.BackColor = System.Drawing.Color.Black;
             this.btnAuthors.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnAuthors.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnAuthors.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnAuthors.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnAuthors.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAuthors.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnAuthors.FillColor = System.Drawing.Color.Black;
             this.btnAuthors.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAuthors.ForeColor = System.Drawing.Color.White;
             this.btnAuthors.Image = ((System.Drawing.Image)(resources.GetObject("btnAuthors.Image")));
@@ -235,8 +237,8 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
-            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel5);
+            this.guna2Panel1.BackColor = System.Drawing.Color.Black;
+            this.guna2Panel1.Controls.Add(this.guna2PictureBox1);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
@@ -244,33 +246,33 @@
             this.guna2Panel1.Size = new System.Drawing.Size(210, 169);
             this.guna2Panel1.TabIndex = 0;
             // 
-            // guna2HtmlLabel5
+            // guna2PictureBox1
             // 
-            this.guna2HtmlLabel5.AutoSize = false;
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(66)))), ((int)(((byte)(100)))));
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(76, 74);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(90, 43);
-            this.guna2HtmlLabel5.TabIndex = 49;
-            this.guna2HtmlLabel5.Text = " System";
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(56, 12);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(96, 95);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 1;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // guna2HtmlLabel3
             // 
             this.guna2HtmlLabel3.AutoSize = false;
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Andalus", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(130)))), ((int)(((byte)(149)))));
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(12, 41);
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(12, 113);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(97, 40);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(177, 50);
             this.guna2HtmlLabel3.TabIndex = 48;
-            this.guna2HtmlLabel3.Text = "Library";
+            this.guna2HtmlLabel3.Text = "Library System";
             // 
             // pnlOptions
             // 
-            this.pnlOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.pnlOptions.BackColor = System.Drawing.Color.Black;
             this.pnlOptions.Controls.Add(this.guna2Button1);
             this.pnlOptions.Controls.Add(this.btnManageReservation);
             this.pnlOptions.Controls.Add(this.btnBorrowing);
@@ -289,13 +291,13 @@
             // 
             // guna2Button1
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.guna2Button1.BackColor = System.Drawing.Color.Black;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Black;
             this.guna2Button1.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
@@ -310,13 +312,13 @@
             // 
             // btnManageReservation
             // 
-            this.btnManageReservation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnManageReservation.BackColor = System.Drawing.Color.Black;
             this.btnManageReservation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnManageReservation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnManageReservation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnManageReservation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnManageReservation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnManageReservation.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnManageReservation.FillColor = System.Drawing.Color.Black;
             this.btnManageReservation.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageReservation.ForeColor = System.Drawing.Color.White;
             this.btnManageReservation.Image = ((System.Drawing.Image)(resources.GetObject("btnManageReservation.Image")));
@@ -332,13 +334,13 @@
             // 
             // btnBorrowing
             // 
-            this.btnBorrowing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnBorrowing.BackColor = System.Drawing.Color.Black;
             this.btnBorrowing.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnBorrowing.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnBorrowing.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnBorrowing.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnBorrowing.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBorrowing.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnBorrowing.FillColor = System.Drawing.Color.Black;
             this.btnBorrowing.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrowing.ForeColor = System.Drawing.Color.White;
             this.btnBorrowing.Image = ((System.Drawing.Image)(resources.GetObject("btnBorrowing.Image")));
@@ -354,13 +356,13 @@
             // 
             // btnFines
             // 
-            this.btnFines.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnFines.BackColor = System.Drawing.Color.Black;
             this.btnFines.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnFines.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnFines.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnFines.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnFines.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFines.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.btnFines.FillColor = System.Drawing.Color.Black;
             this.btnFines.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFines.ForeColor = System.Drawing.Color.White;
             this.btnFines.Image = ((System.Drawing.Image)(resources.GetObject("btnFines.Image")));
@@ -378,9 +380,11 @@
             // 
             this.panelMainMenu.BackColor = System.Drawing.Color.Gray;
             this.panelMainMenu.Controls.Add(this.labLoginDate);
+            this.panelMainMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMainMenu.FillColor = System.Drawing.Color.Black;
             this.panelMainMenu.Location = new System.Drawing.Point(210, 84);
             this.panelMainMenu.Name = "panelMainMenu";
-            this.panelMainMenu.Size = new System.Drawing.Size(1245, 651);
+            this.panelMainMenu.Size = new System.Drawing.Size(1245, 675);
             this.panelMainMenu.TabIndex = 5;
             // 
             // labLoginDate
@@ -388,12 +392,12 @@
             this.labLoginDate.AutoSize = false;
             this.labLoginDate.BackColor = System.Drawing.Color.Transparent;
             this.labLoginDate.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labLoginDate.ForeColor = System.Drawing.SystemColors.Control;
-            this.labLoginDate.Location = new System.Drawing.Point(367, 221);
+            this.labLoginDate.ForeColor = System.Drawing.Color.FloralWhite;
+            this.labLoginDate.Location = new System.Drawing.Point(464, 230);
             this.labLoginDate.Name = "labLoginDate";
             this.labLoginDate.Size = new System.Drawing.Size(256, 59);
             this.labLoginDate.TabIndex = 0;
-            this.labLoginDate.Text = "guna2HtmlLabel1";
+            this.labLoginDate.Text = null;
             this.labLoginDate.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMainMenuScreen
@@ -413,6 +417,7 @@
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picCurrentUser)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnlOptions.ResumeLayout(false);
             this.panelMainMenu.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -430,7 +435,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnAuthors;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2Panel pnlOptions;
         private Guna.UI2.WinForms.Guna2Panel panelMainMenu;
@@ -440,6 +444,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picCurrentUser;
         private Guna.UI2.WinForms.Guna2HtmlLabel labLoginDate;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
 

@@ -18,9 +18,11 @@ namespace LibrarySystem.Books
         {
             if (_Mode == Mode.Add)
             {
+                this.Tag = "Add Book";
                 _Book = new Book();
                 return;
             }
+            this.Tag = "Update Book";
             _Book = Book.Find(_BookId);
             if (_Book == null)
             {
