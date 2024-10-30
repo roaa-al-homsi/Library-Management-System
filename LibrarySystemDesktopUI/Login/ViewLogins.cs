@@ -12,7 +12,7 @@ namespace LibraryStstem.Logins
         }
         private void _RefreshDataLogin()
         {
-            dgvAllLogins.DataSource = Login.All();
+            dgvAllLogins.DataSource = LoginLibrary.All();
         }
         private void ViewLogins_Load(object sender, EventArgs e)
         {

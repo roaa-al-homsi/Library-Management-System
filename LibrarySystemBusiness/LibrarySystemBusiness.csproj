@@ -48,7 +48,7 @@
     <Compile Include="Customer.cs" />
     <Compile Include="Fine.cs" />
     <Compile Include="Genre.cs" />
-    <Compile Include="Login.cs" />
+    <Compile Include="LoginLibrary.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservation.cs" />

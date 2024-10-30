@@ -19,6 +19,7 @@ namespace LibraryStstem.Logins
 
         private void btnLogin_Click_1(object sender, System.EventArgs e)
         {
+
             CurrentUser = User.FindByUserNameAndPassword(txtUserName.Text, txtPassword.Text);
             if (CurrentUser != null)
             {

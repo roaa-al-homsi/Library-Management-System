@@ -9,6 +9,7 @@ using LibrarySystem.Fines;
 using LibrarySystem.Genres;
 using LibrarySystem.Reservations;
 using LibrarySystem.Users;
+using LibrarySystemBusiness;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -198,6 +199,13 @@ namespace LibrarySystem
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
+            frmMainLogin.DateLogoutFromSystem = DateTime.Now;
+            LoginLibrary loginLibrary = new LoginLibrary();
+            loginLibrary.UserId = frmMainLogin.CurrentUser.Id;
+            loginLibrary.LoginDate = frmMainLogin.DateLoginToSystem;
+            loginLibrary.LogoutDate = frmMainLogin.DateLogoutFromSystem;
+            loginLibrary.Add();
+
             this.Close();
             frmMainLogin mainLogin = new frmMainLogin();
             mainLogin.Show();
