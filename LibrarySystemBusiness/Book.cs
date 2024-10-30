@@ -61,6 +61,7 @@ namespace LibrarySystemBusiness
             this.BorrowingPrice = BorrowingPrice;
             this.ImagePath = ImagePath;
             this.SellingPrice = SellingPrice;
+            this.PublishingHouse = PublishingHouse;
             this.Quantity = Quantity;
 
             _Mode = Mode.Update;
@@ -88,11 +89,11 @@ namespace LibrarySystemBusiness
         }
         private bool ReadyBook()
         {
-            if (BookData.IsExistByISBN(int.Parse(this.ISBN)) && _Mode == Mode.Add)
+            if (BookData.IsExistByISBN(this.ISBN) && _Mode == Mode.Add)
             {
                 return false;
             }
-            if (string.IsNullOrEmpty(this.Title) || this.PublicationDate == 0 || this.SellingPrice == 0 || this.BorrowingPrice == 0 || this.NumberOfPages == 0 || this.Quantity == 0)
+            if (string.IsNullOrEmpty(this.Title) || this.PublicationDate == 0 || this.SellingPrice == 0 || this.BorrowingPrice == 0 || this.NumberOfPages == 0)
             {
                 return false;
             }
@@ -145,7 +146,7 @@ namespace LibrarySystemBusiness
             }
             return null;
         }
-        static public bool ExistByISBN(int ISBN)
+        static public bool ExistByISBN(string ISBN)
         {
             return BookData.IsExistByISBN(ISBN);
         }

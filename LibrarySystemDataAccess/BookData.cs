@@ -177,7 +177,7 @@ where Id=@Id";
             finally { connection.Close(); }
             return IsFound;
         }
-        static public bool IsExistByISBN(int ISBN)
+        static public bool IsExistByISBN(string ISBN)
         {
             return GenericData.Exist("select Found=1 from Books where ISBN=@ISBN", "@ISBN", ISBN);
         }
