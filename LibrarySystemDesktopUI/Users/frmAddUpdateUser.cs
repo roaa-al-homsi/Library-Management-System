@@ -101,22 +101,22 @@ namespace LibrarySystem.Users
             else if (e.NewValue == CheckState.Checked && item == "Genres")
             {
                 _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Genres;
-
             }
             else if (e.NewValue == CheckState.Checked && item == "Fines")
             {
                 _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Fines;
-
             }
             else if (e.NewValue == CheckState.Checked && item == "Borrowing")
             {
                 _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Books;
-
             }
             else if (e.NewValue == CheckState.Checked && item == "Reservations")
             {
                 _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Reservations;
-
+            }
+            else if (e.NewValue == CheckState.Checked && item == "Logins")
+            {
+                _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Logins;
             }
 
             else
@@ -126,7 +126,7 @@ namespace LibrarySystem.Users
         }
         private void _GetNamesOptionAllowedFromUserPermission(int User_Permission)
         {
-            int[] arrPermission = { 1, 2, 4, 8, 16, 32, 64, 128 };
+            int[] arrPermission = { 1, 2, 4, 8, 16, 32, 64, 128, 256 };
             for (short i = 1; i <= arrPermission.Length; i++)
             {
                 if (ManagePermissions.CheckAccessPermission(User_Permission, (ManagePermissions.enMainMenuPermission)arrPermission[i - 1]))

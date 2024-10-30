@@ -136,7 +136,8 @@
             "Genres",
             "Fines",
             "Borrowing",
-            "Reservations"});
+            "Reservations",
+            "Logins"});
             this.checkedListBox1.Location = new System.Drawing.Point(686, 304);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(230, 140);

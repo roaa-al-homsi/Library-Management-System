@@ -3,7 +3,7 @@ using LibrarySystemBusiness;
 using System;
 using System.Windows.Forms;
 
-namespace LibraryStstem.Login
+namespace LibraryStstem.Logins
 {
     public partial class frmMainLogin : Form
     {

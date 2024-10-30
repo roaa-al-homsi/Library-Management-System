@@ -43,7 +43,8 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlOptions = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
+            this.btnLogins = new Guna.UI2.WinForms.Guna2Button();
             this.btnManageReservation = new Guna.UI2.WinForms.Guna2Button();
             this.btnBorrowing = new Guna.UI2.WinForms.Guna2Button();
             this.btnFines = new Guna.UI2.WinForms.Guna2Button();
@@ -273,7 +274,8 @@
             // pnlOptions
             // 
             this.pnlOptions.BackColor = System.Drawing.Color.Black;
-            this.pnlOptions.Controls.Add(this.guna2Button1);
+            this.pnlOptions.Controls.Add(this.btnLogout);
+            this.pnlOptions.Controls.Add(this.btnLogins);
             this.pnlOptions.Controls.Add(this.btnManageReservation);
             this.pnlOptions.Controls.Add(this.btnBorrowing);
             this.pnlOptions.Controls.Add(this.btnFines);
@@ -289,27 +291,49 @@
             this.pnlOptions.Size = new System.Drawing.Size(210, 759);
             this.pnlOptions.TabIndex = 3;
             // 
-            // guna2Button1
+            // btnLogout
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Black;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button1.FillColor = System.Drawing.Color.Black;
-            this.guna2Button1.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.ImageSize = new System.Drawing.Size(40, 40);
-            this.guna2Button1.Location = new System.Drawing.Point(0, 577);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(210, 51);
-            this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Tag = "Logout";
-            this.guna2Button1.Text = "Logout";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.btnLogout.BackColor = System.Drawing.Color.Black;
+            this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogout.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogout.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.FillColor = System.Drawing.Color.Black;
+            this.btnLogout.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnLogout.Location = new System.Drawing.Point(0, 628);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(210, 51);
+            this.btnLogout.TabIndex = 13;
+            this.btnLogout.Tag = "Logout";
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnLogins
+            // 
+            this.btnLogins.BackColor = System.Drawing.Color.Black;
+            this.btnLogins.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogins.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogins.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogins.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogins.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogins.FillColor = System.Drawing.Color.Black;
+            this.btnLogins.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogins.ForeColor = System.Drawing.Color.White;
+            this.btnLogins.Image = ((System.Drawing.Image)(resources.GetObject("btnLogins.Image")));
+            this.btnLogins.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogins.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnLogins.Location = new System.Drawing.Point(0, 577);
+            this.btnLogins.Name = "btnLogins";
+            this.btnLogins.Size = new System.Drawing.Size(210, 51);
+            this.btnLogins.TabIndex = 12;
+            this.btnLogins.Tag = "Logins";
+            this.btnLogins.Text = "Logins";
+            this.btnLogins.Click += new System.EventHandler(this.btnLogins_Click);
             // 
             // btnManageReservation
             // 
@@ -442,10 +466,11 @@
         private Guna.UI2.WinForms.Guna2Button btnFines;
         private Guna.UI2.WinForms.Guna2Button btnBorrowing;
         private Guna.UI2.WinForms.Guna2Button btnManageReservation;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnLogins;
         private Guna.UI2.WinForms.Guna2CirclePictureBox picCurrentUser;
         private Guna.UI2.WinForms.Guna2HtmlLabel labLoginDate;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnLogout;
     }
 }
 

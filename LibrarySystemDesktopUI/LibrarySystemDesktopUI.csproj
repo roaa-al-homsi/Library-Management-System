@@ -172,6 +172,12 @@
     <Compile Include="Login\frmMainLogin.Designer.cs">
       <DependentUpon>frmMainLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\ViewLogins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\ViewLogins.Designer.cs">
+      <DependentUpon>ViewLogins.cs</DependentUpon>
+    </Compile>
     <Compile Include="Permission\ManagePermissions.cs" />
     <Compile Include="Persons\AddOrUpdatePerson.cs">
       <SubType>Form</SubType>
@@ -282,6 +288,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmMainLogin.resx">
       <DependentUpon>frmMainLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\ViewLogins.resx">
+      <DependentUpon>ViewLogins.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Persons\AddOrUpdatePerson.resx">
       <DependentUpon>AddOrUpdatePerson.cs</DependentUpon>

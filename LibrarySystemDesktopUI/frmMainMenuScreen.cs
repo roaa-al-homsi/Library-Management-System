@@ -1,5 +1,5 @@
 ﻿using Guna.UI2.WinForms;
-using LibraryStstem.Login;
+using LibraryStstem.Logins;
 using LibraryStstem.Permission;
 using LibrarySystem.Authors;
 using LibrarySystem.Books;
@@ -186,8 +186,17 @@ namespace LibrarySystem
                 picCurrentUser.ImageLocation = frmMainLogin.CurrentUser.Person.ImagePath;
             }
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnLogins_Click(object sender, EventArgs e)
+        {
+            if (!ManagePermissions.CheckAccessPermission(ManagePermissions.enMainMenuPermission.Logins))
+            {
+                _MessageAccessDenied();
+                return;
+            }
+            btnTitle.Image = btnLogins.Image;
+            OpenChildFormAsync(new ViewLogins(), sender);
+        }
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
             frmMainLogin mainLogin = new frmMainLogin();

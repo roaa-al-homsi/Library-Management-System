@@ -1,4 +1,4 @@
-﻿namespace LibraryStstem.Login
+﻿namespace LibraryStstem.Logins
 {
     partial class frmMainLogin
     {
@@ -109,7 +109,7 @@
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(111, 64);
             this.btnLogin.TabIndex = 54;
-            this.btnLogin.Text = "Login";
+            this.btnLogin.Text = "Logins";
             this.btnLogin.UseTransparentBackground = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
