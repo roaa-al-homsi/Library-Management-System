@@ -28,6 +28,28 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return NewIdBook;
         }
+        static public bool AddTheSameRecordMultipleTimes(int BookId, bool AvailabilityStatus, int NumbersRecords)
+        {
+            int rowsAffected = 0;
+            string query = @"INSERT INTO BookCopies ([Book Id], [Availability Status]) VALUES (@BookId, @AvailabilityStatus)";
+
+            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
+            {
+                connection.Open();
+
+                for (int i = 0; i < NumbersRecords; i++)
+                {
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+
+                        command.Parameters.AddWithValue("@BookId", BookId);
+                        command.Parameters.AddWithValue("@AvailabilityStatus", AvailabilityStatus);
+                        rowsAffected += command.ExecuteNonQuery();
+                    }
+                }
+            }
+            return rowsAffected == NumbersRecords;
+        }
 
         static public bool Update(int Id, int BookId, bool AvailabilityStatus)
         {
@@ -48,12 +70,10 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return RowAffected > 0;
         }
-
         public static bool Delete(int Id)
         {
             return GenericData.Delete("delete BookCopies where Id=@Id", "@Id", Id);
         }
-
         public static DataTable All()
         {
             return GenericData.All(" select *from View_BookCopy_Details");
@@ -70,7 +90,6 @@ namespace LibrarySystemDataAccess
         {
             return GenericData.Exist("select found=1 from BookCopies where Id=@Id", "@Id", Id);
         }
-
         public static bool GetBookCopy(int Id, ref int BookId, ref bool AvailabilityStatus)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
@@ -100,9 +119,6 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return IsFound;
         }
-
-
-
     }
 
 }

@@ -21,6 +21,8 @@ namespace LibrarySystemBusiness
         public decimal SellingPrice { get; set; }
         public decimal BorrowingPrice { get; set; }
         public string ImagePath { get; set; }
+        public int Quantity { get; set; }
+        static public int PreviousQuantity = 0;
         public Book()
         {
             this.Author = new Author();
@@ -36,11 +38,12 @@ namespace LibrarySystemBusiness
             this.BorrowingPrice = 0;
             this.ImagePath = string.Empty;
             this.SellingPrice = 0;
+            this.Quantity = 0;
 
             _Mode = Mode.Add;
         }
         private Book(int Id, string Title, string ISBN, int PublicationDate, int GenreId, string AdditionalDetails,
-            int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId)
+            int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId, int Quantity)
         {
             this.Author = Author.Find(AuthorId);
             this.AuthorId = AuthorId;
@@ -58,17 +61,30 @@ namespace LibrarySystemBusiness
             this.BorrowingPrice = BorrowingPrice;
             this.ImagePath = ImagePath;
             this.SellingPrice = SellingPrice;
+            this.Quantity = Quantity;
 
             _Mode = Mode.Update;
         }
         private bool _Add()
         {
-            this.Id = BookData.Add(this.Title, this.ISBN, this.PublicationDate, this.GenreId, this.AdditionalDetails, this.NumberOfPages, this.PublishingHouse, this.SellingPrice, this.BorrowingPrice, this.ImagePath, this.AuthorId);
-            return (this.Id != -1);
+            this.Id = BookData.Add(this.Title, this.ISBN, this.PublicationDate, this.GenreId, this.AdditionalDetails, this.NumberOfPages, this.PublishingHouse, this.SellingPrice, this.BorrowingPrice, this.ImagePath, this.AuthorId, this.Quantity);
+            if (this.Id != -1)
+            {
+                return BookCopyData.AddTheSameRecordMultipleTimes(this.Id, true, this.Quantity);
+            }
+            return false;
         }
         private bool _Update()
         {
-            return BookData.Update(this.Id, this.Title, this.ISBN, this.PublicationDate, this.GenreId, this.AdditionalDetails, this.NumberOfPages, this.PublishingHouse, this.SellingPrice, this.BorrowingPrice, this.ImagePath, this.AuthorId);
+            if (PreviousQuantity > this.Quantity)
+            {
+                return false;
+            }
+            if (PreviousQuantity < this.Quantity)
+            {
+                BookCopyData.AddTheSameRecordMultipleTimes(this.Id, true, this.Quantity - PreviousQuantity);
+            }
+            return BookData.Update(this.Id, this.Title, this.ISBN, this.PublicationDate, this.GenreId, this.AdditionalDetails, this.NumberOfPages, this.PublishingHouse, this.SellingPrice, this.BorrowingPrice, this.ImagePath, this.AuthorId, this.Quantity);
         }
         private bool ReadyBook()
         {
@@ -76,7 +92,7 @@ namespace LibrarySystemBusiness
             {
                 return false;
             }
-            if (string.IsNullOrEmpty(this.Title) || this.PublicationDate == 0 || this.SellingPrice == 0 || this.BorrowingPrice == 0 || this.NumberOfPages == 0)
+            if (string.IsNullOrEmpty(this.Title) || this.PublicationDate == 0 || this.SellingPrice == 0 || this.BorrowingPrice == 0 || this.NumberOfPages == 0 || this.Quantity == 0)
             {
                 return false;
             }
@@ -84,7 +100,7 @@ namespace LibrarySystemBusiness
             {
                 return false;
             }
-            if (!GenreData.Exist(this.AuthorId))
+            if (!GenreData.Exist(this.GenreId))
             {
                 return false;
             }
@@ -107,6 +123,7 @@ namespace LibrarySystemBusiness
         }
         static public Book Find(int Id)
         {
+
             string Title = string.Empty;
             string ISBN = string.Empty;
             int PublicationDate = 1;
@@ -118,11 +135,13 @@ namespace LibrarySystemBusiness
             decimal BorrowingPrice = 0;
             string ImagePath = string.Empty;
             int AuthorId = -1;
+            int Quantity = 0;
 
             if (BookData.GetBookById(Id, ref Title, ref ISBN, ref PublicationDate, ref GenreId, ref AdditionalDetails, ref NumberOfPages, ref PublishingHouse, ref SellingPrice, ref BorrowingPrice
-                , ref ImagePath, ref AuthorId))
+                , ref ImagePath, ref AuthorId, ref Quantity))
             {
-                return new Book(Id, Title, ISBN, PublicationDate, GenreId, AdditionalDetails, NumberOfPages, PublishingHouse, SellingPrice, BorrowingPrice, ImagePath, AuthorId);
+                PreviousQuantity = Quantity;
+                return new Book(Id, Title, ISBN, PublicationDate, GenreId, AdditionalDetails, NumberOfPages, PublishingHouse, SellingPrice, BorrowingPrice, ImagePath, AuthorId, Quantity);
             }
             return null;
         }

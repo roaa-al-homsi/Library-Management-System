@@ -8,14 +8,14 @@ namespace LibrarySystemDataAccess
     {
 
         static public int Add(string Title, string ISBN, int PublicationDate, int GenreId, string AdditionalDetails,
-            int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId)
+            int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId, int Quantity)
         {
             int NewIdBook = 0;
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
             string query = @"insert into Books (Title,ISBN,[Publication Date],[Genre Id],[Additional Details],
              [Numbers Of Pages],[publishing house],[Selling price],
-			[borrowing price],Image,[Author Id] )
-             Values (@Title,@ISBN,@PublicationDate,@GenreId,@AdditionalDetails,@NumberOfPages,@PublishingHouse,@SellingPrice,@BorrowingPrice,@ImagePath,@AuthorId)
+			[borrowing price],Image,[Author Id],Quantity )
+             Values (@Title,@ISBN,@PublicationDate,@GenreId,@AdditionalDetails,@NumberOfPages,@PublishingHouse,@SellingPrice,@BorrowingPrice,@ImagePath,@AuthorId,@Quantity)
                            SELECT SCOPE_IDENTITY();";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Title", Title);
@@ -26,7 +26,7 @@ namespace LibrarySystemDataAccess
             command.Parameters.AddWithValue("@SellingPrice", SellingPrice);
             command.Parameters.AddWithValue("@BorrowingPrice", BorrowingPrice);
             command.Parameters.AddWithValue("@AuthorId", AuthorId);
-
+            command.Parameters.AddWithValue("@Quantity", Quantity);
 
             if (!string.IsNullOrWhiteSpace(AdditionalDetails))
             {
@@ -70,13 +70,13 @@ namespace LibrarySystemDataAccess
             return NewIdBook;
         }
         static public bool Update(int Id, string Title, string ISBN, int PublicationDate, int GenreId, string AdditionalDetails,
-            int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId)
+            int NumberOfPages, string PublishingHouse, decimal SellingPrice, decimal BorrowingPrice, string ImagePath, int AuthorId, int Quantity)
         {
             int RowAffected = 0;
 
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
             string query = @"update Books set Title=@Title,ISBN=@ISBN,[Publication Date]=@PublicationDate,[Genre Id]=@GenreId,[Additional Details]=@AdditionalDetails,
-[Numbers Of Pages]=@NumberOfPages,[publishing house]=@PublishingHouse,[Selling price]=@SellingPrice,[borrowing price]=@BorrowingPrice,Image=@ImagePath,[Author Id]=@AuthorId
+[Numbers Of Pages]=@NumberOfPages,[publishing house]=@PublishingHouse,[Selling price]=@SellingPrice,[borrowing price]=@BorrowingPrice,Image=@ImagePath,[Author Id]=@AuthorId,Quantity=@Quantity
 where Id=@Id";
 
 
@@ -90,7 +90,7 @@ where Id=@Id";
             command.Parameters.AddWithValue("@SellingPrice", SellingPrice);
             command.Parameters.AddWithValue("@BorrowingPrice", BorrowingPrice);
             command.Parameters.AddWithValue("@AuthorId", AuthorId);
-
+            command.Parameters.AddWithValue("@Quantity", Quantity);
 
             if (!string.IsNullOrWhiteSpace(AdditionalDetails))
             {
@@ -138,7 +138,7 @@ where Id=@Id";
             return GenericData.All(" select * from View_Book_Details");
         }
         static public bool GetBookById(int Id, ref string Title, ref string ISBN, ref int PublicationDate, ref int GenreId, ref string AdditionalDetails,
-           ref int NumberOfPages, ref string PublishingHouse, ref decimal SellingPrice, ref decimal BorrowingPrice, ref string ImagePath, ref int AuthorId)
+           ref int NumberOfPages, ref string PublishingHouse, ref decimal SellingPrice, ref decimal BorrowingPrice, ref string ImagePath, ref int AuthorId, ref int Quantity)
         {
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
             string query = @"select * from Books where [Id] =@Id";
@@ -161,7 +161,7 @@ where Id=@Id";
                     NumberOfPages = (int)reader["Numbers Of Pages"];
                     SellingPrice = (decimal)reader["Selling Price"];
                     BorrowingPrice = (decimal)reader["Borrowing Price"];
-
+                    Quantity = (int)reader["Quantity"];
                     AdditionalDetails = reader["Additional Details"] != DBNull.Value ? (string)reader["Additional Details"] : string.Empty;
                     ImagePath = reader["Image"] != DBNull.Value ? (string)reader["Image"] : string.Empty;
                     PublishingHouse = reader["Publishing House"] != DBNull.Value ? (string)reader["Publishing House"] : string.Empty;
