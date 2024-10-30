@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
             this.uctrlBookInfo1 = new LibrarySystem.UctrlBookInfo();
             this.SuspendLayout();
             // 
@@ -76,15 +78,15 @@
             this.uctrlBookInfo1.AdditionalDetails = "";
             this.uctrlBookInfo1.BackColor = System.Drawing.Color.Silver;
             this.uctrlBookInfo1.ComboBoxAuthorsNames = "Reem";
-            this.uctrlBookInfo1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.uctrlBookInfo1.ComboBoxGenresNames = "Learning";
             this.uctrlBookInfo1.Image = null;
             this.uctrlBookInfo1.ISBN = "";
             this.uctrlBookInfo1.LinkRemove = true;
-            this.uctrlBookInfo1.Location = new System.Drawing.Point(0, 0);
+            this.uctrlBookInfo1.Location = new System.Drawing.Point(33, 12);
             this.uctrlBookInfo1.Name = "uctrlBookInfo1";
             this.uctrlBookInfo1.PublishingHouse = "";
-            this.uctrlBookInfo1.Size = new System.Drawing.Size(1245, 513);
-            this.uctrlBookInfo1.TabIndex = 0;
+            this.uctrlBookInfo1.Size = new System.Drawing.Size(1167, 467);
+            this.uctrlBookInfo1.TabIndex = 114;
             this.uctrlBookInfo1.Title = "";
             // 
             // frmAddOrUpdateBook
@@ -93,9 +95,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1245, 675);
+            this.Controls.Add(this.uctrlBookInfo1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.uctrlBookInfo1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAddOrUpdateBook";
             this.Tag = "Add||Update ";
@@ -106,9 +108,9 @@
         }
 
         #endregion
-
-        private UctrlBookInfo uctrlBookInfo1;
         private Guna.UI2.WinForms.Guna2Button btnSave;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2AnimateWindow guna2AnimateWindow1;
+        private UctrlBookInfo uctrlBookInfo1;
     }
 }

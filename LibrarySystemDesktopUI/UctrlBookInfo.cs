@@ -46,6 +46,11 @@ namespace LibrarySystem
             set { txtNumberOfPages.Text = value.ToString(); }
             get { return int.Parse(txtNumberOfPages.Text); }
         }
+        public int Quantity
+        {
+            set { txtQauntity.Text = value.ToString(); }
+            get { return int.Parse(txtQauntity.Text); }
+        }
         public string AdditionalDetails
         {
             set { txtAdditionalDetails.Text = value; }

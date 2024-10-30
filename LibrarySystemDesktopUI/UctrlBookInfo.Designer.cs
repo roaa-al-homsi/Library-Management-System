@@ -52,6 +52,8 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.comboAuthors = new Guna.UI2.WinForms.Guna2ComboBox();
             this.ComboGenre = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtQauntity = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictBook)).BeginInit();
             this.SuspendLayout();
             // 
@@ -458,11 +460,50 @@
             this.ComboGenre.Size = new System.Drawing.Size(177, 36);
             this.ComboGenre.TabIndex = 70;
             // 
+            // txtQauntity
+            // 
+            this.txtQauntity.Animated = true;
+            this.txtQauntity.AutoRoundedCorners = true;
+            this.txtQauntity.BorderRadius = 14;
+            this.txtQauntity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtQauntity.DefaultText = "";
+            this.txtQauntity.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtQauntity.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtQauntity.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQauntity.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtQauntity.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(29)))), ((int)(((byte)(44)))));
+            this.txtQauntity.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQauntity.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtQauntity.ForeColor = System.Drawing.Color.White;
+            this.txtQauntity.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtQauntity.Location = new System.Drawing.Point(835, 303);
+            this.txtQauntity.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtQauntity.Name = "txtQauntity";
+            this.txtQauntity.PasswordChar = '\0';
+            this.txtQauntity.PlaceholderText = "";
+            this.txtQauntity.SelectedText = "";
+            this.txtQauntity.Size = new System.Drawing.Size(72, 31);
+            this.txtQauntity.TabIndex = 72;
+            this.txtQauntity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBoxNumbers_KeyPress);
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.AutoSize = false;
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(719, 302);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(107, 31);
+            this.guna2HtmlLabel1.TabIndex = 71;
+            this.guna2HtmlLabel1.Text = "Quantity";
+            // 
             // UctrlBookInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
+            this.Controls.Add(this.txtQauntity);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.ComboGenre);
             this.Controls.Add(this.comboAuthors);
             this.Controls.Add(this.linkSet);
@@ -521,5 +562,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private Guna.UI2.WinForms.Guna2ComboBox comboAuthors;
         private Guna.UI2.WinForms.Guna2ComboBox ComboGenre;
+        private Guna.UI2.WinForms.Guna2TextBox txtQauntity;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

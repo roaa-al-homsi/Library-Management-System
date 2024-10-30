@@ -135,7 +135,7 @@ where Id=@Id";
         }
         static public DataTable All()
         {
-            return GenericData.All(" select * from View_Book_Details");
+            return GenericData.All(" select * from Books");
         }
         static public bool GetBookById(int Id, ref string Title, ref string ISBN, ref int PublicationDate, ref int GenreId, ref string AdditionalDetails,
            ref int NumberOfPages, ref string PublishingHouse, ref decimal SellingPrice, ref decimal BorrowingPrice, ref string ImagePath, ref int AuthorId, ref int Quantity)

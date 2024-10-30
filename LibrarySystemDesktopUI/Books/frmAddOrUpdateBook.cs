@@ -67,6 +67,7 @@ namespace LibrarySystem.Books
             _Book.GenreId = GenreId;
             _Book.AuthorId = AuthorId;
             _Book.ImagePath = (uctrlBookInfo1.Image != null) ? uctrlBookInfo1.Image : null;
+            _Book.Quantity = uctrlBookInfo1.Quantity;
 
         }
         private void _BackDefaultForm()
