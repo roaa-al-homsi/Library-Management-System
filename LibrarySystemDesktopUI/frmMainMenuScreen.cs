@@ -187,6 +187,11 @@ namespace LibrarySystem
             }
         }
 
-
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            frmMainLogin mainLogin = new frmMainLogin();
+            mainLogin.Show();
+        }
     }
 }

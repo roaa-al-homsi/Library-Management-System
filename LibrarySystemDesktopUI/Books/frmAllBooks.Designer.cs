@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAllBooks));
             this.dgvAllBooks = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cmsBooks = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.updateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -39,8 +40,10 @@
             this.showCopiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddBook = new Guna.UI2.WinForms.Guna2Button();
             this.btnAllCopies = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllBooks)).BeginInit();
             this.cmsBooks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAllBooks
@@ -192,12 +195,25 @@
             this.btnAllCopies.Text = "All Copies";
             this.btnAllCopies.Click += new System.EventHandler(this.btnAllCopies_Click);
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(1031, 421);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(202, 242);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 115;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // frmAllBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1245, 675);
+            this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.btnAllCopies);
             this.Controls.Add(this.btnAddBook);
             this.Controls.Add(this.dgvAllBooks);
@@ -207,6 +223,7 @@
             this.Load += new System.EventHandler(this.frmAllBooks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllBooks)).EndInit();
             this.cmsBooks.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -220,5 +237,6 @@
         private System.Windows.Forms.ToolStripMenuItem showCopiesToolStripMenuItem;
         private Guna.UI2.WinForms.Guna2Button btnAddBook;
         private Guna.UI2.WinForms.Guna2Button btnAllCopies;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

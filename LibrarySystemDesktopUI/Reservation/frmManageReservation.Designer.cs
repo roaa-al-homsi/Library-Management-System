@@ -32,13 +32,16 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageReservations));
             this.dgvAllReservation = new Guna.UI2.WinForms.Guna2DataGridView();
             this.cmsManageReservationRecord = new Guna.UI2.WinForms.Guna2ContextMenuStrip();
             this.ItemUpdate = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAddReservation = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllReservation)).BeginInit();
             this.cmsManageReservationRecord.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAllReservation
@@ -164,12 +167,25 @@
             this.btnAddReservation.Text = "Add Record";
             this.btnAddReservation.Click += new System.EventHandler(this.btnAddReservation_Click);
             // 
+            // guna2PictureBox2
+            // 
+            this.guna2PictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox2.Image")));
+            this.guna2PictureBox2.ImageRotate = 0F;
+            this.guna2PictureBox2.Location = new System.Drawing.Point(996, 421);
+            this.guna2PictureBox2.Name = "guna2PictureBox2";
+            this.guna2PictureBox2.Size = new System.Drawing.Size(202, 242);
+            this.guna2PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox2.TabIndex = 119;
+            this.guna2PictureBox2.TabStop = false;
+            // 
             // frmManageReservations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(1245, 675);
+            this.Controls.Add(this.guna2PictureBox2);
             this.Controls.Add(this.btnAddReservation);
             this.Controls.Add(this.dgvAllReservation);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -179,6 +195,7 @@
             this.Load += new System.EventHandler(this.frmManageReservation_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllReservation)).EndInit();
             this.cmsManageReservationRecord.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -190,5 +207,6 @@
         private Guna.UI2.WinForms.Guna2ContextMenuStrip cmsManageReservationRecord;
         private System.Windows.Forms.ToolStripMenuItem ItemUpdate;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
     }
 }

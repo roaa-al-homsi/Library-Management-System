@@ -70,7 +70,7 @@
             // labTimer
             // 
             this.labTimer.BackColor = System.Drawing.Color.Transparent;
-            this.labTimer.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labTimer.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTimer.ForeColor = System.Drawing.Color.DimGray;
             this.labTimer.Location = new System.Drawing.Point(978, 569);
             this.labTimer.Name = "labTimer";
@@ -85,12 +85,11 @@
             this.labCheckLogin.BackColor = System.Drawing.Color.Transparent;
             this.labCheckLogin.Enabled = false;
             this.labCheckLogin.Font = new System.Drawing.Font("Andalus", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCheckLogin.ForeColor = System.Drawing.Color.MistyRose;
+            this.labCheckLogin.ForeColor = System.Drawing.Color.IndianRed;
             this.labCheckLogin.Location = new System.Drawing.Point(859, 502);
             this.labCheckLogin.Name = "labCheckLogin";
             this.labCheckLogin.Size = new System.Drawing.Size(295, 64);
             this.labCheckLogin.TabIndex = 55;
-            this.labCheckLogin.Text = null;
             // 
             // btnLogin
             // 

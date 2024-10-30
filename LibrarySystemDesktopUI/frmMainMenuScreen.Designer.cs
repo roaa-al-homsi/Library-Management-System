@@ -65,7 +65,7 @@
             this.btnTitle.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnTitle.FillColor = System.Drawing.Color.Transparent;
             this.btnTitle.Font = new System.Drawing.Font("Andalus", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTitle.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.btnTitle.ForeColor = System.Drawing.Color.MintCream;
             this.btnTitle.Image = ((System.Drawing.Image)(resources.GetObject("btnTitle.Image")));
             this.btnTitle.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnTitle.ImageSize = new System.Drawing.Size(40, 40);
@@ -309,6 +309,7 @@
             this.guna2Button1.TabIndex = 12;
             this.guna2Button1.Tag = "Logout";
             this.guna2Button1.Text = "Logout";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btnManageReservation
             // 
