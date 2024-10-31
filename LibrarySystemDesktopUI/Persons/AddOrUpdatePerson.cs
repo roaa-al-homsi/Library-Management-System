@@ -32,7 +32,11 @@ namespace LibrarySystem.Persons
             txtFullName.Text = _Person.Name;
             txtCountry.Text = _Person.Country;
             txtContactInfo.Text = _Person.ContactInfo;
-            TimePicBirthDate.Value = _Person.BirthDate;
+            if (_Person.BirthDate != DateTime.MinValue)
+            {
+                TimePicBirthDate.Value = _Person.BirthDate;
+            }
+
             picPerson.ImageLocation = (!string.IsNullOrWhiteSpace(_Person.ImagePath)) ? _Person.ImagePath : null;
             labPersoId.Visible = true;
             labPersoId.Text = _Person.Id.ToString();

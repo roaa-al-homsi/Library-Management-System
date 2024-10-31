@@ -435,7 +435,7 @@
             this.comboAuthors.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.comboAuthors.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.comboAuthors.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.comboAuthors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboAuthors.ForeColor = System.Drawing.Color.White;
             this.comboAuthors.ItemHeight = 30;
             this.comboAuthors.Location = new System.Drawing.Point(439, 250);
             this.comboAuthors.Name = "comboAuthors";
@@ -452,12 +452,12 @@
             this.ComboGenre.FillColor = System.Drawing.Color.Black;
             this.ComboGenre.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.ComboGenre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.ComboGenre.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ComboGenre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.ComboGenre.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboGenre.ForeColor = System.Drawing.Color.White;
             this.ComboGenre.ItemHeight = 30;
             this.ComboGenre.Location = new System.Drawing.Point(439, 192);
             this.ComboGenre.Name = "ComboGenre";
-            this.ComboGenre.Size = new System.Drawing.Size(177, 36);
+            this.ComboGenre.Size = new System.Drawing.Size(202, 36);
             this.ComboGenre.TabIndex = 70;
             // 
             // txtQauntity

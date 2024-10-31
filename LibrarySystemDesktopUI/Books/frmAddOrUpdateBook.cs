@@ -38,6 +38,7 @@ namespace LibrarySystem.Books
             uctrlBookInfo1.AdditionalDetails = _Book.AdditionalDetails;
             uctrlBookInfo1.ComboBoxAuthorsNames = Author.GetNameAuthorById(_Book.AuthorId);
             uctrlBookInfo1.ComboBoxGenresNames = Genre.GetNameGenreById(_Book.GenreId);
+            uctrlBookInfo1.Quantity = _Book.Quantity;
 
             if (!string.IsNullOrWhiteSpace(_Book.ImagePath))
             {
