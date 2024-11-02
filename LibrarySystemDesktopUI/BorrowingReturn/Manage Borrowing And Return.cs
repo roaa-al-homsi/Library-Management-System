@@ -1,5 +1,4 @@
-﻿using LibrarySystem;
-using LibrarySystemBusiness;
+﻿using LibrarySystemBusiness;
 using System;
 using System.Windows.Forms;
 
@@ -52,6 +51,7 @@ namespace LibrarySystem.BorrowingReturn
                 bookCopy.Save();
             }
         }
+
         private void ItemReturn_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want return this copy?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -62,19 +62,21 @@ namespace LibrarySystem.BorrowingReturn
                 {
                     borrowingRecord.ActualReturnDate = DateTime.Now;
                     //borrowingRecord.BookCopy.AvailabilityStatus = true;
+                    if (borrowingRecord.Save())
+                    {
+                        MessageBox.Show("The return process was completed successfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        _RefreshBorrowingData();
+                        _CheckFine(borrowingRecord);
+                        _ChangeAvailabilityCopy(borrowingRecord.CopyId);
+                    }
                 }
-                if (borrowingRecord.Save())
+                else
                 {
-                    MessageBox.Show("The return process was completed successfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
                 }
-                _RefreshBorrowingData();
-                _CheckFine(borrowingRecord);
-                _ChangeAvailabilityCopy(borrowingRecord.CopyId);
+
             }
-            else
-            {
-                return;
-            }
+
         }
         private void ItemUpdate_Click(object sender, EventArgs e)
         {

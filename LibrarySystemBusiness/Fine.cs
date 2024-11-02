@@ -1,11 +1,13 @@
 ﻿using LibrarySystemDataAccess;
+using System;
+using System.Configuration;
 using System.Data;
 
 namespace LibrarySystemBusiness
 {
     public class Fine
     {
-        public const byte DefaultFinePerDay = 5;
+        public static readonly byte DefaultFinePerDay = Convert.ToByte(ConfigurationManager.AppSettings["DefaultFinePerDay"]);
         private enum Mode { Add, Update }
         private Mode _Mode;
         public Customer Customer { get; private set; }//composition 

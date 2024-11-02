@@ -7,7 +7,7 @@ namespace LibraryStstem.Logins
 {
     public partial class frmMainLogin : Form
     {
-        static public User CurrentUser = User.FindByUserNameAndPassword(string.Empty, string.Empty);
+        static public User CurrentUser = new User();
         public static DateTime DateLoginToSystem;
         public static DateTime DateLogoutFromSystem;
         private byte _CounterFailedLogin = 0;
@@ -56,16 +56,20 @@ namespace LibraryStstem.Logins
             _CounterTick--;
             if (_CounterTick == 0)
             {
-                btnLogin.Enabled = false;
-                timer1.Enabled = false;
-                txtPassword.Enabled = true;
-                txtUserName.Enabled = true;
-                labTimer.Visible = false;
-                labCheckLogin.Visible = false;
-                _CounterTick = 60;
+                _Reset();
             }
         }
 
+        private void _Reset()
+        {
+            btnLogin.Enabled = false;
+            timer1.Enabled = false;
+            txtPassword.Enabled = true;
+            txtUserName.Enabled = true;
+            labTimer.Visible = false;
+            labCheckLogin.Visible = false;
+            _CounterTick = 60;
+        }
 
     }
 }

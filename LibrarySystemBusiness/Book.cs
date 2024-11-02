@@ -69,22 +69,10 @@ namespace LibrarySystemBusiness
         private bool _Add()
         {
             this.Id = BookData.Add(this.Title, this.ISBN, this.PublicationDate, this.GenreId, this.AdditionalDetails, this.NumberOfPages, this.PublishingHouse, this.SellingPrice, this.BorrowingPrice, this.ImagePath, this.AuthorId, this.Quantity);
-            if (this.Id != -1)
-            {
-                return BookCopyData.AddTheSameRecordMultipleTimes(this.Id, true, this.Quantity);
-            }
-            return false;
+            return (this.Id != -1);
         }
         private bool _Update()
         {
-            if (PreviousQuantity > this.Quantity)
-            {
-                return false;
-            }
-            if (PreviousQuantity < this.Quantity)
-            {
-                BookCopyData.AddTheSameRecordMultipleTimes(this.Id, true, this.Quantity - PreviousQuantity);
-            }
             return BookData.Update(this.Id, this.Title, this.ISBN, this.PublicationDate, this.GenreId, this.AdditionalDetails, this.NumberOfPages, this.PublishingHouse, this.SellingPrice, this.BorrowingPrice, this.ImagePath, this.AuthorId, this.Quantity);
         }
         private bool ReadyBook()

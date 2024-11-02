@@ -1,8 +1,10 @@
-﻿namespace LibrarySystemDataAccess
+﻿using System.Configuration;
+
+namespace LibrarySystemDataAccess
 {
     public static class SettingData
     {
-        public static string ConnectionString = "Server=.;Database=LibrarySystemDB;User Id=sa;Password=sa123456;";
+        public static string ConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
 
     }
 }

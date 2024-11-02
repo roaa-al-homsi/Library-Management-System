@@ -25,7 +25,6 @@ namespace LibrarySystem.Fines
             if (_Fine.Save())
             {
                 MessageBox.Show("Data Saved Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
             }
             else
             {

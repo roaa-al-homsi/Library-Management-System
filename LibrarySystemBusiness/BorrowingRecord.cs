@@ -1,11 +1,12 @@
 ﻿using LibrarySystemDataAccess;
 using System;
+using System.Configuration;
 using System.Data;
 namespace LibrarySystemBusiness
 {
     public class BorrowingRecord
     {
-        public const byte DefaultBorrowDays = 10;
+        public static readonly byte DefaultBorrowDays = Convert.ToByte(ConfigurationManager.AppSettings["DefaultBorrowDays"]);
         private enum Mode { Add, Update };
         private Mode _Mode;
 

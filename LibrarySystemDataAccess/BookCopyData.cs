@@ -28,29 +28,6 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return NewIdBook;
         }
-        static public bool AddTheSameRecordMultipleTimes(int BookId, bool AvailabilityStatus, int NumbersRecords)
-        {
-            int rowsAffected = 0;
-            string query = @"INSERT INTO BookCopies ([Book Id], [Availability Status]) VALUES (@BookId, @AvailabilityStatus)";
-
-            using (SqlConnection connection = new SqlConnection(SettingData.ConnectionString))
-            {
-                connection.Open();
-
-                for (int i = 0; i < NumbersRecords; i++)
-                {
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-
-                        command.Parameters.AddWithValue("@BookId", BookId);
-                        command.Parameters.AddWithValue("@AvailabilityStatus", AvailabilityStatus);
-                        rowsAffected += command.ExecuteNonQuery();
-                    }
-                }
-            }
-            return rowsAffected == NumbersRecords;
-        }
-
         static public bool Update(int Id, int BookId, bool AvailabilityStatus)
         {
             int RowAffected = 0;

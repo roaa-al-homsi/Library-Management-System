@@ -16,7 +16,23 @@ namespace LibrarySystemDataAccess
              [Numbers Of Pages],[publishing house],[Selling price],
 			[borrowing price],Image,[Author Id],Quantity )
              Values (@Title,@ISBN,@PublicationDate,@GenreId,@AdditionalDetails,@NumberOfPages,@PublishingHouse,@SellingPrice,@BorrowingPrice,@ImagePath,@AuthorId,@Quantity)
-                           SELECT SCOPE_IDENTITY();";
+                           
+
+Declare @BookId int;
+Set @BookId = SCOPE_IDENTITY();
+
+WHILE @Quantity > 0
+BEGIN
+    INSERT INTO BookCopies ([Book Id], [Availability Status])
+    VALUES (@BookId, 1);
+    
+    SET @Quantity = @Quantity - 1;
+END;
+
+SELECT SCOPE_IDENTITY();
+";
+
+
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@Title", Title);
             command.Parameters.AddWithValue("@ISBN", ISBN);
@@ -75,9 +91,53 @@ namespace LibrarySystemDataAccess
             int RowAffected = 0;
 
             SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
-            string query = @"update Books set Title=@Title,ISBN=@ISBN,[Publication Date]=@PublicationDate,[Genre Id]=@GenreId,[Additional Details]=@AdditionalDetails,
-[Numbers Of Pages]=@NumberOfPages,[publishing house]=@PublishingHouse,[Selling price]=@SellingPrice,[borrowing price]=@BorrowingPrice,Image=@ImagePath,[Author Id]=@AuthorId,Quantity=@Quantity
-where Id=@Id";
+            string query = @"
+
+-- Get the previous quantity
+    DECLARE @PreviousQuantity INT;
+    SELECT @PreviousQuantity = b.Quantity 
+    FROM Books b 
+    WHERE b.Id = @Id;
+
+
+UPDATE Books 
+    SET Title = @Title,
+        ISBN = @ISBN,
+        [Publication Date] = @PublicationDate,
+        [Genre Id] = @GenreId,
+        [Additional Details] = @AdditionalDetails,
+        [Numbers Of Pages] = @NumberOfPages,
+        [publishing house] = @PublishingHouse,
+        [Selling price] = @SellingPrice,
+        [borrowing price] = @BorrowingPrice,
+        Image = @ImagePath,
+        [Author Id] = @AuthorId,
+        Quantity = @Quantity
+    WHERE Id = @Id;
+    
+
+    -- Calculate the difference in quantity
+    DECLARE @DiffQuantity INT;
+    SET @DiffQuantity = @Quantity - @PreviousQuantity;
+
+    -- Insert copies if the new quantity is higher
+    IF (@DiffQuantity > 0)
+    BEGIN
+        WHILE @DiffQuantity > 0
+        BEGIN
+            INSERT INTO BookCopies ([Book Id], [Availability Status])
+            VALUES (@Id, 1);
+
+            SET @DiffQuantity = @DiffQuantity - 1;
+        END;
+    END
+    ELSE
+    BEGIN
+        -- Delete excess copies if the new quantity is lower
+        DELETE top(ABS(@DiffQuantity)) FROM BookCopies where [Book Id] = @Id;
+    END;
+
+";
 
 
             SqlCommand command = new SqlCommand(query, connection);
