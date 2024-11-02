@@ -42,16 +42,10 @@ namespace LibrarySystem.BorrowingReturn
                 fine.Save();
             }
         }
-        private void _ChangeAvailabilityCopy(int CopyId)
+        private void _ChangeAvailabilityCopy(int CopyId, bool Availability = true)
         {
-            BookCopy bookCopy = BookCopy.Find(CopyId);
-            if (bookCopy != null)
-            {
-                bookCopy.AvailabilityStatus = true;
-                bookCopy.Save();
-            }
+            BookCopy.UpdateAvailabilityCopy(CopyId, Availability);
         }
-
         private void ItemReturn_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want return this copy?", "Question", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
@@ -61,7 +55,6 @@ namespace LibrarySystem.BorrowingReturn
                 if (borrowingRecord != null)
                 {
                     borrowingRecord.ActualReturnDate = DateTime.Now;
-                    //borrowingRecord.BookCopy.AvailabilityStatus = true;
                     if (borrowingRecord.Save())
                     {
                         MessageBox.Show("The return process was completed successfully", "Done", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -83,7 +76,6 @@ namespace LibrarySystem.BorrowingReturn
             int RecordId = (int)dgvAllBorrowingRecords.CurrentRow.Cells[0].Value;
             _frmMainMenu.OpenChildFormAsync(new frmAddUpdateRecord(RecordId));
         }
-
         private void ItemViewDetails_Click(object sender, EventArgs e)
         {
             int CustomerId = (int)dgvAllBorrowingRecords.CurrentRow.Cells[2].Value;

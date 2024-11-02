@@ -88,6 +88,10 @@ namespace LibrarySystemBusiness
             }
             return null;
         }
+        public static bool UpdateAvailabilityCopy(int CopyId, bool Availability)
+        {
+            return BookCopyData.UpdateAvailabilityCopy(CopyId, Availability);
+        }
 
     }
 

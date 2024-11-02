@@ -96,6 +96,24 @@ namespace LibrarySystemDataAccess
             finally { connection.Close(); }
             return IsFound;
         }
+        public static bool UpdateAvailabilityCopy(int Id, bool Availability)
+        {
+            int RowAffected = 0;
+            SqlConnection connection = new SqlConnection(SettingData.ConnectionString);
+            string query = @"update BookCopies set [Availability Status]=@Availability where Id=@Id";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@Id", Id);
+            command.Parameters.AddWithValue("@Availability", Availability);
+            try
+            {
+                connection.Open();
+                RowAffected = command.ExecuteNonQuery();
+            }
+            catch { Exception exception; }
+            finally { connection.Close(); }
+            return RowAffected > 0;
+        }
     }
 
 }
