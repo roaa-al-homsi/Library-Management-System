@@ -117,9 +117,9 @@
             this.labCurrentUser.BackColor = System.Drawing.Color.Transparent;
             this.labCurrentUser.Font = new System.Drawing.Font("Andalus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labCurrentUser.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labCurrentUser.Location = new System.Drawing.Point(990, 36);
+            this.labCurrentUser.Location = new System.Drawing.Point(1053, 36);
             this.labCurrentUser.Name = "labCurrentUser";
-            this.labCurrentUser.Size = new System.Drawing.Size(160, 37);
+            this.labCurrentUser.Size = new System.Drawing.Size(97, 37);
             this.labCurrentUser.TabIndex = 0;
             this.labCurrentUser.Text = null;
             // 

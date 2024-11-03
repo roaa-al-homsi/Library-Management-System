@@ -123,9 +123,9 @@
             this.labNameBook.AutoSize = false;
             this.labNameBook.BackColor = System.Drawing.Color.Transparent;
             this.labNameBook.Font = new System.Drawing.Font("Andalus", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labNameBook.Location = new System.Drawing.Point(343, 211);
+            this.labNameBook.Location = new System.Drawing.Point(333, 211);
             this.labNameBook.Name = "labNameBook";
-            this.labNameBook.Size = new System.Drawing.Size(127, 37);
+            this.labNameBook.Size = new System.Drawing.Size(299, 37);
             this.labNameBook.TabIndex = 3;
             this.labNameBook.Text = null;
             // 

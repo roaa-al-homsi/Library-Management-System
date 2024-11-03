@@ -1,5 +1,4 @@
-﻿using LibrarySystem;
-using LibrarySystemBusiness;
+﻿using LibrarySystemBusiness;
 using System.Windows.Forms;
 namespace LibrarySystem.Fines
 {
@@ -30,8 +29,8 @@ namespace LibrarySystem.Fines
                 {
                     MessageBox.Show($"{fine.Amount} Payment has been made successfully.", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                _RefreshFinesData();
             }
-            _RefreshFinesData();
         }
         private void cmsManageFines_Opening(object sender, System.ComponentModel.CancelEventArgs e)
         {
