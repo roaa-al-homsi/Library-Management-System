@@ -62,7 +62,7 @@ namespace LibraryStstem.Logins
 
         private void _Reset()
         {
-            btnLogin.Enabled = false;
+            btnLogin.Enabled = true;
             timer1.Enabled = false;
             txtPassword.Enabled = true;
             txtUserName.Enabled = true;
