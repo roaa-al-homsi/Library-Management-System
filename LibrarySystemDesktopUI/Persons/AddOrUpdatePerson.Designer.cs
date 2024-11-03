@@ -315,6 +315,7 @@
             this.Controls.Add(this.btnSave);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmAddUpdatePerson";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Tag = "Add | Update Person";
             this.Text = " Add | Update Person";
             this.Load += new System.EventHandler(this.frmAddPerson_Load);
