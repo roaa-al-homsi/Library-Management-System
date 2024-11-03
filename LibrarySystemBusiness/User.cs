@@ -49,7 +49,7 @@ namespace LibrarySystemBusiness
         }
         private bool _ReadyUser()
         {
-            if (ExistByUserName(this.UserName))
+            if (!ExistByUserName(this.UserName))
             {
                 return false;
             }
