@@ -5,6 +5,7 @@ using System.Windows.Forms;
 
 namespace LibrarySystem.Users
 {
+
     public partial class frmAddUpdateUser : Form
     {
         private enum Mode { Add, Update }
@@ -39,12 +40,59 @@ namespace LibrarySystem.Users
         {
             _LoadUserDataToForm();
         }
+        private void _CalculatePermissionUser()
+        {
+            foreach (var checkedItem in checkedListBox1.CheckedItems)
+            {
+                string item = checkedItem.ToString();
+                if (item == "Books")
+                {
+                    _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Books;
+                }
+                else if (item == "Authors")
+                {
+                    _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Authors;
+                }
+                else if (item == "Customers")
+                {
+                    _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Customers;
+                }
+                else if (item == "Users")
+                {
+                    _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Users;
+                }
+                else if (item == "Genres")
+                {
+                    _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Genres;
+                }
+                else if (item == "Fines")
+                {
+                    _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Fines;
+                }
+                else if (item == "Borrowing")
+                {
+                    _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Borrowing;
+                }
+                else if (item == "Reservations")
+                {
+                    _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Reservations;
+                }
+                else if (item == "Logins")
+                {
+                    _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Logins;
+                }
+            }
+        }
         private void btnSave_Click(object sender, System.EventArgs e)
         {
+            _PermissionOnlyUser = 0; // Reset and calculate the combined permission
+            _CalculatePermissionUser();
+
             _user.PersonId = int.Parse(labPersonId.Text);
             _user.UserName = txtUserName.Text;
             _user.Password = txtPassword.Text;
             _user.Permission = _PermissionOnlyUser;
+
             if (_user.Save())
             {
                 labUser.Visible = true;
@@ -74,67 +122,66 @@ namespace LibrarySystem.Users
                 panelContainerUserInfo.Enabled = true;
             }
         }
-        private void checkedListBox1_ItemCheck(object sender, ItemCheckEventArgs e)
-        { // Get the checked list box control
-            CheckedListBox checkedListBox = sender as CheckedListBox;
-            string item = checkedListBox.Items[e.Index].ToString();
-            // Check if the item is being checked or unchecked
-
-            if (e.NewValue == CheckState.Checked && item == "Books")
-            {
-                _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Books;
-
-            }
-            else if (e.NewValue == CheckState.Checked && item == "Authors")
-            {
-                _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Authors;
-            }
-            else if (e.NewValue == CheckState.Checked && item == "Customers")
-            {
-                _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Customers;
-
-            }
-            else if (e.NewValue == CheckState.Checked && item == "Users")
-            {
-                _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Users;
-            }
-            else if (e.NewValue == CheckState.Checked && item == "Genres")
-            {
-                _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Genres;
-            }
-            else if (e.NewValue == CheckState.Checked && item == "Fines")
-            {
-                _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Fines;
-            }
-            else if (e.NewValue == CheckState.Checked && item == "Borrowing")
-            {
-                _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Books;
-            }
-            else if (e.NewValue == CheckState.Checked && item == "Reservations")
-            {
-                _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Reservations;
-            }
-            else if (e.NewValue == CheckState.Checked && item == "Logins")
-            {
-                _PermissionOnlyUser += (int)ManagePermissions.enMainMenuPermission.Logins;
-            }
-
-            else
-            {
-                _PermissionOnlyUser = 0;
-            }
-        }
         private void _GetNamesOptionAllowedFromUserPermission(int User_Permission)
         {
-            int[] arrPermission = { 1, 2, 4, 8, 16, 32, 64, 128, 256 };
-            for (short i = 1; i <= arrPermission.Length; i++)
+            checkedListBox1.BeginUpdate(); // Pause updates for performance
+            try
             {
-                if (ManagePermissions.CheckAccessPermission(User_Permission, (ManagePermissions.enMainMenuPermission)arrPermission[i - 1]))
+                for (int i = 0; i < checkedListBox1.Items.Count; i++)
                 {
-                    checkedListBox1.SetItemChecked(i - 1, true);
+                    string itemName = checkedListBox1.Items[i].ToString();
+                    int permissionValue = 0;
+
+                    // Map each item to its corresponding permission value
+                    switch (itemName)
+                    {
+                        case "Books":
+                            permissionValue = (int)ManagePermissions.enMainMenuPermission.Books;
+                            break;
+                        case "Authors":
+                            permissionValue = (int)ManagePermissions.enMainMenuPermission.Authors;
+                            break;
+                        case "Customers":
+                            permissionValue = (int)ManagePermissions.enMainMenuPermission.Customers;
+                            break;
+                        case "Users":
+                            permissionValue = (int)ManagePermissions.enMainMenuPermission.Users;
+                            break;
+                        case "Genres":
+                            permissionValue = (int)ManagePermissions.enMainMenuPermission.Genres;
+                            break;
+                        case "Fines":
+                            permissionValue = (int)ManagePermissions.enMainMenuPermission.Fines;
+                            break;
+                        case "Borrowing":
+                            permissionValue = (int)ManagePermissions.enMainMenuPermission.Borrowing;
+                            break;
+                        case "Reservations":
+                            permissionValue = (int)ManagePermissions.enMainMenuPermission.Reservations;
+                            break;
+                        case "Logins":
+                            permissionValue = (int)ManagePermissions.enMainMenuPermission.Logins;
+                            break;
+                            // Add other cases as necessary
+                    }
+
+                    // Check if the permission bit is set in User_Permission
+                    if ((User_Permission & permissionValue) == permissionValue)
+                    {
+                        checkedListBox1.SetItemChecked(i, true);
+                    }
+                    else
+                    {
+                        checkedListBox1.SetItemChecked(i, false);
+                    }
                 }
+            }
+            finally
+            {
+                checkedListBox1.EndUpdate(); // Resume updates
             }
         }
 
     }
+
 }
